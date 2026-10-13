@@ -1,0 +1,3407 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De L'amour | Digital Flagship Store - Bản hòa ca lãng mạn & Tình yêu chính bản thân</title>
+  
+  <!-- Tailwind CSS CDN with custom config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Cormorant Garamond & Playfair Display (French Romantic Serif) + Plus Jakarta Sans (Modern Clean Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FAF8F5',
+              beige: '#F4EFEA',
+              sand: '#EAE2D7',
+              gold: '#C5A880',
+              goldDark: '#9E8055',
+              wine: '#6D2232',
+              wineLight: '#8C3246',
+              espresso: '#231F20',
+              charcoal: '#3A3535',
+              muted: '#7A726E'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #FAF8F5; }
+    ::-webkit-scrollbar-thumb { background: #D5C8B8; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #C5A880; }
+
+    /* Engraving simulation font options */
+    .font-engrave-script { font-family: 'Brush Script MT', cursive, serif; font-style: italic; }
+    .font-engrave-serif { font-family: 'Cormorant Garamond', serif; letter-spacing: 0.15em; font-weight: 600; text-transform: uppercase; }
+    .font-engrave-sans { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.2em; font-weight: 500; text-transform: uppercase; }
+
+    /* Subtle shimmer animation */
+    @keyframes subtleShimmer {
+      0% { opacity: 0.8; }
+      50% { opacity: 1; }
+      100% { opacity: 0.8; }
+    }
+    .animate-shimmer { animation: subtleShimmer 3s ease-in-out infinite; }
+  </style>
+</head>
+<body class="bg-brand-cream text-brand-espresso font-sans antialiased selection:bg-brand-wine selection:text-white">
+
+  <!-- TOP NOTIFICATION BAR -->
+  <div class="bg-brand-wine text-white text-xs py-2 px-4 text-center tracking-wider font-medium flex items-center justify-center gap-2">
+    <span class="inline-block w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+    <span>Ưu đãi ra mắt: <strong>Freeship</strong> đơn từ 399.000đ | Tặng Voucher hoàn tiền khi mua Bộ Mẫu Thử Discovery Set</span>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-brand-cream/95 backdrop-blur-md border-b border-brand-sand/60 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Mobile menu trigger -->
+      <button class="md:hidden p-2 text-brand-charcoal hover:text-brand-wine" onclick="toggleMobileNav()">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+      <!-- Navigation links (Desktop) -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+        <a href="#collection" class="text-brand-charcoal hover:text-brand-wine transition-colors">Bộ sưu tập</a>
+        <a href="#discovery-set" class="text-brand-charcoal hover:text-brand-wine transition-colors">Discovery Set</a>
+        <button onclick="openQuizModal()" class="text-brand-wine hover:text-brand-wineLight flex items-center gap-1 font-semibold transition-colors">
+          <i data-lucide="sparkles" class="w-4 h-4 text-brand-gold"></i>
+          <span>Scent Quiz</span>
+        </button>
+        <a href="#journal" class="text-brand-charcoal hover:text-brand-wine transition-colors">The Scent Journal</a>
+        <a href="#about" class="text-brand-charcoal hover:text-brand-wine transition-colors">Về De L'amour</a>
+      </nav>
+
+      <!-- BRAND LOGO -->
+      <div class="text-center">
+        <a href="#" class="inline-block">
+          <h1 class="font-serif text-3xl sm:text-4xl tracking-[0.18em] text-brand-wine font-semibold uppercase">De L'amour</h1>
+          <p class="text-[9px] tracking-[0.3em] uppercase text-brand-muted font-sans font-medium">Paris • Haute Parfumerie</p>
+        </a>
+      </div>
+
+      <!-- ACTIONS (SEARCH, QUIZ CTA, CART) -->
+      <div class="flex items-center gap-4 sm:gap-6">
+        <button onclick="openQuizModal()" class="hidden lg:flex items-center gap-2 border border-brand-wine/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-brand-wine hover:bg-brand-wine hover:text-white transition-all shadow-sm">
+          <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+          <span>Tìm mùi chân ái</span>
+        </button>
+
+        <button onclick="toggleCartDrawer(true)" class="relative p-2 text-brand-charcoal hover:text-brand-wine transition-colors" title="Giỏ hàng">
+          <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+          <span id="cart-badge-count" class="absolute top-1 right-0 w-5 h-5 bg-brand-wine text-white text-[11px] font-bold rounded-full flex items-center justify-center scale-100 transition-transform">1</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-nav-backdrop" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden transition-opacity" onclick="toggleMobileNav(false)"></div>
+  <aside id="mobile-nav" class="fixed top-0 left-0 bottom-0 z-50 w-72 bg-brand-cream border-r border-brand-sand shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-6">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-brand-sand">
+        <div>
+          <h2 class="font-serif text-2xl tracking-widest text-brand-wine font-semibold uppercase">De L'amour</h2>
+          <p class="text-[9px] tracking-widest uppercase text-brand-muted font-medium">Paris • Haute Parfumerie</p>
+        </div>
+        <button onclick="toggleMobileNav(false)" class="p-1.5 text-brand-muted hover:text-brand-wine rounded-full" title="Đóng menu">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <nav class="mt-6 flex flex-col space-y-3 text-sm font-medium">
+        <a href="#collection" onclick="toggleMobileNav(false)" class="text-brand-charcoal hover:text-brand-wine py-2 border-b border-brand-sand/40 flex items-center justify-between">
+          <span>Bộ sưu tập 5 mùi hương</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-brand-muted"></i>
+        </a>
+        <a href="#featured-product" onclick="toggleMobileNav(false)" class="text-brand-charcoal hover:text-brand-wine py-2 border-b border-brand-sand/40 flex items-center justify-between">
+          <span>Khắc tên &amp; Tháp hương PDP</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-brand-muted"></i>
+        </a>
+        <a href="#discovery-set" onclick="toggleMobileNav(false)" class="text-brand-charcoal hover:text-brand-wine py-2 border-b border-brand-sand/40 flex items-center justify-between">
+          <span>Discovery Set 89k</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-brand-muted"></i>
+        </a>
+        <button onclick="toggleMobileNav(false); openQuizModal();" class="text-left text-brand-wine font-semibold py-2 border-b border-brand-sand/40 flex items-center justify-between">
+          <span class="flex items-center gap-2"><i data-lucide="sparkles" class="w-4 h-4 text-brand-gold"></i> Scent Quiz</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-brand-wine"></i>
+        </button>
+        <a href="#journal" onclick="toggleMobileNav(false)" class="text-brand-charcoal hover:text-brand-wine py-2 border-b border-brand-sand/40 flex items-center justify-between">
+          <span>The Scent Journal</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-brand-muted"></i>
+        </a>
+        <a href="#about" onclick="toggleMobileNav(false)" class="text-brand-charcoal hover:text-brand-wine py-2 border-b border-brand-sand/40 flex items-center justify-between">
+          <span>Về De L'amour</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-brand-muted"></i>
+        </a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-brand-sand space-y-3">
+      <button onclick="toggleMobileNav(false); toggleCartDrawer(true);" class="w-full py-3 bg-brand-wine hover:bg-brand-wineLight text-white rounded-xl text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm transition-colors">
+        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+        <span>Mở giỏ hàng</span>
+      </button>
+      <p class="text-[10px] text-center text-brand-muted">Hotline/Zalo: 0912 345 678 (8:00 - 22:00)</p>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- 1. HERO SECTION (FULL-SCREEN CINEMATIC) -->
+    <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
+      <!-- Background Image with Soft Parallax Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=2000&auto=format&fit=crop" 
+          alt="De L'amour Parisian Romantic Fragrance Atmosphere" 
+          class="w-full h-full object-cover object-center scale-105 transform motion-safe:animate-shimmer"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-espresso/85 via-brand-espresso/50 to-brand-espresso/35 backdrop-blur-[1px]"></div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center text-white py-16">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-xs tracking-widest uppercase mb-6 text-brand-sand">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-gold"></i>
+          <span>The Art of Self-Love & French Romance</span>
+        </div>
+
+        <h2 class="font-serif text-4xl sm:text-6xl md:text-7xl font-normal tracking-wide leading-tight mb-6">
+          Bản hòa ca lãng mạn &amp;<br class="hidden sm:inline"> Tình yêu chính bản thân
+        </h2>
+
+        <div class="max-w-2xl mx-auto mb-10 space-y-3 font-serif italic text-lg sm:text-xl text-brand-sand/95 font-light leading-relaxed tracking-wide">
+          <p>
+            "Có những ngày, điều bạn cần chỉ đơn giản là một mùi hương dịu nhẹ tựa như cái ôm dành riêng cho chính mình. Nước hoa là lời tỏ tình thầm lặng nhất — nơi bạn tự do là chính mình mà không cần vội vã chạy theo bất kỳ ánh nhìn nào khác."
+          </p>
+          <p class="text-brand-sand/85 text-base sm:text-lg">
+            Khám phá 5 nốt hương tinh tế chưng cất từ tinh dầu Pháp cao cấp, ôm ấp và đánh thức trọn vẹn từng tầng cảm xúc sâu kín.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <button onclick="openQuizModal()" class="w-full sm:w-auto px-8 py-4 bg-brand-gold hover:bg-brand-goldDark text-brand-espresso font-semibold text-sm tracking-wider uppercase rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group">
+            <span>Khám phá mùi hương chân ái (Scent Quiz)</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </button>
+          
+          <a href="#featured-product" class="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 font-medium text-sm tracking-wider uppercase rounded-full transition-all duration-300">
+            Xem sản phẩm nổi bật
+          </a>
+        </div>
+
+        <!-- Floating Badges / Stats -->
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 text-left border-t border-white/20 pt-8 max-w-3xl mx-auto">
+          <div class="flex items-center gap-3">
+            <i data-lucide="award" class="w-5 h-5 text-brand-gold shrink-0"></i>
+            <div>
+              <p class="text-xs font-semibold text-white">100% Tinh dầu Pháp</p>
+              <p class="text-[11px] text-brand-sand/70">Nguồn gốc Grasse danh tiếng</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <i data-lucide="clock" class="w-5 h-5 text-brand-gold shrink-0"></i>
+            <div>
+              <p class="text-xs font-semibold text-white">Lưu hương 6–8h+</p>
+              <p class="text-[11px] text-brand-sand/70">Tỏa hương dịu êm, sang trọng</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <i data-lucide="gift" class="w-5 h-5 text-brand-gold shrink-0"></i>
+            <div>
+              <p class="text-xs font-semibold text-white">Discovery Kit 89k</p>
+              <p class="text-[11px] text-brand-sand/70">Tặng Voucher hoàn tiền 50%</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <i data-lucide="shield-check" class="w-5 h-5 text-brand-gold shrink-0"></i>
+            <div>
+              <p class="text-xs font-semibold text-white">An toàn lành tính</p>
+              <p class="text-[11px] text-brand-sand/70">Đổi trả nếu kích ứng da</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. DUAL PERSONA TEASER: CHIC EXPLORERS & ELEGANT ICONS -->
+    <section class="py-16 bg-brand-beige/50 border-b border-brand-sand/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-brand-wine text-xs uppercase tracking-[0.25em] font-semibold">Tuyên ngôn phong cách</span>
+          <h3 class="font-serif text-3xl sm:text-4xl text-brand-espresso mt-2">Mỗi tâm trạng, một tầng hương</h3>
+          <p class="text-brand-muted text-sm mt-3">Dù bạn đang tìm kiếm một phụ kiện hương thơm rạng rỡ hằng ngày hay thần thái kiêu hãnh nơi công sở.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Persona 1: The Chic Explorers -->
+          <div class="group relative rounded-2xl overflow-hidden bg-white border border-brand-sand/80 p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-rose-50 text-rose-800 text-xs font-semibold tracking-wider">The Chic Explorers</span>
+                <span class="text-xs text-brand-muted">Tuổi 22 - 26 • Tươi mới &amp; Ngọt ngào</span>
+              </div>
+              <h4 class="font-serif text-2xl text-brand-wine font-medium">Hương thơm như một món phụ kiện thời trang</h4>
+              <p class="text-brand-muted text-sm mt-2 leading-relaxed">
+                Năng động, tự do biến tấu theo outfit và cảm xúc ngày mới. Những nốt hương hoa quả tươi, phấn nhẹ, trà dịu giúp bạn luôn tỏa ra năng lượng tích cực và cuốn hút.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4 text-xs font-medium text-brand-charcoal">
+                <span class="px-2.5 py-1 bg-brand-cream rounded-md">#FleurL'amour</span>
+                <span class="px-2.5 py-1 bg-brand-cream rounded-md">#SoleilL'amour</span>
+                <span class="px-2.5 py-1 bg-brand-cream rounded-md">#Pocket10ml</span>
+              </div>
+            </div>
+            <div class="mt-6 pt-6 border-t border-brand-sand/60 flex items-center justify-between">
+              <span class="text-xs font-medium text-brand-wine">Pocket 10ml chỉ từ 179.000đ</span>
+              <a href="#collection" class="text-xs font-semibold text-brand-espresso group-hover:text-brand-wine flex items-center gap-1">
+                Xem gợi ý <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Persona 2: The Elegant Icons -->
+          <div class="group relative rounded-2xl overflow-hidden bg-white border border-brand-sand/80 p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-900 text-xs font-semibold tracking-wider">The Elegant Icons</span>
+                <span class="text-xs text-brand-muted">Tuổi 27 - 35 • Khí chất &amp; Sâu lắng</span>
+              </div>
+              <h4 class="font-serif text-2xl text-brand-wine font-medium">Dấu ấn thần thái và sự tĩnh tại nội tâm</h4>
+              <p class="text-brand-muted text-sm mt-2 leading-relaxed">
+                Đỉnh cao của sự thanh lịch và chăm sóc bản thân (Self-care). Độ lưu hương bền bỉ 6-8 tiếng với gỗ ấm, hổ phách và hoa hồng khô sang trọng, khẳng định bản sắc riêng.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4 text-xs font-medium text-brand-charcoal">
+                <span class="px-2.5 py-1 bg-brand-cream rounded-md">#NuitL'amour</span>
+                <span class="px-2.5 py-1 bg-brand-cream rounded-md">#ChérieL'amour</span>
+                <span class="px-2.5 py-1 bg-brand-cream rounded-md">#Signature50ml</span>
+              </div>
+            </div>
+            <div class="mt-6 pt-6 border-t border-brand-sand/60 flex items-center justify-between">
+              <span class="text-xs font-medium text-brand-wine">Signature 50ml từ 699.000đ</span>
+              <a href="#collection" class="text-xs font-semibold text-brand-espresso group-hover:text-brand-wine flex items-center gap-1">
+                Xem gợi ý <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. INTERACTIVE PDP SECTION (PRODUCT DETAIL PAGE SHOWCASE) -->
+    <!-- Đây là trái tim của trải nghiệm: Cột bên phải có đầy đủ Tháp hương, Thước đo, Khắc tên Live Preview, Gói quà và Safety Net -->
+    <section id="featured-product" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Breadcrumbs & Header -->
+      <div class="mb-8 flex items-center justify-between">
+        <div class="flex items-center gap-2 text-xs text-brand-muted">
+          <a href="#" class="hover:text-brand-wine">Trang chủ</a>
+          <span>/</span>
+          <a href="#collection" class="hover:text-brand-wine">Signature Collection</a>
+          <span>/</span>
+          <span id="pdp-breadcrumb-name" class="text-brand-espresso font-medium">Chérie L'amour</span>
+        </div>
+        <span class="inline-flex items-center gap-1.5 text-xs text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Đang có sẵn • Giao nhanh 1-3 ngày
+        </span>
+      </div>
+
+      <!-- Main PDP Grid: 2 Columns (Image Gallery Left, Buy & Olfactory Proof Right) -->
+      <div class="grid lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- LEFT COLUMN: PRODUCT GALLERY (5 cols) -->
+        <div class="lg:col-span-5 sticky top-28">
+          <div class="relative bg-brand-beige rounded-2xl overflow-hidden aspect-[4/5] border border-brand-sand shadow-inner flex items-center justify-center group">
+            
+            <!-- Bottle Visual with Simulated Cap Overlay for Live Preview -->
+            <img 
+              id="pdp-main-img"
+              src="assets/images/Chérie L'amour.jpg" 
+              alt="Chérie L'amour Eau de Parfum" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              onerror="handleImgFallback(this)"
+            />
+
+            <!-- LIVE ENGRAVING PREVIEW ON BOTTLE CAP OVERLAY -->
+            <div id="live-engraving-badge" class="hidden absolute top-[16%] left-1/2 transform -translate-x-1/2 z-20 pointer-events-none transition-all duration-300">
+              <div class="px-3 py-1 bg-brand-gold/90 backdrop-blur-sm text-brand-espresso rounded shadow-md border border-yellow-200/50">
+                <p id="live-engraving-text" class="text-xs font-engrave-script tracking-wider font-bold">Chérie</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge: Note category -->
+            <div id="pdp-badge-note" class="absolute bottom-4 left-4 z-10 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-semibold text-brand-wine border border-brand-sand shadow-sm">
+              Berry &amp; Woody Vanilla
+            </div>
+
+            <!-- Zoom Indicator -->
+            <div class="absolute top-4 right-4 z-10 p-2 bg-white/80 rounded-full text-brand-charcoal shadow-sm">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+
+          <!-- Thumbnail Strip (5 Chai nước hoa chủ đạo) -->
+          <div class="grid grid-cols-5 gap-2 mt-4" id="pdp-thumbnails">
+            <button onclick="switchPDPProduct('cherie')" id="thumb-cherie" class="rounded-xl overflow-hidden aspect-square border-2 border-brand-wine p-0.5 transition-all shadow-sm" title="Chérie L'amour">
+              <img src="assets/images/Chérie L'amour.jpg" class="w-full h-full object-cover rounded-lg" alt="Chérie L'amour" onerror="handleImgFallback(this)">
+            </button>
+            <button onclick="switchPDPProduct('fleur')" id="thumb-fleur" class="rounded-xl overflow-hidden aspect-square border border-brand-sand opacity-75 hover:opacity-100 transition-all" title="Fleur L'amour">
+              <img src="assets/images/Fleur L'amour.jpg" class="w-full h-full object-cover rounded-lg" alt="Fleur L'amour" onerror="handleImgFallback(this)">
+            </button>
+            <button onclick="switchPDPProduct('botanique')" id="thumb-botanique" class="rounded-xl overflow-hidden aspect-square border border-brand-sand opacity-75 hover:opacity-100 transition-all" title="L'amour Botanique">
+              <img src="assets/images/L'amour botanique.jpg" class="w-full h-full object-cover rounded-lg" alt="L'amour Botanique" onerror="handleImgFallback(this)">
+            </button>
+            <button onclick="switchPDPProduct('nuit')" id="thumb-nuit" class="rounded-xl overflow-hidden aspect-square border border-brand-sand opacity-75 hover:opacity-100 transition-all" title="Nuit L'amour">
+              <img src="assets/images/Nuit L'amour.jpg" class="w-full h-full object-cover rounded-lg" alt="Nuit L'amour" onerror="handleImgFallback(this)">
+            </button>
+            <button onclick="switchPDPProduct('soleil')" id="thumb-soleil" class="rounded-xl overflow-hidden aspect-square border border-brand-sand opacity-75 hover:opacity-100 transition-all" title="Soleil L'amour">
+              <img src="assets/images/Soleil L'amour.jpg" class="w-full h-full object-cover rounded-lg" alt="Soleil L'amour" onerror="handleImgFallback(this)">
+            </button>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: PRODUCT DETAILS, PERSONALIZATION, ACTIONS, SCENT PYRAMID & METRICS (7 cols) -->
+        <div class="lg:col-span-7 space-y-7">
+          
+          <!-- Title & Story Hook -->
+          <div>
+            <div class="flex items-center gap-2 mb-1.5">
+              <span id="pdp-subtitle-brand" class="text-xs uppercase tracking-widest text-brand-goldDark font-semibold">Chérie L'amour • Berry &amp; Woody Vanilla</span>
+              <span class="text-brand-sand">•</span>
+              <span class="text-xs text-brand-muted">Eau de Parfum</span>
+            </div>
+            <h3 id="pdp-product-title" class="font-serif text-3xl sm:text-4xl text-brand-espresso font-semibold">Chérie L'amour</h3>
+            <p id="pdp-product-quote" class="text-brand-muted text-sm mt-2 italic font-serif text-base">
+              "Một thoáng kiêu kỳ như đóa hoa nở muộn giữa lòng Paris – ngọt dịu quả mọng, ấm êm vani gỗ và vấn vương suốt ngày dài."
+            </p>
+          </div>
+
+          <!-- Price & Volume Selector -->
+          <div class="border-y border-brand-sand/80 py-4 flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <span id="pdp-display-price" class="text-2xl sm:text-3xl font-serif font-bold text-brand-wine">679.000đ</span>
+              <span id="pdp-original-price" class="text-xs text-brand-muted line-through ml-2">799.000đ</span>
+              <span id="pdp-savings-badge" class="text-xs text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-semibold ml-2">Tiết kiệm 120k</span>
+            </div>
+
+            <!-- Dung tích: Pocket 10ml vs Signature 50ml -->
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-brand-muted font-medium mr-1">Dung tích:</span>
+              <button 
+                id="btn-size-50ml"
+                onclick="selectSize('50ml')" 
+                class="px-4 py-2 rounded-lg text-xs font-semibold border-2 border-brand-wine bg-brand-wine text-white shadow-sm transition-all"
+              >
+                Signature 50ml
+              </button>
+              <button 
+                id="btn-size-10ml"
+                onclick="selectSize('10ml')" 
+                class="px-4 py-2 rounded-lg text-xs font-semibold border border-brand-sand bg-white text-brand-charcoal hover:border-brand-gold transition-all"
+              >
+                Pocket 10ml
+              </button>
+            </div>
+          </div>
+
+          <!-- 3 PERSONALIZATION OPTIONS (TIÊU CHUẨN, KHẮC TÊN 80K, GÓI QUÀ 30K) -->
+          <div class="bg-brand-beige/60 rounded-xl p-5 border border-brand-sand/80 space-y-4">
+            <div class="flex items-center justify-between">
+              <label class="text-xs font-bold uppercase tracking-wider text-brand-espresso flex items-center gap-1.5">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-gold"></i>
+                <span>Tùy chọn đóng gói &amp; Cá nhân hóa</span>
+              </label>
+              <span class="text-[11px] text-brand-muted">Chọn 1 trong 3</span>
+            </div>
+
+            <!-- 3 Option Cards (Radio selector) -->
+            <div class="grid sm:grid-cols-3 gap-3">
+              
+              <!-- Option 1: Tiêu chuẩn (0đ) -->
+              <label class="relative flex flex-col p-3 rounded-lg border-2 border-brand-wine bg-white cursor-pointer transition-all shadow-sm personalization-card" id="card-opt-standard">
+                <input type="radio" name="personalization_option" value="standard" checked onchange="changePersonalization('standard')" class="sr-only">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs font-semibold text-brand-espresso">Hàng tiêu chuẩn</span>
+                  <span class="text-[11px] font-bold text-brand-muted">Miễn phí</span>
+                </div>
+                <p class="text-[11px] text-brand-muted">Hộp De L'amour thanh lịch, giao nhanh.</p>
+              </label>
+
+              <!-- Option 2: Khắc tên (+80k) -->
+              <label class="relative flex flex-col p-3 rounded-lg border border-brand-sand bg-white/70 hover:bg-white cursor-pointer transition-all personalization-card" id="card-opt-engraving">
+                <input type="radio" name="personalization_option" value="engraving" onchange="changePersonalization('engraving')" class="sr-only">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs font-semibold text-brand-wine flex items-center gap-1">
+                    <i data-lucide="feather" class="w-3 h-3 text-brand-gold"></i> Khắc tên
+                  </span>
+                  <span class="text-[11px] font-bold text-brand-wine">+80.000đ</span>
+                </div>
+                <p class="text-[11px] text-brand-muted">Khắc tên/thông điệp độc bản lên nắp chai.</p>
+              </label>
+
+              <!-- Option 3: Gói quà & Thiệp (+30k) -->
+              <label class="relative flex flex-col p-3 rounded-lg border border-brand-sand bg-white/70 hover:bg-white cursor-pointer transition-all personalization-card" id="card-opt-giftwrap">
+                <input type="radio" name="personalization_option" value="giftwrap" onchange="changePersonalization('giftwrap')" class="sr-only">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs font-semibold text-brand-wine flex items-center gap-1">
+                    <i data-lucide="gift" class="w-3 h-3 text-brand-gold"></i> Gói quà
+                  </span>
+                  <span class="text-[11px] font-bold text-brand-wine">+30.000đ</span>
+                </div>
+                <p class="text-[11px] text-brand-muted">Hộp thắt nơ lụa, túi giấy &amp; thiệp viết tay.</p>
+              </label>
+            </div>
+
+            <!-- SUB-PANEL: NẾU CHỌN KHẮC TÊN (+80K) -->
+            <div id="panel-engraving" class="hidden pt-3 border-t border-brand-sand/70 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-semibold text-brand-charcoal">Nội dung khắc (Tối đa 20 ký tự):</span>
+                <span id="char-count" class="text-[11px] text-brand-muted">7/20</span>
+              </div>
+              <div class="flex gap-2">
+                <input 
+                  type="text" 
+                  id="engraving-input" 
+                  maxlength="20" 
+                  value="Chérie" 
+                  placeholder="Nhập tên hoặc lời chúc..."
+                  oninput="updateEngravingText(this.value)"
+                  class="flex-1 px-3 py-2 text-xs bg-white border border-brand-sand rounded-lg focus:outline-none focus:border-brand-wine focus:ring-1 focus:ring-brand-wine"
+                />
+                <!-- Font Selector -->
+                <select id="engraving-font" onchange="updateEngravingFont(this.value)" class="px-2 py-2 text-xs bg-white border border-brand-sand rounded-lg focus:outline-none text-brand-charcoal">
+                  <option value="script">Font Cursive Lãng mạn</option>
+                  <option value="serif">Font Serif Cổ điển</option>
+                  <option value="sans">Font Modern Tối giản</option>
+                </select>
+              </div>
+
+              <!-- GHI CHÚ BẮT BUỘC VỀ THANH TOÁN (CHO KHẮC TÊN) -->
+              <div class="bg-amber-50/80 border border-amber-200 rounded-lg p-3 text-xs text-amber-900 space-y-1">
+                <p class="font-bold flex items-center gap-1.5 text-amber-950">
+                  <i data-lucide="alert-circle" class="w-3.5 h-3.5 text-amber-600"></i>
+                  <span>Yêu cầu về thanh toán &amp; Vận chuyển đơn khắc tên:</span>
+                </p>
+                <ul class="list-disc list-inside space-y-0.5 text-[11px] text-amber-800 ml-1">
+                  <li><strong>Yêu cầu chuyển khoản trước:</strong> Đơn hàng có khắc tên cần thanh toán trước (Không áp dụng COD).</li>
+                  <li><strong>Chính sách:</strong> Đơn hàng đã khắc tên không hỗ trợ hủy hoặc đổi trả.</li>
+                  <li><strong>Thời gian giao hàng:</strong> Toàn quốc 2–5 ngày, nội thành TP.HCM 1–3 ngày làm việc.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- SUB-PANEL: NẾU CHỌN GÓI QUÀ + THIỆP (+30K) -->
+            <div id="panel-giftwrap" class="hidden pt-3 border-t border-brand-sand/70 space-y-3">
+              <span class="text-xs font-semibold text-brand-charcoal">Hình ảnh mẫu giấy gói nơ lụa, túi giấy &amp; thiệp:</span>
+              
+              <!-- Mẫu ảnh thực tế -->
+              <div class="grid grid-cols-3 gap-2">
+                <div class="rounded-lg overflow-hidden border border-brand-sand aspect-video relative group">
+                  <img src="assets/images/Hopgiay.jpg" onerror="this.src='image/Hopgiay.jpg'; this.onerror=function(){this.src='assets/images/Hopqua.png';}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" alt="Hộp giấy quà tặng">
+                  <span class="absolute bottom-1 left-1 bg-black/60 text-white text-[9px] px-1 rounded">Nơ lụa Paris</span>
+                </div>
+                <div class="rounded-lg overflow-hidden border border-brand-sand aspect-video relative group">
+                  <img src="assets/images/tuigiay.jpg" onerror="this.src='image/tuigiay.jpg'; this.onerror=function(){this.src='assets/images/tuigiay.png';}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" alt="Túi giấy cao cấp">
+                  <span class="absolute bottom-1 left-1 bg-black/60 text-white text-[9px] px-1 rounded">Túi giấy sang trọng</span>
+                </div>
+                <div class="rounded-lg overflow-hidden border border-brand-sand aspect-video relative group">
+                  <img src="assets/images/thiep.jpg" onerror="this.src='image/thiep.jpg'; this.onerror=function(){this.src='assets/images/thiep.png';}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" alt="Thiệp trắng viết tay">
+                  <span class="absolute bottom-1 left-1 bg-black/60 text-white text-[9px] px-1 rounded">Thiệp viết tay</span>
+                </div>
+              </div>
+
+              <textarea 
+                id="giftwrap-message"
+                placeholder="Nội dung lời nhắn ghi trên thiệp (để trống nếu bạn muốn tự viết)..." 
+                rows="2" 
+                class="w-full px-3 py-2 text-xs bg-white border border-brand-sand rounded-lg focus:outline-none focus:border-brand-wine"
+              ></textarea>
+
+              <!-- GHI CHÚ BẮT BUỘC VỀ THANH TOÁN (CHO GÓI QUÀ) -->
+              <div class="bg-amber-50/80 border border-amber-200 rounded-lg p-3 text-xs text-amber-900 space-y-1">
+                <p class="font-bold flex items-center gap-1.5 text-amber-950">
+                  <i data-lucide="alert-circle" class="w-3.5 h-3.5 text-amber-600"></i>
+                  <span>Yêu cầu về thanh toán &amp; Vận chuyển đơn gói quà:</span>
+                </p>
+                <ul class="list-disc list-inside space-y-0.5 text-[11px] text-amber-800 ml-1">
+                  <li><strong>Yêu cầu chuyển khoản trước:</strong> Đơn hàng có gói quà đính nơ cần thanh toán trước (Không áp dụng COD).</li>
+                  <li><strong>Thời gian giao hàng:</strong> Toàn quốc 2–5 ngày, nội thành TP.HCM 1–3 ngày làm việc.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- CTA ACTIONS: BỘ CHỌN SỐ LƯỢNG + THÊM VÀO GIỎ & MUA NGAY -->
+          <div class="flex flex-col sm:flex-row gap-3 items-stretch">
+            <!-- Bộ đếm số lượng -->
+            <div class="flex items-center justify-between border border-brand-sand bg-white rounded-full px-3 py-2 w-full sm:w-28 shrink-0 shadow-sm">
+              <button onclick="changePDPQuantity(-1)" class="w-7 h-7 rounded-full text-brand-charcoal hover:bg-brand-cream hover:text-brand-wine flex items-center justify-center font-bold text-sm transition-colors" title="Giảm số lượng">-</button>
+              <span id="pdp-qty-display" class="font-bold text-xs text-brand-espresso">1</span>
+              <button onclick="changePDPQuantity(1)" class="w-7 h-7 rounded-full text-brand-charcoal hover:bg-brand-cream hover:text-brand-wine flex items-center justify-center font-bold text-sm transition-colors" title="Tăng số lượng">+</button>
+            </div>
+
+            <button 
+              onclick="addCurrentProductToCart()" 
+              class="flex-1 py-4 px-6 bg-brand-wine hover:bg-brand-wineLight text-white font-semibold text-xs tracking-widest uppercase rounded-full shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 group"
+            >
+              <i data-lucide="shopping-bag" class="w-4 h-4 transition-transform group-hover:scale-110"></i>
+              <span>Thêm vào giỏ • <span id="btn-price-calc">679.000đ</span></span>
+            </button>
+            <button 
+              onclick="buyNowDirectly()" 
+              class="sm:w-auto px-8 py-4 bg-brand-gold hover:bg-brand-goldDark text-brand-espresso font-semibold text-xs tracking-widest uppercase rounded-full shadow-sm transition-all text-center font-medium"
+            >
+              Mua ngay
+            </button>
+          </div>
+
+          <!-- ========================================================= -->
+          <!-- NẰM NGAY TRONG CỘT BÊN PHẢI (THEO ĐÚNG Ý KIẾN BẠN CHỌN):   -->
+          <!-- THÁP HƯƠNG 3 TẦNG & THƯỚC ĐO TRỰC QUAN TRỰC TIẾP           -->
+          <!-- ========================================================= -->
+
+          <div class="space-y-6 pt-4 border-t border-brand-sand">
+            
+            <!-- THÁP HƯƠNG 3 TẦNG (SCENT PYRAMID) -->
+            <div class="bg-white rounded-xl p-5 border border-brand-sand/80 shadow-sm space-y-4">
+              <div class="flex items-center justify-between border-b border-brand-sand/60 pb-2.5">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-espresso flex items-center gap-1.5">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-brand-gold"></i>
+                  <span>Tháp hương chi tiết (Fragrance Pyramid)</span>
+                </span>
+                <span id="pdp-pyramid-category" class="text-[11px] text-brand-wine font-semibold">Nhóm: Berry &amp; Woody Vanilla</span>
+              </div>
+
+              <div class="space-y-3">
+                <!-- Top Note -->
+                <div class="flex items-start gap-3">
+                  <div class="w-20 shrink-0">
+                    <span class="text-[11px] font-bold uppercase text-brand-goldDark tracking-wider block">Hương đầu</span>
+                    <span class="text-[9px] text-brand-muted">0 - 15 phút</span>
+                  </div>
+                  <div class="flex-1 bg-brand-cream/80 px-3 py-2 rounded-lg text-xs text-brand-charcoal">
+                    <strong id="pdp-top-notes">Quả mọng đỏ, Quả sung ngọt, Cam Bergamot</strong>
+                    <p id="pdp-top-desc" class="text-[11px] text-brand-muted mt-0.5">Mở đầu ngọt mọng, quyến rũ và ấn tượng khó phai.</p>
+                  </div>
+                </div>
+
+                <!-- Heart Note -->
+                <div class="flex items-start gap-3">
+                  <div class="w-20 shrink-0">
+                    <span class="text-[11px] font-bold uppercase text-brand-wine tracking-wider block">Hương giữa</span>
+                    <span class="text-[9px] text-brand-muted">15p - 3 giờ</span>
+                  </div>
+                  <div class="flex-1 bg-rose-50/50 px-3 py-2 rounded-lg text-xs text-brand-charcoal border border-rose-100">
+                    <strong id="pdp-heart-notes">Hoa hồng Damask, Diên vĩ (Iris Powdery)</strong>
+                    <p id="pdp-heart-desc" class="text-[11px] text-brand-muted mt-0.5">Trái tim kiêu kỳ, phấn thơm mịn như lụa là trên da.</p>
+                  </div>
+                </div>
+
+                <!-- Base Note -->
+                <div class="flex items-start gap-3">
+                  <div class="w-20 shrink-0">
+                    <span class="text-[11px] font-bold uppercase text-brand-espresso tracking-wider block">Hương cuối</span>
+                    <span class="text-[9px] text-brand-muted">3 - 8 giờ+</span>
+                  </div>
+                  <div class="flex-1 bg-brand-cream/80 px-3 py-2 rounded-lg text-xs text-brand-charcoal">
+                    <strong id="pdp-base-notes">Vani gỗ nguyên chất, Gỗ đàn hương, Xạ hương trắng</strong>
+                    <p id="pdp-base-desc" class="text-[11px] text-brand-muted mt-0.5">Lưu lại chiều sâu ấm áp, sang trọng và kiêu sa.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- THƯỚC ĐO TRỰC QUAN (LONGEVITY, SILLAGE, OCCASION, SEASON) -->
+            <div class="bg-white rounded-xl p-5 border border-brand-sand/80 shadow-sm space-y-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-espresso flex items-center gap-1.5 border-b border-brand-sand/60 pb-2.5">
+                <i data-lucide="sliders" class="w-3.5 h-3.5 text-brand-gold"></i>
+                <span>Chỉ số khứu giác &amp; Hoàn cảnh sử dụng</span>
+              </span>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <!-- Độ lưu hương -->
+                <div>
+                  <div class="flex justify-between text-xs mb-1">
+                    <span class="font-medium text-brand-charcoal">Độ lưu hương</span>
+                    <span id="pdp-longevity-text" class="font-bold text-brand-wine">7 – 9 tiếng</span>
+                  </div>
+                  <div class="w-full bg-brand-sand/50 h-2 rounded-full overflow-hidden">
+                    <div id="pdp-longevity-bar" class="bg-brand-wine h-full rounded-full transition-all duration-500" style="width: 85%"></div>
+                  </div>
+                  <p class="text-[10px] text-brand-muted mt-1">Lưu hương tốt trên da và vải áo</p>
+                </div>
+
+                <!-- Độ tỏa hương -->
+                <div>
+                  <div class="flex justify-between text-xs mb-1">
+                    <span class="font-medium text-brand-charcoal">Độ tỏa hương</span>
+                    <span id="pdp-sillage-text" class="font-bold text-brand-wine">1 cánh tay (Vừa phải)</span>
+                  </div>
+                  <div class="w-full bg-brand-sand/50 h-2 rounded-full overflow-hidden">
+                    <div id="pdp-sillage-bar" class="bg-brand-gold h-full rounded-full transition-all duration-500" style="width: 70%"></div>
+                  </div>
+                  <p class="text-[10px] text-brand-muted mt-1">Dịu dàng, không gây gắt nơi văn phòng</p>
+                </div>
+              </div>
+
+              <!-- Badges: Bối cảnh & Mùa -->
+              <div class="pt-2 grid sm:grid-cols-2 gap-3 text-xs">
+                <div>
+                  <span class="text-[11px] font-semibold text-brand-muted block mb-1.5">Bối cảnh lý tưởng:</span>
+                  <div id="pdp-occasions-container" class="flex flex-wrap gap-1.5">
+                    <span class="px-2.5 py-1 bg-brand-beige rounded-md text-brand-espresso font-medium text-[11px]">Hẹn hò lãng mạn</span>
+                    <span class="px-2.5 py-1 bg-brand-beige rounded-md text-brand-espresso font-medium text-[11px]">Công sở</span>
+                    <span class="px-2.5 py-1 bg-brand-beige rounded-md text-brand-espresso font-medium text-[11px]">Tiệc tối</span>
+                  </div>
+                </div>
+                <div>
+                  <span class="text-[11px] font-semibold text-brand-muted block mb-1.5">Mùa thích hợp:</span>
+                  <div id="pdp-seasons-container" class="flex flex-wrap gap-1.5">
+                    <span class="px-2.5 py-1 bg-brand-beige rounded-md text-brand-espresso font-medium text-[11px]">Thu</span>
+                    <span class="px-2.5 py-1 bg-brand-beige rounded-md text-brand-espresso font-medium text-[11px]">Đông</span>
+                    <span class="px-2.5 py-1 bg-brand-beige rounded-md text-brand-espresso font-medium text-[11px]">Xuân</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SMART SAFETY NET CONTAINER: GỢI Ý BỘ MẪU THỬ DISCOVERY SET 89K -->
+            <div class="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200/80 rounded-xl p-4 flex items-center justify-between gap-4 shadow-sm">
+              <div class="space-y-1">
+                <span class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100/80 px-2 py-0.5 rounded">
+                  <i data-lucide="help-circle" class="w-3 h-3 text-amber-700"></i>
+                  Bạn còn đang phân vân?
+                </span>
+                <p class="text-xs font-semibold text-amber-950">
+                  Thử trước <strong>Discovery Set (3 ống x 2ml)</strong> chỉ <span class="text-brand-wine font-bold">89.000đ</span>
+                </p>
+                <p class="text-[11px] text-amber-800">
+                  🎁 Tặng Voucher hoàn 50% (~45k) khi quay lại mua chai 50ml trong vòng 15 ngày!
+                </p>
+              </div>
+              <button 
+                onclick="addDiscoverySetToCart()" 
+                class="shrink-0 px-4 py-2.5 bg-amber-800 hover:bg-amber-900 text-white rounded-lg text-xs font-semibold tracking-wide shadow-sm transition-all"
+              >
+                Thử kit 89k
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FULL COLLECTION SHOWCASE (5 SIGNATURE FRAGRANCES, DUO & DISCOVERY) -->
+    <section id="collection" class="py-20 bg-brand-beige/40 border-t border-brand-sand">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12">
+          <div>
+            <span class="text-xs font-semibold text-brand-wine tracking-[0.25em] uppercase">Bộ sưu tập chủ đạo</span>
+            <h3 class="font-serif text-3xl sm:text-4xl text-brand-espresso mt-1 font-semibold">Những nốt hương De L'amour</h3>
+          </div>
+          <p class="text-xs text-brand-muted max-w-sm mt-2 sm:mt-0">Đầy đủ 2 phiên bản Pocket 10ml tiện lợi và Signature 50ml biểu tượng cho từng xúc cảm.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          
+          <!-- Card 0: Chérie L'amour -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-brand-sand p-4 flex flex-col justify-between group hover:shadow-lg transition-all cursor-pointer" onclick="switchPDPProductAndScroll('cherie')">
+            <div>
+              <div class="relative aspect-square rounded-xl overflow-hidden bg-brand-cream mb-4">
+                <img src="assets/images/Chérie L'amour.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Chérie L'amour">
+                <span class="absolute top-2 left-2 bg-white/90 text-brand-wine text-[10px] font-bold px-2 py-0.5 rounded-full">Berry & Vanilla</span>
+                <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">Xem tháp hương →</span>
+              </div>
+              <h4 class="font-serif text-xl font-semibold text-brand-espresso group-hover:text-brand-wine transition-colors">Chérie L'amour</h4>
+              <p class="text-xs text-brand-muted mt-1">Berry &amp; Woody Vanilla • Quả mọng đỏ, Hoa hồng Iris, Vani gỗ sang trọng.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-brand-sand/60 flex items-center justify-between" onclick="event.stopPropagation()">
+              <div>
+                <span class="text-xs text-brand-muted">10ml từ <strong class="text-brand-charcoal">179k</strong> • 50ml:</span>
+                <span class="text-sm font-bold text-brand-wine ml-1">679.000đ</span>
+              </div>
+              <button onclick="quickAddProduct('Chérie L\'amour', 679000, 'assets/images/Chérie L\'amour.jpg')" class="p-2 rounded-full bg-brand-cream hover:bg-brand-wine hover:text-white transition-colors" title="Thêm chai 50ml vào giỏ">
+                <i data-lucide="plus" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 1: Fleur L'amour -->
+
+          <div class="bg-white rounded-2xl overflow-hidden border border-brand-sand p-4 flex flex-col justify-between group hover:shadow-lg transition-all cursor-pointer" onclick="switchPDPProductAndScroll('fleur')">
+            <div>
+              <div class="relative aspect-square rounded-xl overflow-hidden bg-brand-cream mb-4">
+                <img src="assets/images/Fleur L'amour.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Fleur L'amour">
+                <span class="absolute top-2 left-2 bg-white/90 text-brand-wine text-[10px] font-bold px-2 py-0.5 rounded-full">Fruity Floral</span>
+                <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">Xem tháp hương →</span>
+              </div>
+              <h4 class="font-serif text-xl font-semibold text-brand-espresso group-hover:text-brand-wine transition-colors">Fleur L'amour</h4>
+              <p class="text-xs text-brand-muted mt-1">Peony &amp; White Tea • Hoa mẫu đơn &amp; Trà trắng thanh khiết, Dâu dại ngọt ngào.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-brand-sand/60 flex items-center justify-between" onclick="event.stopPropagation()">
+              <div>
+                <span class="text-xs text-brand-muted">10ml từ <strong class="text-brand-charcoal">179k</strong> • 50ml:</span>
+                <span class="text-sm font-bold text-brand-wine ml-1">549.000đ</span>
+              </div>
+              <button onclick="quickAddProduct('Fleur L\'amour', 549000, 'assets/images/Fleur L\'amour.jpg')" class="p-2 rounded-full bg-brand-cream hover:bg-brand-wine hover:text-white transition-colors" title="Thêm chai 50ml vào giỏ">
+                <i data-lucide="plus" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: L'amour Botanique -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-brand-sand p-4 flex flex-col justify-between group hover:shadow-lg transition-all cursor-pointer" onclick="switchPDPProductAndScroll('botanique')">
+            <div>
+              <div class="relative aspect-square rounded-xl overflow-hidden bg-brand-cream mb-4">
+                <img src="assets/images/L'amour botanique.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="L'amour Botanique">
+                <span class="absolute top-2 left-2 bg-white/90 text-brand-wine text-[10px] font-bold px-2 py-0.5 rounded-full">Fresh Green</span>
+                <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">Xem tháp hương →</span>
+              </div>
+              <h4 class="font-serif text-xl font-semibold text-brand-espresso group-hover:text-brand-wine transition-colors">L'amour Botanique</h4>
+              <p class="text-xs text-brand-muted mt-1">Green Tea &amp; Bergamot • Lá trà xanh tươi mát, Cam Bergamot, Cỏ hương bài.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-brand-sand/60 flex items-center justify-between" onclick="event.stopPropagation()">
+              <div>
+                <span class="text-xs text-brand-muted">10ml từ <strong class="text-brand-charcoal">179k</strong> • 50ml:</span>
+                <span class="text-sm font-bold text-brand-wine ml-1">599.000đ</span>
+              </div>
+              <button onclick="quickAddProduct('L\'amour Botanique', 599000, 'assets/images/L\'amour botanique.jpg')" class="p-2 rounded-full bg-brand-cream hover:bg-brand-wine hover:text-white transition-colors" title="Thêm chai 50ml vào giỏ">
+                <i data-lucide="plus" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: Nuit L'amour -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-brand-sand p-4 flex flex-col justify-between group hover:shadow-lg transition-all cursor-pointer" onclick="switchPDPProductAndScroll('nuit')">
+            <div>
+              <div class="relative aspect-square rounded-xl overflow-hidden bg-brand-cream mb-4">
+                <img src="assets/images/Nuit L'amour.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Nuit L'amour">
+                <span class="absolute top-2 left-2 bg-white/90 text-brand-wine text-[10px] font-bold px-2 py-0.5 rounded-full">Amber Woody</span>
+                <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">Xem tháp hương →</span>
+              </div>
+              <h4 class="font-serif text-xl font-semibold text-brand-espresso group-hover:text-brand-wine transition-colors">Nuit L'amour</h4>
+              <p class="text-xs text-brand-muted mt-1">Warm Wood &amp; Amber • Gỗ ấm, Hổ phách đậm, Trầm hương huyền bí.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-brand-sand/60 flex items-center justify-between" onclick="event.stopPropagation()">
+              <div>
+                <span class="text-xs text-brand-muted">10ml từ <strong class="text-brand-charcoal">179k</strong> • 50ml:</span>
+                <span class="text-sm font-bold text-brand-wine ml-1">599.000đ</span>
+              </div>
+              <button onclick="quickAddProduct('Nuit L\'amour', 599000, 'assets/images/Nuit L\'amour.jpg')" class="p-2 rounded-full bg-brand-cream hover:bg-brand-wine hover:text-white transition-colors" title="Thêm chai 50ml vào giỏ">
+                <i data-lucide="plus" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4: Soleil L'amour -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-brand-sand p-4 flex flex-col justify-between group hover:shadow-lg transition-all cursor-pointer" onclick="switchPDPProductAndScroll('soleil')">
+            <div>
+              <div class="relative aspect-square rounded-xl overflow-hidden bg-brand-cream mb-4">
+                <img src="assets/images/Soleil L'amour.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Soleil L'amour">
+                <span class="absolute top-2 left-2 bg-white/90 text-brand-wine text-[10px] font-bold px-2 py-0.5 rounded-full">Citrus Gourmand</span>
+                <span class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">Xem tháp hương →</span>
+              </div>
+              <h4 class="font-serif text-xl font-semibold text-brand-espresso group-hover:text-brand-wine transition-colors">Soleil L'amour</h4>
+              <p class="text-xs text-brand-muted mt-1">Laurel &amp; Pink Grapefruit • Lá nguyệt quế, Bưởi hồng mọng nước, Vani ngọt dịu.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-brand-sand/60 flex items-center justify-between" onclick="event.stopPropagation()">
+              <div>
+                <span class="text-xs text-brand-muted">10ml từ <strong class="text-brand-charcoal">179k</strong> • 50ml:</span>
+                <span class="text-sm font-bold text-brand-wine ml-1">599.000đ</span>
+              </div>
+              <button onclick="quickAddProduct('Soleil L\'amour', 599000, 'assets/images/Soleil L\'amour.jpg')" class="p-2 rounded-full bg-brand-cream hover:bg-brand-wine hover:text-white transition-colors" title="Thêm chai 50ml vào giỏ">
+                <i data-lucide="plus" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- COMBO ĐẶC BIỆT: POCKET DUO & GIFTING BOX -->
+        <div class="grid md:grid-cols-2 gap-8 mt-12">
+          
+          <!-- Pocket Duo Card -->
+          <div class="bg-white rounded-2xl p-6 border border-brand-sand flex flex-col sm:flex-row items-center gap-6 shadow-sm relative">
+            <!-- Icon nhỏ ở góc phải phía trên -->
+            <div class="absolute top-4 right-4 w-8 h-8 rounded-full bg-brand-cream border border-brand-gold/40 flex items-center justify-center text-brand-gold shadow-sm hover:scale-110 transition-transform" title="Tùy biến Mix &amp; Match">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+            </div>
+
+            <div class="w-full sm:w-44 aspect-square rounded-xl overflow-hidden bg-brand-cream shrink-0">
+              <img src="assets/images/pocketduo.jpg" onerror="this.src='assets/images/pocket duo.jpg'" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Pocket Duo">
+            </div>
+            <div class="space-y-2 pr-6 sm:pr-4">
+              <span class="px-2.5 py-0.5 bg-brand-gold/20 text-brand-wine font-semibold text-[10px] uppercase rounded-full">Tùy biến Mix &amp; Match</span>
+              <h4 class="font-serif text-2xl font-semibold text-brand-espresso">Pocket Duo (Set 2 chai 10ml)</h4>
+              <p class="text-xs text-brand-muted">Tự do chọn 2 mùi hương bất kỳ mang theo túi xách hằng ngày. Tiết kiệm 59.000đ so với mua lẻ.</p>
+              <div class="pt-2 flex items-center gap-4">
+                <span class="text-xl font-serif font-bold text-brand-wine">299.000đ</span>
+                <span class="text-xs text-brand-muted line-through">358.000đ</span>
+                <button onclick="openPocketDuoModal()" class="px-4 py-2 bg-brand-wine text-white rounded-full text-xs font-semibold hover:bg-brand-wineLight transition-colors">
+                  Chọn 2 mùi bất kỳ
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- L'amour Gifting Box Card -->
+          <div class="bg-white rounded-2xl p-6 border border-brand-sand flex flex-col sm:flex-row items-center gap-6 shadow-sm relative">
+            <!-- Icon nhỏ ở góc phải phía trên -->
+            <div class="absolute top-4 right-4 w-8 h-8 rounded-full bg-brand-cream border border-brand-gold/40 flex items-center justify-center text-brand-gold shadow-sm hover:scale-110 transition-transform" title="Hộp quà thượng hạng">
+              <i data-lucide="gift" class="w-4 h-4"></i>
+            </div>
+
+            <div class="w-full sm:w-44 aspect-square rounded-xl overflow-hidden bg-brand-cream shrink-0">
+              <img src="assets/images/giftingbox.jpg" onerror="this.src='assets/images/Giftingbox.jpg'" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="L'amour Gifting Box">
+            </div>
+            <div class="space-y-2 pr-6 sm:pr-4">
+              <span class="px-2.5 py-0.5 bg-rose-100 text-brand-wine font-semibold text-[10px] uppercase rounded-full">Hộp quà thượng hạng</span>
+              <h4 class="font-serif text-2xl font-semibold text-brand-espresso">L'amour Gifting Box</h4>
+              <p class="text-xs text-brand-muted leading-relaxed">
+                Món quà hoàn hảo dành cho bản thân và người thương yêu.<br>
+                <span class="text-brand-charcoal font-medium">Combo hoàn mỹ:</span> 1 chai 50ml tự chọn + Kem dưỡng tay + Hủ sáp thơm phòng
+              </p>
+              <div class="pt-2 flex items-center gap-4">
+                <span class="text-lg sm:text-xl font-serif font-bold text-brand-wine">899.000đ - 1.099.000đ</span>
+                <button onclick="openGiftingBoxModal()" class="px-4 py-2 bg-brand-gold hover:bg-brand-goldDark text-brand-espresso rounded-full text-xs font-semibold transition-colors shadow-sm flex items-center gap-1.5">
+                  <i data-lucide="gift" class="w-3.5 h-3.5"></i>
+                  <span>Gifting Box</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4b. DISCOVERY SET SECTION -->
+    <section id="discovery-set" class="py-20 bg-brand-espresso text-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-14">
+          <span class="text-xs font-semibold text-brand-gold uppercase tracking-[0.25em]">Bắt đầu hành trình hương thơm</span>
+          <h3 class="font-serif text-3xl sm:text-4xl text-white mt-2 font-semibold">Discovery Set</h3>
+          <p class="text-sm text-brand-sand/70 mt-2">Khám phá trước, quyết định sau — không lo chọn sai.</p>
+        </div>
+
+        <!-- Main Card -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          
+          <!-- LEFT: Product Image -->
+          <div class="relative">
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/5] max-w-md mx-auto shadow-2xl border border-white/10">
+              <img 
+                src="assets/images/Discoveryset.jpg" 
+                alt="Discovery Set – Bộ thử trải nghiệm 3 mùi De L'amour" 
+                class="w-full h-full object-cover"
+              />
+              <!-- Overlay badge -->
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-brand-wine text-white text-xs font-bold rounded-full shadow">
+                  <i data-lucide="gift" class="w-3.5 h-3.5"></i>
+                  Bestseller #1
+                </span>
+              </div>
+              <!-- Price floating badge -->
+              <div class="absolute bottom-4 right-4 z-10 bg-brand-gold text-brand-espresso px-4 py-2 rounded-xl shadow-lg">
+                <p class="text-xs font-semibold leading-none">Chỉ từ</p>
+                <p class="text-xl font-serif font-bold">89.000đ</p>
+              </div>
+            </div>
+            <!-- Decorative blur blob -->
+            <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-brand-wine/20 rounded-full blur-3xl pointer-events-none"></div>
+          </div>
+
+          <!-- RIGHT: Product Info -->
+          <div class="space-y-8">
+            
+            <!-- Tag + Title -->
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Discovery Set · 3 ống × 2ml</span>
+              <h4 class="font-serif text-3xl sm:text-4xl text-white font-semibold mt-2 leading-snug">
+                Bộ thử trải nghiệm<br>3 mùi đại diện
+              </h4>
+              <p class="text-brand-sand/80 text-sm mt-3 leading-relaxed">
+                Thử trải nghiệm 3 nốt hương đặc trưng nhất của De L'amour ngay tại nhà — 
+                <strong class="text-white">không lo chọn sai</strong>, không lãng phí ngân sách.
+                Mỗi ống 2ml đủ dùng 7–10 lần xịt để cảm nhận trọn vẹn tháp hương.
+              </p>
+            </div>
+
+            <!-- Price Block -->
+            <div class="flex items-center gap-4 py-4 border-y border-white/15">
+              <span class="text-4xl font-serif font-bold text-brand-gold">89.000đ</span>
+              <div class="text-sm text-brand-sand/70">
+                <p>3 ống × 2ml · Đủ dùng thử 10–15 lần</p>
+                <p class="text-[11px]">Giao nhanh 1–3 ngày toàn quốc</p>
+              </div>
+            </div>
+
+            <!-- Voucher Mechanism -->
+            <div class="bg-white/8 border border-brand-gold/40 rounded-2xl p-6 space-y-5">
+              <div class="flex items-center gap-2 mb-1">
+                <i data-lucide="ticket-percent" class="w-4 h-4 text-brand-gold"></i>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-gold">Cơ chế Voucher đặc biệt</span>
+              </div>
+              <p class="text-xs text-brand-sand/70 -mt-2">Áp dụng trong <strong class="text-white">15 ngày</strong> kể từ ngày mua Discovery Set</p>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <!-- Voucher 1: Pocket 10ml -->
+                <div class="bg-white/10 rounded-xl p-4 border border-white/15 space-y-2">
+                  <div class="flex items-center gap-2">
+                    <span class="px-2 py-0.5 bg-brand-wine rounded-full text-[10px] font-bold text-white uppercase tracking-wide">Pocket 10ml</span>
+                  </div>
+                  <p class="text-2xl font-serif font-bold text-brand-gold">Giảm 30%</p>
+                  <p class="text-[11px] text-brand-sand/70 leading-relaxed">
+                    Tính trên giá mua Discovery Set (89.000đ) → <strong class="text-white">tiết kiệm ~26.700đ</strong> khi nâng cấp lên chai Pocket 10ml.
+                  </p>
+                </div>
+
+                <!-- Voucher 2: Signature 50ml -->
+                <div class="bg-white/10 rounded-xl p-4 border border-brand-gold/30 space-y-2 relative overflow-hidden">
+                  <div class="absolute top-2 right-2">
+                    <span class="px-2 py-0.5 bg-brand-gold text-brand-espresso rounded-full text-[9px] font-bold uppercase">Ưu đãi nhất</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="px-2 py-0.5 bg-brand-goldDark rounded-full text-[10px] font-bold text-white uppercase tracking-wide">Signature 50ml</span>
+                  </div>
+                  <p class="text-2xl font-serif font-bold text-brand-gold">Giảm 50%</p>
+                  <p class="text-[11px] text-brand-sand/70 leading-relaxed">
+                    Tính trên giá mua Discovery Set (89.000đ) → <strong class="text-white">tiết kiệm ~44.500đ</strong> khi nâng cấp lên chai Signature 50ml.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Note -->
+              <div class="flex items-start gap-2 bg-amber-500/10 border border-amber-400/30 rounded-lg px-3 py-2.5">
+                <i data-lucide="info" class="w-3.5 h-3.5 text-amber-400 mt-0.5 shrink-0"></i>
+                <p class="text-[11px] text-amber-200/90 leading-relaxed">
+                  Voucher được gửi qua Zalo ngay sau khi xác nhận đơn hàng Discovery Set. Voucher chỉ áp dụng <strong>1 lần</strong> trong vòng <strong>15 ngày</strong> kể từ ngày mua.
+                </p>
+              </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-3">
+              <button 
+                onclick="addDiscoverySetToCart()" 
+                class="flex-1 py-4 px-6 bg-brand-gold hover:bg-brand-goldDark text-brand-espresso font-bold text-xs tracking-widest uppercase rounded-full shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group"
+              >
+                <i data-lucide="shopping-bag" class="w-4 h-4 transition-transform group-hover:scale-110"></i>
+                <span>Mua Discovery Set · 89.000đ</span>
+              </button>
+              <a href="#collection" class="sm:w-auto px-6 py-4 border border-white/30 hover:bg-white/10 text-white font-medium text-xs tracking-wider uppercase rounded-full transition-all text-center">
+                Xem bộ sưu tập
+              </a>
+            </div>
+
+            <!-- Trust badges -->
+            <div class="flex flex-wrap gap-4 text-xs text-brand-sand/60 pt-2">
+              <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-gold"></i> Đổi trả nếu kích ứng da</span>
+              <span class="flex items-center gap-1.5"><i data-lucide="truck" class="w-3.5 h-3.5 text-brand-gold"></i> Freeship từ 399.000đ</span>
+              <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-brand-gold"></i> Voucher 15 ngày</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SCENT JOURNAL (BLOG / BRAND CONTENT) -->
+    <section id="journal" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-semibold text-brand-wine uppercase tracking-[0.25em]">The Scent Journal</span>
+        <h3 class="font-serif text-3xl sm:text-4xl text-brand-espresso mt-2 font-semibold">Nghệ thuật thưởng hương &amp; Phong cách sống</h3>
+        <p class="text-xs text-brand-muted mt-2">Bí quyết lưu hương trọn vẹn và cách tìm kiếm nốt hương định hình thần thái riêng bạn.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <article class="group cursor-pointer">
+          <div class="aspect-[16/10] rounded-xl overflow-hidden bg-brand-sand mb-4">
+            <img src="https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Blog 1">
+          </div>
+          <span class="text-[11px] text-brand-goldDark font-semibold uppercase tracking-wider">Bí quyết ủ hương</span>
+          <h4 class="font-serif text-xl font-medium text-brand-espresso group-hover:text-brand-wine transition-colors mt-1">Cách xịt nước hoa để lưu hương từ 8–10 tiếng trên da</h4>
+          <p class="text-xs text-brand-muted mt-2 line-clamp-2">Những điểm mạch ấm trên cơ thể và kỹ thuật xịt tạo màn sương giúp hạt hương bám tỏa tinh tế nhất.</p>
+        </article>
+
+        <article class="group cursor-pointer">
+          <div class="aspect-[16/10] rounded-xl overflow-hidden bg-brand-sand mb-4">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Blog 2">
+          </div>
+          <span class="text-[11px] text-brand-goldDark font-semibold uppercase tracking-wider">Phong cách Parisian</span>
+          <h4 class="font-serif text-xl font-medium text-brand-espresso group-hover:text-brand-wine transition-colors mt-1">Học phụ nữ Pháp yêu bản thân từ những điều nhỏ nhất</h4>
+          <p class="text-xs text-brand-muted mt-2 line-clamp-2">Nước hoa không phải để gây ấn tượng với ai khác, mà là một lời nhắn nhủ yêu thương chính mình mỗi sớm mai.</p>
+        </article>
+
+        <article class="group cursor-pointer">
+          <div class="aspect-[16/10] rounded-xl overflow-hidden bg-brand-sand mb-4">
+            <img src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Blog 3">
+          </div>
+          <span class="text-[11px] text-brand-goldDark font-semibold uppercase tracking-wider">Scent Layering</span>
+          <h4 class="font-serif text-xl font-medium text-brand-espresso group-hover:text-brand-wine transition-colors mt-1">Nghệ thuật phối 2 mùi hương (Layering) tạo dấu ấn độc bản</h4>
+          <p class="text-xs text-brand-muted mt-2 line-clamp-2">Cách kết hợp nốt Cam Chanh thanh khiết cùng Gỗ Hổ Phách ấm áp để không bao giờ "đụng hàng".</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="about" class="bg-brand-espresso text-brand-sand py-16 border-t border-brand-sand/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        
+        <!-- Brand Info -->
+        <div class="md:col-span-1 space-y-4">
+          <h3 class="font-serif text-2xl tracking-[0.15em] text-white uppercase">De L'amour</h3>
+          <p class="text-xs text-brand-sand/70 leading-relaxed font-light">
+            Thương hiệu nước hoa cảm xúc mang tinh thần lãng mạn kiểu Pháp và thông điệp yêu thương chính bản thân (The Art of Self-Love).
+          </p>
+          <div class="flex items-center gap-3 text-brand-sand/60">
+            <a href="#" class="hover:text-white"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+            <a href="#" class="hover:text-white"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+            <a href="#" class="hover:text-white"><i data-lucide="music-2" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <!-- Collections -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-white mb-4">Bộ sưu tập</h4>
+          <ul class="space-y-2 text-xs text-brand-sand/70">
+            <li><a href="#" class="hover:text-white">Signature 50ml</a></li>
+            <li><a href="#" class="hover:text-white">Pocket Perfume 10ml</a></li>
+            <li><a href="#" class="hover:text-white">Pocket Duo Tự chọn</a></li>
+            <li><a href="#" class="hover:text-white">Discovery Kit 3x2ml (89k)</a></li>
+            <li><a href="#" class="hover:text-white">L'amour Gifting Box</a></li>
+          </ul>
+        </div>
+
+        <!-- Policies -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-white mb-4">Dịch vụ &amp; Chính sách</h4>
+          <ul class="space-y-2 text-xs text-brand-sand/70">
+            <li><a href="#" class="hover:text-white">Dịch vụ khắc tên Live Preview</a></li>
+            <li><a href="#" class="hover:text-white">Gói quà thắt nơ &amp; Thiệp viết tay</a></li>
+            <li><a href="#" class="hover:text-white">Chính sách Voucher hoàn tiền 15 ngày</a></li>
+            <li><a href="#" class="hover:text-white">Chính sách đổi trả dịu nhẹ da</a></li>
+            <li><a href="#" class="hover:text-white">Kiểm tra đơn hàng (Zalo ZNS)</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter & Contact -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-white mb-4">Nhận thông điệp hương thơm</h4>
+          <p class="text-xs text-brand-sand/70 mb-3">Đăng ký để nhận ưu đãi thành viên và câu chuyện mùi hương mới nhất.</p>
+          <div class="flex gap-2">
+            <input type="email" placeholder="Email của bạn..." class="px-3 py-2 text-xs bg-white/10 rounded-lg border border-white/20 text-white placeholder-brand-sand/50 flex-1 focus:outline-none focus:border-brand-gold">
+            <button class="px-4 py-2 bg-brand-gold text-brand-espresso text-xs font-bold rounded-lg hover:bg-brand-goldDark transition-colors">Gửi</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-sand/50">
+        <p>© 2026 De L'amour Paris. All rights reserved.</p>
+        <p>Digital Flagship Store • Thiết kế chuẩn UI/UX Stitch</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: POCKET DUO SCENT SELECTOR (CHỌN 2 MÙI BẤT KỲ DẠNG 10ML)           -->
+  <!-- ========================================================================= -->
+  <div id="pocketduo-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-3 sm:p-4">
+    <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl border border-brand-sand overflow-hidden relative max-h-[92vh] flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="p-5 sm:p-6 border-b border-brand-sand/80 bg-brand-cream/60 flex items-center justify-between">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="px-2.5 py-0.5 bg-brand-gold/20 text-brand-wine font-semibold text-[10px] uppercase rounded-full tracking-wider">Tùy biến Mix &amp; Match</span>
+            <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">Tiết kiệm 59.000đ</span>
+          </div>
+          <h3 class="font-serif text-2xl text-brand-espresso font-semibold">Chọn 2 Mùi Hương Pocket Duo</h3>
+          <p class="text-xs text-brand-muted mt-0.5">Tự do chọn 2 chai 10ml tùy thích (có thể chọn 1 mùi 2 lần).</p>
+        </div>
+        <button onclick="closePocketDuoModal()" class="p-2 text-brand-muted hover:text-brand-wine hover:bg-white rounded-full transition-colors" title="Đóng">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-5 sm:p-6 overflow-y-auto flex-1 space-y-5">
+        
+        <!-- Slot Tracker: Hiển thị trực quan 2 vị trí chai -->
+        <div class="bg-brand-cream/70 rounded-xl p-4 border border-brand-sand/80">
+          <div class="flex items-center justify-between text-xs mb-3">
+            <span class="font-bold text-brand-espresso flex items-center gap-1.5">
+              <i data-lucide="sparkles" class="w-4 h-4 text-brand-gold"></i>
+              <span>Set của bạn:</span>
+              <span id="pocketduo-counter-badge" class="px-2 py-0.5 bg-brand-wine text-white rounded-full text-[11px] font-semibold">0/2 chai</span>
+            </span>
+            <span id="pocketduo-status-hint" class="text-[11px] text-brand-muted font-medium">Nhấp chọn 2 chai từ danh sách bên dưới</span>
+          </div>
+
+          <!-- 2 Slots Container -->
+          <div class="grid grid-cols-2 gap-3" id="pocketduo-slots-grid">
+            <!-- Rendered by JS: Slot 1 & Slot 2 -->
+          </div>
+        </div>
+
+        <!-- 5 Scents Selector Menu -->
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="text-xs uppercase font-bold text-brand-espresso tracking-wider">Menu 5 Mùi Hương (Chai 10ml)</h4>
+            <span class="text-[11px] text-brand-muted">Chọn 2 chai bất kỳ</span>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3" id="pocketduo-scents-grid">
+            <!-- Rendered by JS: 5 cards with 10ml bottles -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 sm:p-5 border-t border-brand-sand/80 bg-brand-cream/40 flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <div class="flex items-baseline gap-2">
+            <span class="text-2xl font-serif font-bold text-brand-wine">299.000đ</span>
+            <span class="text-xs text-brand-muted line-through">358.000đ</span>
+          </div>
+          <p class="text-[11px] text-emerald-700 font-medium">Combo 2 chai 10ml • Tiết kiệm 59.000đ</p>
+        </div>
+
+        <div class="flex items-center gap-2.5">
+          <button onclick="closePocketDuoModal()" class="px-4 py-2.5 rounded-xl border border-brand-sand text-xs font-semibold text-brand-charcoal hover:bg-white transition-colors">
+            Hủy
+          </button>
+          <button 
+            id="btn-pocketduo-submit"
+            onclick="submitPocketDuoToCart()" 
+            disabled 
+            class="px-6 py-2.5 rounded-xl text-xs font-semibold bg-brand-sand text-brand-muted cursor-not-allowed opacity-60 transition-all flex items-center gap-2"
+          >
+            <span>Vui lòng chọn 2 chai (0/2)</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: L'AMOUR GIFTING BOX SCENT SELECTOR (CHỌN CHAI 50ML KÈM BOX)        -->
+  <!-- ========================================================================= -->
+  <div id="giftingbox-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-3 sm:p-4">
+    <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl border border-brand-sand overflow-hidden relative max-h-[92vh] flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="p-5 sm:p-6 border-b border-brand-sand/80 bg-brand-cream/60 flex items-center justify-between">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="px-2.5 py-0.5 bg-rose-100 text-brand-wine font-semibold text-[10px] uppercase rounded-full tracking-wider">Hộp quà thượng hạng</span>
+            <span class="text-xs font-semibold text-brand-goldDark bg-brand-gold/10 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+              <i data-lucide="gift" class="w-3.5 h-3.5 text-brand-gold"></i>
+              Gifting Box
+            </span>
+          </div>
+          <h3 class="font-serif text-2xl text-brand-espresso font-semibold">Tùy Chọn Mùi Hương Cho Gifting Box</h3>
+          <p class="text-xs text-brand-muted mt-0.5">Chọn 1 chai nước hoa 50ml để hoàn thiện bộ quà tặng sang trọng.</p>
+        </div>
+        <button onclick="closeGiftingBoxModal()" class="p-2 text-brand-muted hover:text-brand-wine hover:bg-white rounded-full transition-colors" title="Đóng">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-5 sm:p-6 overflow-y-auto flex-1 space-y-5">
+        
+        <!-- Box Combo Highlight Banner -->
+        <div class="bg-brand-cream/70 rounded-xl p-4 border border-brand-sand/80 flex items-center gap-4 shadow-sm">
+          <img src="assets/images/giftingbox.jpg" onerror="this.src='assets/images/Giftingbox.jpg'" class="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-xl border border-brand-sand shrink-0 shadow-sm" alt="Gifting Box Preview">
+          <div class="space-y-1 text-xs">
+            <span class="font-bold text-brand-espresso text-sm block">Trọn Bộ Quà Tặng L'amour Gifting Box:</span>
+            <ul class="text-brand-muted space-y-0.5 text-[11px]">
+              <li>✨ <strong class="text-brand-wine" id="giftingbox-selected-title">Chai 50ml: Fleur L'amour</strong></li>
+              <li>🧴 1 tuýp Kem dưỡng tay hương nước hoa cao cấp</li>
+              <li>🕯️ 1 hũ Sáp thơm phòng thư giãn De L'amour</li>
+              <li>🎁 Hộp quà nam châm sang trọng thắt nơ lụa &amp; thiệp chúc</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5 Scents Selector Menu (50ml) -->
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="text-xs uppercase font-bold text-brand-espresso tracking-wider">Chọn 1 Chai Nước Hoa (Dung tích 50ml)</h4>
+            <span id="giftingbox-scent-hint" class="text-[11px] text-brand-muted font-medium">Nhấp vào chai để đổi giá box</span>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3" id="giftingbox-scents-grid">
+            <!-- Rendered by JS: 5 cards with 50ml bottles, price for box, and hashtag bestseller -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 sm:p-5 border-t border-brand-sand/80 bg-brand-cream/40 flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <div class="flex items-baseline gap-2">
+            <span id="giftingbox-display-price" class="text-2xl font-serif font-bold text-brand-wine">899.000đ</span>
+            <span id="giftingbox-original-price" class="text-xs text-brand-muted line-through">1.190.000đ</span>
+          </div>
+          <p id="giftingbox-savings-text" class="text-[11px] text-emerald-700 font-medium">Tiết kiệm 291.000đ cho trọn bộ quà tặng</p>
+        </div>
+
+        <div class="flex items-center gap-2.5">
+          <button onclick="closeGiftingBoxModal()" class="px-4 py-2.5 rounded-xl border border-brand-sand text-xs font-semibold text-brand-charcoal hover:bg-white transition-colors">
+            Hủy
+          </button>
+          <button 
+            id="btn-giftingbox-submit"
+            onclick="submitGiftingBoxToCart()" 
+            class="px-6 py-2.5 rounded-xl text-xs font-semibold bg-brand-wine hover:bg-brand-wineLight text-white shadow-lg cursor-pointer transform hover:scale-[1.02] transition-all flex items-center gap-2"
+          >
+            <span>Thêm Box Vào Giỏ Hàng (899.000đ)</span>
+            <i data-lucide="check" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: SCENT QUIZ (3-4 CÂU HỎI + 70% REVEAL + GATE MỞ 30% QUA ZALO ZNS)  -->
+  <!-- ========================================================================= -->
+  <div id="quiz-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-brand-cream w-full max-w-xl rounded-2xl shadow-2xl border border-brand-sand overflow-hidden relative max-h-[90vh] flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="p-6 border-b border-brand-sand/80 flex items-center justify-between bg-white">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-brand-goldDark">Scent Discovery Engine</span>
+          <h3 class="font-serif text-2xl text-brand-espresso font-semibold">Tìm Mùi Hương Chân Ái Của Bạn</h3>
+        </div>
+        <button onclick="closeQuizModal()" class="p-2 text-brand-muted hover:text-brand-wine rounded-full">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Quiz Body: Dynamic Questions or Result -->
+      <div id="quiz-content" class="p-6 overflow-y-auto flex-1 space-y-6">
+        
+        <!-- STEP INDICATOR -->
+        <div id="quiz-step-indicator" class="flex items-center justify-between text-xs font-medium text-brand-muted">
+          <span>Câu hỏi <span id="quiz-current-step">1</span> / 4</span>
+          <div class="w-32 bg-brand-sand h-1.5 rounded-full overflow-hidden">
+            <div id="quiz-progress-bar" class="bg-brand-wine h-full transition-all duration-300" style="width: 25%"></div>
+          </div>
+        </div>
+
+        <!-- QUESTION CONTAINER -->
+        <div id="quiz-question-container" class="space-y-4">
+          <h4 id="quiz-question-title" class="font-serif text-xl text-brand-espresso font-medium">
+            1. Bạn muốn mùi hương mang lại cho mình cảm xúc nào nhất?
+          </h4>
+          <div id="quiz-options-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- MÀN HÌNH KẾT QUẢ: 70% HIỂN THỊ + GATE MỞ 30% CÒN LẠI       -->
+        <!-- ======================================================== -->
+        <div id="quiz-result-container" class="hidden space-y-6">
+          
+          <!-- 70% REVEAL: HIỂN THỊ NGAY TRÊN MÀN HÌNH -->
+          <div class="bg-white p-5 rounded-xl border border-brand-sand shadow-sm space-y-4">
+            <div class="flex items-center justify-between">
+              <span id="quiz-compat-badge" class="text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full">Độ tương thích 98%</span>
+              <span class="text-xs text-brand-muted">Kết quả phân tích khứu giác</span>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <img id="quiz-result-img" src="assets/images/Chérie L'amour.jpg" class="w-20 h-24 object-cover rounded-lg border border-brand-sand shrink-0 shadow-sm" alt="Matched Scent">
+              <div>
+                <h4 id="quiz-result-title" class="font-serif text-2xl font-bold text-brand-wine">Chérie L'amour</h4>
+                <p id="quiz-result-category" class="text-xs text-brand-muted">Berry &amp; Woody Vanilla</p>
+                <p id="quiz-result-desc" class="text-xs text-brand-charcoal mt-1 line-clamp-2">
+                  Ngọt ngào, kiêu kỳ và ấm áp. Rất phù hợp với phong cách thanh lịch và mong muốn cảm nhận sự tự tin từ chính bản thân.
+                </p>
+              </div>
+            </div>
+
+            <!-- Tháp hương tóm tắt (Trong 70%) -->
+            <div class="grid grid-cols-3 gap-2 text-center text-xs bg-brand-cream/80 p-2.5 rounded-lg border border-brand-sand/50">
+              <div>
+                <span class="text-[10px] text-brand-muted block">Hương đầu</span>
+                <span id="quiz-top-notes" class="font-semibold text-brand-charcoal text-[11px] truncate block">Cam &amp; Lê</span>
+              </div>
+              <div>
+                <span class="text-[10px] text-brand-muted block">Hương giữa</span>
+                <span id="quiz-heart-notes" class="font-semibold text-brand-wine text-[11px] truncate block">Hoa hồng Iris</span>
+              </div>
+              <div>
+                <span class="text-[10px] text-brand-muted block">Hương cuối</span>
+                <span id="quiz-base-notes" class="font-semibold text-brand-charcoal text-[11px] truncate block">Gỗ &amp; Xạ hương</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 30% LOCKED GATE: THU THẬP SĐT / ZALO ĐỂ GỬI SCENT PROFILE VÀ VOUCHER HOÀN TIỀN -->
+          <div id="quiz-lead-gate" class="bg-gradient-to-br from-brand-beige to-amber-50 p-5 rounded-xl border border-brand-gold/60 space-y-3 relative overflow-hidden">
+            <div class="flex items-start gap-3">
+              <div class="p-2 bg-brand-wine text-white rounded-lg shrink-0">
+                <i data-lucide="lock" class="w-4 h-4 text-brand-gold"></i>
+              </div>
+              <div>
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-wine">Mở khóa 30% Scent Profile chuyên sâu</h5>
+                <p class="text-xs text-brand-charcoal mt-0.5">
+                  Nhận bí quyết phối đồ với mùi hương, thời điểm xịt lý tưởng và <strong>Mã Voucher Hoàn Tiền 50%</strong> gửi riêng vào Zalo của bạn.
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-2 pt-2">
+              <input type="text" id="quiz-lead-name" placeholder="Họ và tên của bạn" class="w-full px-3 py-2 text-xs bg-white border border-brand-sand rounded-lg focus:outline-none focus:border-brand-wine">
+              <input type="tel" id="quiz-lead-phone" placeholder="Số điện thoại Zalo để nhận Scent Profile & Voucher" class="w-full px-3 py-2 text-xs bg-white border border-brand-sand rounded-lg focus:outline-none focus:border-brand-wine">
+              <button onclick="submitQuizLead()" class="w-full py-2.5 bg-brand-wine hover:bg-brand-wineLight text-white rounded-lg text-xs font-semibold tracking-wider uppercase transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                <span>Mở khóa &amp; Nhận qua Zalo ZNS</span>
+                <i data-lucide="send" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- UNLOCKED 30% PROFILE (HIỂN THỊ SAU KHI NHẬP THÔNG TIN) -->
+          <div id="quiz-unlocked-section" class="hidden bg-emerald-50 border border-emerald-200 p-4 rounded-xl text-xs space-y-3">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <p class="font-bold text-emerald-900 flex items-center gap-1.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>
+                  <span>Đã mở khóa Scent Profile &amp; Voucher thành công!</span>
+                </p>
+                <p class="text-[11px] text-emerald-800 mt-0.5">
+                  Voucher hoàn tiền đã được cấp và gửi đến Zalo của bạn:
+                </p>
+              </div>
+              <button onclick="copyQuizVoucher()" class="px-2.5 py-1 bg-white hover:bg-emerald-100 border border-emerald-300 rounded font-mono font-bold text-emerald-800 text-xs shadow-sm flex items-center gap-1 transition-colors" title="Sao chép mã">
+                <span id="quiz-voucher-code">DELAMOUR50</span>
+                <i data-lucide="copy" class="w-3 h-3 text-emerald-600"></i>
+              </button>
+            </div>
+            <div class="bg-white/80 p-2.5 rounded-lg border border-emerald-200/60 space-y-1">
+              <p class="text-[11px] text-brand-espresso font-semibold">Bí quyết ủ hương cá nhân hóa dành riêng cho bạn:</p>
+              <p id="quiz-unlocked-tips" class="text-[11px] text-brand-muted leading-relaxed">
+                Xịt 2 shot vào cổ áo và sau gáy lúc 8h sáng, dặm lại bằng chai Pocket 10ml sau 14h chiều.
+              </p>
+            </div>
+          </div>
+
+          <!-- DUAL PURCHASE CALL TO ACTION -->
+          <div class="space-y-3 pt-2">
+            <button id="btn-quiz-buy-50ml" onclick="addQuizResultToCart()" class="w-full py-3 bg-brand-wine text-white font-semibold text-xs tracking-wider uppercase rounded-full shadow-md hover:bg-brand-wineLight transition-colors">
+              Sở hữu ngay Signature 50ml (679.000đ)
+            </button>
+
+            <!-- SMART SAFETY NET -->
+            <div class="text-center p-3 rounded-xl bg-brand-sand/30 border border-brand-sand">
+              <p class="text-xs text-brand-charcoal">
+                Vẫn muốn ngửi thử trước trên da?
+              </p>
+              <button onclick="addDiscoverySetToCart()" class="mt-1 text-xs font-bold text-brand-wine underline hover:text-brand-wineLight">
+                Đặt ngay Discovery Kit (3x2ml) chỉ 89k + Voucher hoàn 50% →
+              </button>
+            </div>
+
+            <!-- NÚT LÀM LẠI QUIZ -->
+            <button onclick="retakeQuiz()" class="w-full py-2.5 bg-transparent hover:bg-brand-sand/40 text-brand-charcoal border border-brand-sand rounded-full text-xs font-medium tracking-wider transition-colors flex items-center justify-center gap-1.5">
+              <i data-lucide="rotate-ccw" class="w-3.5 h-3.5 text-brand-wine"></i>
+              <span>Làm lại bài trắc nghiệm (Thử phong cách khác)</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- CART DRAWER (GIỎ HÀNG TRƯỢT TỪ BÊN PHẢI VỚI FREESHIP 399K & UPSELL 99K)   -->
+  <!-- ========================================================================= -->
+  <div id="cart-drawer-backdrop" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden transition-opacity" onclick="toggleCartDrawer(false)"></div>
+  
+  <aside id="cart-drawer" class="fixed top-0 right-0 bottom-0 z-50 w-full max-w-md bg-brand-cream border-l border-brand-sand shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+    
+    <!-- Drawer Header -->
+    <div class="p-5 border-b border-brand-sand/80 bg-white flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i data-lucide="shopping-bag" class="w-5 h-5 text-brand-wine"></i>
+        <h3 class="font-serif text-xl font-bold text-brand-espresso">Giỏ Hàng Của Bạn</h3>
+        <span id="cart-count-title" class="text-xs bg-brand-sand/70 px-2 py-0.5 rounded-full font-medium">1</span>
+      </div>
+      <button onclick="toggleCartDrawer(false)" class="p-1.5 text-brand-muted hover:text-brand-wine rounded-full">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- FREESHIP PROGRESS BAR (NGƯỠNG 399K) -->
+    <div class="p-4 bg-brand-beige border-b border-brand-sand/80 space-y-2">
+      <div class="flex items-center justify-between text-xs">
+        <span id="freeship-status-text" class="font-semibold text-brand-espresso">
+          Mua thêm 0đ để nhận Freeship toàn quốc!
+        </span>
+        <i data-lucide="truck" class="w-4 h-4 text-brand-gold"></i>
+      </div>
+      <div class="w-full bg-white h-2 rounded-full overflow-hidden border border-brand-sand">
+        <div id="freeship-bar" class="bg-brand-wine h-full transition-all duration-300" style="width: 100%"></div>
+      </div>
+
+      <!-- Quick Add 69k product when cart is below 399k -->
+      <div id="quick-add-69k-banner" class="hidden pt-1 flex items-center justify-between text-xs bg-white p-2 rounded-lg border border-brand-sand">
+        <span class="text-[11px] text-brand-charcoal">Thêm <strong>Sáp thơm phòng 69k</strong> để freeship:</span>
+        <button onclick="quickAdd69kItem()" class="px-2.5 py-1 bg-brand-gold hover:bg-brand-goldDark text-brand-espresso font-bold text-[10px] rounded transition-colors">
+          + Thêm 69k
+        </button>
+      </div>
+    </div>
+
+    <!-- Cart Items Scrollable List -->
+    <div id="cart-items-list" class="flex-1 overflow-y-auto p-4 space-y-4">
+      <!-- Item template inserted by JS -->
+    </div>
+
+    <!-- SMART UPSELL BANNER (KHI CÓ CHAI 50ML TRONG GIỎ: UPSELL POCKET 10ML GIÁ 99K) -->
+    <div id="upsell-10ml-container" class="p-3 mx-4 bg-rose-50 border border-rose-200 rounded-xl space-y-2">
+      <div class="flex items-center justify-between">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-brand-wine bg-white px-2 py-0.5 rounded">Đặc quyền mua kèm</span>
+        <span class="text-[11px] font-bold text-brand-wine">99.000đ <span class="line-through text-brand-muted text-[10px]">179.000đ</span></span>
+      </div>
+      <div class="flex items-center justify-between gap-3">
+        <p class="text-xs text-brand-charcoal leading-tight">
+          Thêm 1 chai <strong>Pocket 10ml</strong> cùng mùi tiện lợi bỏ túi đi làm.
+        </p>
+        <button onclick="addUpsell10ml()" class="shrink-0 px-3 py-1.5 bg-brand-wine hover:bg-brand-wineLight text-white text-xs font-semibold rounded-lg transition-colors">
+          + Thêm 99k
+        </button>
+      </div>
+    </div>
+
+    <!-- Drawer Footer: Subtotal & Checkout -->
+    <div class="p-5 border-t border-brand-sand bg-white space-y-3">
+      
+      <!-- Cảnh báo phương thức thanh toán nếu có khắc tên / gói quà -->
+      <div id="cart-payment-restriction-notice" class="hidden p-2.5 bg-amber-50 border border-amber-200 rounded-lg text-[11px] text-amber-900 flex items-start gap-2">
+        <i data-lucide="info" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i>
+        <span>Đơn hàng có <strong>Khắc tên / Gói quà</strong> yêu cầu thanh toán chuyển khoản trước (Không COD).</span>
+      </div>
+
+      <div class="flex items-center justify-between text-sm">
+        <span class="text-brand-muted">Tạm tính:</span>
+        <span id="cart-subtotal" class="font-serif text-2xl font-bold text-brand-wine">699.000đ</span>
+      </div>
+
+      <button onclick="openCheckoutModal()" class="w-full py-4 bg-brand-wine hover:bg-brand-wineLight text-white font-semibold text-xs tracking-widest uppercase rounded-full shadow-md transition-all flex items-center justify-center gap-2">
+        <span>Tiến hành thanh toán</span>
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </button>
+
+      <p class="text-center text-[10px] text-brand-muted">
+        Hỗ trợ Mua hàng nhanh (Guest Checkout) không cần mật khẩu
+      </p>
+    </div>
+
+  </aside>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: 1-PAGE FAST CHECKOUT (GUEST CHECKOUT & AUTO LOCK COD CHO CUSTOM)  -->
+  <!-- ========================================================================= -->
+  <div id="checkout-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-brand-cream w-full max-w-2xl rounded-2xl shadow-2xl border border-brand-sand overflow-hidden relative max-h-[92vh] flex flex-col">
+      
+      <div class="p-5 border-b border-brand-sand/80 bg-white flex items-center justify-between">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-brand-wine">Thanh toán nhanh 1 bước</span>
+          <h3 class="font-serif text-2xl text-brand-espresso font-semibold">Thông Tin Đơn Hàng</h3>
+        </div>
+        <button onclick="closeCheckoutModal()" class="p-2 text-brand-muted hover:text-brand-wine rounded-full">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-6 overflow-y-auto flex-1 space-y-6">
+        
+        <!-- Khách hàng thông tin -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-brand-espresso flex items-center gap-1.5">
+            <i data-lucide="user" class="w-4 h-4 text-brand-gold"></i>
+            <span>1. Thông tin giao hàng (Guest Checkout)</span>
+          </h4>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <input type="text" id="order-name" value="Nguyễn Hoàng Lan" placeholder="Họ và tên người nhận" class="px-3.5 py-2.5 text-xs bg-white border border-brand-sand rounded-lg focus:outline-none focus:border-brand-wine">
+            <input type="tel" id="order-phone" value="0912 345 678" placeholder="Số điện thoại / Zalo nhận thông báo" class="px-3.5 py-2.5 text-xs bg-white border border-brand-sand rounded-lg focus:outline-none focus:border-brand-wine">
+          </div>
+          <input type="text" id="order-address" value="Landmark 81, P. 22, Bình Thạnh, TP. Hồ Chí Minh" placeholder="Địa chỉ chi tiết (Số nhà, tên đường, phường/xã...)" class="w-full px-3.5 py-2.5 text-xs bg-white border border-brand-sand rounded-lg focus:outline-none focus:border-brand-wine">
+        </div>
+
+        <!-- Mã ưu đãi / Voucher hoàn tiền -->
+        <div class="bg-white p-3.5 rounded-xl border border-brand-sand/80 space-y-2">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-brand-espresso flex items-center gap-1.5">
+              <i data-lucide="ticket" class="w-4 h-4 text-brand-gold"></i>
+              <span>2. Mã ưu đãi / Voucher</span>
+            </span>
+            <span id="voucher-applied-badge" class="hidden text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">
+              -50.000đ từ Voucher
+            </span>
+          </div>
+          <div class="flex gap-2">
+            <input type="text" id="checkout-voucher-input" placeholder="Nhập mã (VD: DELAMOUR50)" class="flex-1 px-3 py-2 text-xs bg-brand-cream/40 border border-brand-sand rounded-lg uppercase tracking-wider font-mono focus:outline-none focus:border-brand-wine">
+            <button type="button" onclick="applyCheckoutVoucher()" class="px-4 py-2 bg-brand-wine hover:bg-brand-wineLight text-white rounded-lg text-xs font-semibold transition-colors shrink-0">
+              Áp dụng
+            </button>
+          </div>
+          <p id="voucher-message" class="text-[11px] text-emerald-700 hidden font-medium"></p>
+        </div>
+
+        <!-- Phương thức thanh toán -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-brand-espresso flex items-center gap-1.5">
+            <i data-lucide="credit-card" class="w-4 h-4 text-brand-gold"></i>
+            <span>3. Phương thức thanh toán</span>
+          </h4>
+
+          <div class="space-y-2">
+            <!-- VietQR -->
+            <label class="flex items-center justify-between p-3 bg-white rounded-lg border-2 border-brand-wine cursor-pointer">
+              <div class="flex items-center gap-3">
+                <input type="radio" name="payment_method" value="vietqr" checked onchange="handlePaymentMethodChange(this.value)" class="text-brand-wine focus:ring-brand-wine">
+                <span class="text-xs font-semibold text-brand-charcoal">Quét mã VietQR tự động (Khuyên dùng)</span>
+              </div>
+              <span class="text-[10px] bg-emerald-50 text-emerald-800 font-bold px-2 py-0.5 rounded">Khớp tự động</span>
+            </label>
+
+            <!-- MoMo / VNPay -->
+            <label class="flex items-center justify-between p-3 bg-white rounded-lg border border-brand-sand cursor-pointer">
+              <div class="flex items-center gap-3">
+                <input type="radio" name="payment_method" value="momo" onchange="handlePaymentMethodChange(this.value)" class="text-brand-wine">
+                <span class="text-xs font-semibold text-brand-charcoal">Ví MoMo / Cổng VNPay</span>
+              </div>
+              <i data-lucide="smartphone" class="w-4 h-4 text-brand-muted"></i>
+            </label>
+
+            <!-- COD (Thanh toán khi nhận hàng) - Sẽ bị vô hiệu hóa nếu có đơn khắc tên / gói quà -->
+            <label id="payment-opt-cod" class="flex items-center justify-between p-3 bg-white rounded-lg border border-brand-sand cursor-pointer">
+              <div class="flex items-center gap-3">
+                <input type="radio" id="radio-cod" name="payment_method" value="cod" onchange="handlePaymentMethodChange(this.value)" class="text-brand-wine">
+                <span id="label-cod" class="text-xs font-semibold text-brand-charcoal">Thanh toán khi nhận hàng (COD)</span>
+              </div>
+              <span id="badge-cod-lock" class="hidden text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">
+                Khóa do có Khắc tên/Gói quà
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Dynamic VietQR Box Preview -->
+        <div id="vietqr-preview-box" class="bg-brand-sand/30 border border-brand-sand rounded-xl p-4 flex flex-col sm:flex-row items-center gap-4">
+          <div class="w-32 h-32 bg-white p-2 rounded-lg border border-brand-sand flex items-center justify-center shrink-0 shadow-sm relative">
+            <img id="vietqr-code-img" src="https://img.vietqr.io/image/MB-8888666999-compact2.png?amount=679000&addInfo=DELAMOUR%20DL9281&accountName=CTY%20DE%20LAMOUR%20VIETNAM" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=DELAMOUR_ORDER_679K'" class="w-full h-full object-contain" alt="Mã VietQR thanh toán">
+          </div>
+          <div class="space-y-1.5 text-xs text-brand-charcoal w-full">
+            <div class="flex items-center justify-between">
+              <p class="font-bold text-brand-wine">Ngân hàng MB Bank</p>
+              <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-medium">Napas 247</span>
+            </div>
+            <div class="flex items-center justify-between bg-white/80 p-1.5 rounded border border-brand-sand/60">
+              <span>STK: <strong id="vietqr-acc-num" class="font-mono text-brand-espresso">8888 666 999</strong></span>
+              <button onclick="copyToClipboard('8888666999', 'Đã sao chép số tài khoản!')" class="text-brand-wine hover:text-brand-wineLight text-[11px] font-semibold flex items-center gap-1">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i> Chép
+              </button>
+            </div>
+            <p class="text-[11px] text-brand-muted">Chủ TK: <strong>CTY DE L'AMOUR VIETNAM</strong></p>
+            <p>Số tiền: <strong id="checkout-total-text" class="text-brand-wine font-bold">679.000đ</strong></p>
+            <div class="flex items-center justify-between bg-white/80 p-1.5 rounded border border-brand-sand/60">
+              <span class="text-[11px] text-brand-muted">Cú pháp: <code id="vietqr-order-remark" class="bg-amber-50 px-1 py-0.5 rounded font-mono font-bold text-brand-wine">DELAMOUR DL9281</code></span>
+              <button onclick="copyToClipboard(document.getElementById('vietqr-order-remark').innerText, 'Đã sao chép nội dung chuyển khoản!')" class="text-brand-wine hover:text-brand-wineLight text-[11px] font-semibold flex items-center gap-1">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i> Chép
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- MoMo Box Preview -->
+        <div id="momo-preview-box" class="hidden bg-rose-50 border border-rose-200 rounded-xl p-4 text-xs space-y-2">
+          <p class="font-bold text-rose-900 flex items-center gap-1.5">
+            <i data-lucide="smartphone" class="w-4 h-4 text-rose-600"></i>
+            <span>Thanh toán qua Ví MoMo</span>
+          </p>
+          <p class="text-rose-800 text-[11px]">Hệ thống sẽ chuyển hướng an toàn sang ứng dụng Ví MoMo khi bạn bấm nút "Hoàn tất đặt hàng" bên dưới.</p>
+        </div>
+
+        <!-- COD Box Preview -->
+        <div id="cod-preview-box" class="hidden bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs space-y-2">
+          <p class="font-bold text-amber-900 flex items-center gap-1.5">
+            <i data-lucide="truck" class="w-4 h-4 text-amber-600"></i>
+            <span>Thanh toán khi nhận hàng (COD)</span>
+          </p>
+          <p class="text-amber-800 text-[11px]">Bạn sẽ thanh toán tiền mặt cho shipper khi nhận và đồng kiểm tra kiện hàng De L'amour.</p>
+        </div>
+
+      </div>
+
+      <!-- Footer Checkout -->
+      <div class="p-5 border-t border-brand-sand bg-white flex items-center justify-between">
+        <div>
+          <span class="text-xs text-brand-muted">Tổng cộng:</span>
+          <p id="checkout-final-amount" class="text-2xl font-serif font-bold text-brand-wine">679.000đ</p>
+        </div>
+        <button onclick="confirmOrder()" class="px-8 py-3.5 bg-brand-wine hover:bg-brand-wineLight text-white rounded-full text-xs font-semibold tracking-wider uppercase shadow-md transition-all">
+          Hoàn tất đặt hàng
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: ORDER SUCCESS CONFIRMATION                                         -->
+  <!-- ========================================================================= -->
+  <div id="order-success-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-brand-cream w-full max-w-lg rounded-2xl shadow-2xl border border-brand-sand overflow-hidden relative max-h-[92vh] flex flex-col">
+      <div class="p-6 bg-white border-b border-brand-sand text-center relative">
+        <div class="w-14 h-14 mx-auto bg-emerald-50 rounded-full flex items-center justify-center text-emerald-600 mb-3 border border-emerald-200 shadow-sm">
+          <i data-lucide="check-circle-2" class="w-8 h-8"></i>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full">Đặt hàng thành công</span>
+        <h3 class="font-serif text-2xl font-bold text-brand-espresso mt-2">Cảm ơn bạn đã lựa chọn De L'amour</h3>
+        <p class="text-xs text-brand-muted mt-1">Mã đơn hàng: <strong id="success-order-id" class="text-brand-wine font-mono text-sm">#DL-9281</strong></p>
+      </div>
+      
+      <div class="p-6 overflow-y-auto space-y-4 text-xs">
+        <div class="bg-white p-4 rounded-xl border border-brand-sand/80 space-y-2.5">
+          <div class="flex justify-between text-brand-muted pb-2 border-b border-brand-sand/40">
+            <span>Người nhận:</span>
+            <strong id="success-customer-name" class="text-brand-espresso">Nguyễn Hoàng Lan</strong>
+          </div>
+          <div class="flex justify-between text-brand-muted pb-2 border-b border-brand-sand/40">
+            <span>Số điện thoại / Zalo:</span>
+            <strong id="success-customer-phone" class="text-brand-espresso">0912 345 678</strong>
+          </div>
+          <div class="flex justify-between text-brand-muted pb-2 border-b border-brand-sand/40">
+            <span>Địa chỉ giao hàng:</span>
+            <span id="success-customer-address" class="text-brand-espresso text-right max-w-[240px] truncate">Landmark 81, TP.HCM</span>
+          </div>
+          <div class="flex justify-between text-brand-muted pb-2 border-b border-brand-sand/40">
+            <span>Phương thức:</span>
+            <strong id="success-payment-method" class="text-brand-wine">Quét mã VietQR</strong>
+          </div>
+          <div class="flex justify-between text-brand-muted pt-1 text-sm font-serif">
+            <span class="text-brand-espresso font-sans text-xs font-semibold">Tổng thanh toán:</span>
+            <strong id="success-total-amount" class="text-brand-wine font-bold text-base">679.000đ</strong>
+          </div>
+        </div>
+
+        <!-- Zalo Notification Banner -->
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-3.5 flex items-start gap-3 text-blue-900">
+          <i data-lucide="bell-ring" class="w-5 h-5 text-blue-600 shrink-0 mt-0.5"></i>
+          <div class="space-y-1">
+            <p class="font-bold text-xs">Đã kích hoạt thông báo Zalo ZNS</p>
+            <p class="text-[11px] text-blue-800 leading-relaxed">
+              Chi tiết đơn hàng và mã vận đơn theo dõi hành trình giao nhận đã được tự động gửi đến số Zalo của bạn.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-5 border-t border-brand-sand bg-white flex items-center justify-between">
+        <span class="text-[11px] text-brand-muted">Giao 1–3 ngày (TP.HCM) • 2–5 ngày (Toàn quốc)</span>
+        <button onclick="closeOrderSuccessModal()" class="px-6 py-2.5 bg-brand-wine hover:bg-brand-wineLight text-white rounded-full text-xs font-semibold uppercase tracking-wider transition-all">
+          Tiếp tục mua sắm
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- JAVASCRIPT STATE ENGINE & MOCKUP LOGIC -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // ==========================================
+    // UTILITY: TOAST, CLIPBOARD & MOBILE NAV
+    // ==========================================
+    function toggleMobileNav(open) {
+      const nav = document.getElementById('mobile-nav');
+      const backdrop = document.getElementById('mobile-nav-backdrop');
+      if (!nav || !backdrop) return;
+      const isOpen = typeof open === 'boolean' ? open : nav.classList.contains('-translate-x-full');
+      if (isOpen) {
+        nav.classList.remove('-translate-x-full');
+        backdrop.classList.remove('hidden');
+      } else {
+        nav.classList.add('-translate-x-full');
+        backdrop.classList.add('hidden');
+      }
+    }
+
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
+      const toast = document.createElement('div');
+      const isSuccess = type === 'success';
+      toast.className = `pointer-events-auto flex items-center gap-2.5 px-4 py-3 rounded-xl shadow-xl text-xs font-medium border transition-all duration-300 transform translate-y-4 opacity-0 ${
+        isSuccess 
+          ? 'bg-emerald-950 text-white border-emerald-700' 
+          : 'bg-brand-espresso text-white border-brand-sand/30'
+      }`;
+      toast.innerHTML = `
+        <i data-lucide="${isSuccess ? 'check-circle-2' : 'info'}" class="w-4 h-4 shrink-0 ${isSuccess ? 'text-emerald-400' : 'text-brand-gold'}"></i>
+        <span>${message}</span>
+      `;
+      container.appendChild(toast);
+      if (window.lucide) lucide.createIcons();
+
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-4', 'opacity-0');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => {
+          toast.remove();
+        }, 300);
+      }, 3000);
+    }
+
+    function copyToClipboard(text, msg = 'Đã sao chép vào bộ nhớ tạm!') {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(msg, 'success');
+        }).catch(() => {
+          showToast(msg, 'info');
+        });
+      } else {
+        showToast(msg, 'info');
+      }
+    }
+
+    // ==========================================
+    // 0. COMPREHENSIVE PRODUCTS DATABASE
+    // ==========================================
+    const PRODUCTS_DATA = {
+      "cherie": {
+        id: "cherie",
+        name: "Chérie L'amour",
+        subtitle: "Chérie L'amour • Berry & Woody Vanilla",
+        badge: "Berry & Woody Vanilla",
+        categoryText: "Nhóm: Berry & Woody Vanilla",
+        quote: "\"Một thoáng kiêu kỳ như đóa hoa nở muộn giữa lòng Paris – ngọt dịu quả mọng, ấm êm vani gỗ và vấn vương suốt ngày dài.\"",
+        price10ml: 179000,
+        price50ml: 679000,
+        original10ml: "249.000đ",
+        savingsText10ml: "Tiết kiệm 70k",
+        original50ml: "799.000đ",
+        savingsText50ml: "Tiết kiệm 120k",
+        savingsText: "Tiết kiệm 120k",
+        image: "assets/images/Chérie L'amour.jpg",
+        image50ml: "assets/images/Chérie L'amour.jpg",
+        image10ml: "assets/images/Cherie pocket.jpg",
+        topNotes: "Quả mọng đỏ, Quả sung ngọt, Cam Bergamot",
+        topDesc: "Mở đầu ngọt mọng, quyến rũ và ấn tượng khó phai.",
+        heartNotes: "Hoa hồng Damask, Diên vĩ (Iris Powdery)",
+        heartDesc: "Trái tim kiêu kỳ, phấn thơm mịn như lụa là trên da.",
+        baseNotes: "Vani gỗ nguyên chất, Gỗ đàn hương, Xạ hương trắng",
+        baseDesc: "Lưu lại chiều sâu ấm áp, sang trọng và kiêu sa.",
+        longevity: "7 – 9 tiếng",
+        longevityPercent: "85%",
+        sillage: "1 cánh tay (Vừa phải)",
+        sillagePercent: "70%",
+        occasions: ["Hẹn hò lãng mạn", "Công sở", "Tiệc tối"],
+        seasons: ["Thu", "Đông", "Xuân"]
+      },
+      "fleur": {
+        id: "fleur",
+        name: "Fleur L'amour",
+        subtitle: "Fleur L'amour • Peony & White Tea",
+        badge: "Fruity Floral / Sweet",
+        categoryText: "Nhóm: Fruity Floral / Sweet",
+        quote: "\"Một khúc ca dịu dàng như sớm mai dạo bước giữa vườn mẫu đơn nước Pháp – thanh thuần, tươi trẻ và ngập tràn tình yêu đời.\"",
+        price10ml: 179000,
+        price50ml: 549000,
+        original10ml: "249.000đ",
+        savingsText10ml: "Tiết kiệm 70k",
+        original50ml: "649.000đ",
+        savingsText50ml: "Tiết kiệm 100k",
+        savingsText: "Tiết kiệm 100k",
+        image: "assets/images/Fleur L'amour.jpg",
+        image50ml: "assets/images/Fleur L'amour.jpg",
+        image10ml: "assets/images/Fleur Pocket.jpg",
+        topNotes: "Dâu tây dại, Cam Bergamot, Quả mọng",
+        topDesc: "Tươi tắn, ngọt nhẹ và bừng sáng năng lượng tích cực.",
+        heartNotes: "Hoa mẫu đơn Pháp (Peony), Trà trắng, Hoa nhài Grasse",
+        heartDesc: "Thanh tao, nữ tính và mềm mại như cánh hoa sớm mai.",
+        baseNotes: "Xạ hương trắng, Gỗ tuyết tùng dịu, Hạnh nhân",
+        baseDesc: "Vấn vương sạch sẽ, thanh khiết và bền lâu trên da.",
+        longevity: "6 – 8 tiếng",
+        longevityPercent: "75%",
+        sillage: "1 cánh tay (Dịu nhẹ)",
+        sillagePercent: "60%",
+        occasions: ["Hằng ngày", "Đi làm", "Cà phê", "Hẹn hò"],
+        seasons: ["Xuân", "Hạ"]
+      },
+      "botanique": {
+        id: "botanique",
+        name: "L'amour Botanique",
+        subtitle: "L'amour Botanique • Green Tea & Bergamot",
+        badge: "Fresh Green / Citrus",
+        categoryText: "Nhóm: Fresh Green / Citrus",
+        quote: "\"Một làn gió sớm trong trẻo qua khu vườn thảo mộc miền Nam nước Pháp – sảng khoái, tĩnh tại và tràn đầy sinh khí.\"",
+        price10ml: 179000,
+        price50ml: 599000,
+        original10ml: "249.000đ",
+        savingsText10ml: "Tiết kiệm 70k",
+        original50ml: "699.000đ",
+        savingsText50ml: "Tiết kiệm 100k",
+        savingsText: "Tiết kiệm 100k",
+        image: "assets/images/L'amour botanique.jpg",
+        image50ml: "assets/images/L'amour botanique.jpg",
+        image10ml: "assets/images/Botanique Pocket.jpg",
+        topNotes: "Cam Bergamot Ý, Quả chanh xanh, Cam Mandarin",
+        topDesc: "Sảng khoái, bừng tỉnh các giác quan ngay tức khắc.",
+        heartNotes: "Lá trà xanh tươi, Hoa cam Neroli, Cỏ xạ hương",
+        heartDesc: "Thanh mát, thư thái tâm hồn như tách trà sớm mai.",
+        baseNotes: "Cỏ hương bài (Vetiver), Gỗ sồi, Xạ hương sương sớm",
+        baseDesc: "Khô ráo, sạch sẽ và tươi mát dài lâu.",
+        longevity: "6 – 7 tiếng",
+        longevityPercent: "70%",
+        sillage: "1 cánh tay (Tươi mát)",
+        sillagePercent: "60%",
+        occasions: ["Đi làm", "Thể thao", "Dạo phố hè"],
+        seasons: ["Xuân", "Hạ"]
+      },
+      "nuit": {
+        id: "nuit",
+        name: "Nuit L'amour",
+        subtitle: "Nuit L'amour • Warm Wood & Amber",
+        badge: "Amber Woody / Warm",
+        categoryText: "Nhóm: Amber Woody / Warm",
+        quote: "\"Bản tình ca bóng đêm bên bờ sông Seine – ấm áp, nồng nàn và ẩn chứa sức hút quyền lực không thể cưỡng lại.\"",
+        price10ml: 179000,
+        price50ml: 599000,
+        original10ml: "249.000đ",
+        savingsText10ml: "Tiết kiệm 70k",
+        original50ml: "699.000đ",
+        savingsText50ml: "Tiết kiệm 100k",
+        savingsText: "Tiết kiệm 100k",
+        image: "assets/images/Nuit L'amour.jpg",
+        image50ml: "assets/images/Nuit L'amour.jpg",
+        image10ml: "assets/images/Nuit Pocket.jpg",
+        topNotes: "Tiêu hồng, Nhục đậu khấu, Quả lý chua đen",
+        topDesc: "Cay nhẹ kích thích, cuốn hút và bí ẩn.",
+        heartNotes: "Hoa hồng đen huyền bí, Trầm hương nhẹ (Oud), Hoa phong lữ",
+        heartDesc: "Nồng nàn, sang trọng và đậm chất vương giả.",
+        baseNotes: "Hổ phách đậm, Gỗ tuyết tùng, Hoắc hương ấm",
+        baseDesc: "Dư vị sâu thẳm, bám tỏa kiên cố suốt đêm tiệc.",
+        longevity: "8 – 10 tiếng",
+        longevityPercent: "95%",
+        sillage: "Hơn 1 cánh tay (Nồng nàn)",
+        sillagePercent: "85%",
+        occasions: ["Tiệc tối", "Sự kiện lớn", "Hẹn hò lãng mạn đêm"],
+        seasons: ["Thu", "Đông"]
+      },
+      "soleil": {
+        id: "soleil",
+        name: "Soleil L'amour",
+        subtitle: "Soleil L'amour • Laurel & Pink Grapefruit",
+        badge: "Citrus Gourmand / Sunny",
+        categoryText: "Nhóm: Citrus Gourmand / Sunny",
+        quote: "\"Ánh nắng vàng óng ả rực rỡ của Riviera nước Pháp – ngọt ngào bưởi mọng nước, thơm lừng nguyệt quế và nụ cười rạng ngời.\"",
+        price10ml: 179000,
+        price50ml: 599000,
+        original10ml: "249.000đ",
+        savingsText10ml: "Tiết kiệm 70k",
+        original50ml: "699.000đ",
+        savingsText50ml: "Tiết kiệm 100k",
+        savingsText: "Tiết kiệm 100k",
+        image: "assets/images/Soleil L'amour.jpg",
+        image50ml: "assets/images/Soleil L'amour.jpg",
+        image10ml: "assets/images/Soleil Pocket.jpg",
+        topNotes: "Bưởi hồng mọng nước, Quýt ngọt, Lá nguyệt quế Địa Trung Hải",
+        topDesc: "Tràn đầy sức sống, tươi sáng và rạng rỡ.",
+        heartNotes: "Hoa cam Pháp, Gừng tươi, Hạnh nhân nướng",
+        heartDesc: "Ấm áp, ngọt dịu và ngon ngọt kích thích vị giác.",
+        baseNotes: "Gỗ tuyết tùng vàng, Vani ngọt dịu, Xạ hương hổ phách",
+        baseDesc: "Lưu hương êm đềm như ánh chiều tà ấm áp.",
+        longevity: "6 – 8 tiếng",
+        longevityPercent: "75%",
+        sillage: "1 cánh tay (Vừa phải)",
+        sillagePercent: "65%",
+        occasions: ["Du lịch", "Cà phê cuối tuần", "Đi làm"],
+        seasons: ["Xuân", "Hạ", "Thu"]
+      }
+    };
+
+    // ==========================================
+    // 1. PDP STATE MANAGEMENT
+    // ==========================================
+    let currentProductKey = "cherie";
+    let currentProduct = {
+      name: PRODUCTS_DATA["cherie"].name,
+      image: PRODUCTS_DATA["cherie"].image50ml,
+      size: "50ml",
+      basePrice: PRODUCTS_DATA["cherie"].price50ml,
+      personalization: "standard", // "standard", "engraving", "giftwrap"
+      engravingText: "Chérie",
+      engravingFont: "script",
+      giftMessage: "",
+      extraPrice: 0
+    };
+
+    function handleImgFallback(img) {
+      if (!img.dataset.triedFallback) {
+        img.dataset.triedFallback = '1';
+        if (img.src.endsWith('.jpg')) {
+          img.src = img.src.replace(/\.jpg$/i, '.png');
+        } else if (img.src.includes('assets/images/')) {
+          img.src = img.src.replace('assets/images/', 'image/');
+        }
+      }
+    }
+
+    function switchPDPProduct(key) {
+      const p = PRODUCTS_DATA[key];
+      if (!p) return;
+
+      currentProductKey = key;
+      currentProduct.name = p.name;
+      const activeImg = currentProduct.size === '10ml' ? (p.image10ml || p.image) : (p.image50ml || p.image);
+      currentProduct.image = activeImg;
+      currentProduct.basePrice = currentProduct.size === '50ml' ? p.price50ml : p.price10ml;
+
+      // 1. Update image and badge
+      const mainImg = document.getElementById('pdp-main-img');
+      if (mainImg) {
+        delete mainImg.dataset.triedFallback;
+        mainImg.src = activeImg;
+        mainImg.alt = `${p.name} ${currentProduct.size === '10ml' ? 'Pocket 10ml' : 'Signature 50ml'}`;
+      }
+      document.getElementById('pdp-badge-note').innerText = p.badge;
+
+      // 2. Update thumbnails border styling
+      const keys = ['cherie', 'fleur', 'botanique', 'nuit', 'soleil'];
+      keys.forEach(k => {
+        const btn = document.getElementById(`thumb-${k}`);
+        if (btn) {
+          if (k === key) {
+            btn.className = "rounded-xl overflow-hidden aspect-square border-2 border-brand-wine p-0.5 transition-all shadow-sm";
+          } else {
+            btn.className = "rounded-xl overflow-hidden aspect-square border border-brand-sand opacity-75 hover:opacity-100 transition-all";
+          }
+        }
+      });
+
+      // 3. Update titles, breadcrumb, quote
+      const breadcrumb = document.getElementById('pdp-breadcrumb-name');
+      if (breadcrumb) breadcrumb.innerText = p.name;
+      document.getElementById('pdp-subtitle-brand').innerText = p.subtitle;
+      document.getElementById('pdp-product-title').innerText = p.name;
+      document.getElementById('pdp-product-quote').innerText = p.quote;
+
+      // 4. Update prices
+      const origPriceElem = document.getElementById('pdp-original-price');
+      const savingsElem = document.getElementById('pdp-savings-badge');
+      if (origPriceElem) {
+        origPriceElem.innerText = currentProduct.size === '50ml' ? p.original50ml : (p.original10ml || "249.000đ");
+      }
+      if (savingsElem) {
+        savingsElem.innerText = currentProduct.size === '50ml' ? (p.savingsText50ml || p.savingsText) : (p.savingsText10ml || "Tiết kiệm 70k");
+      }
+
+      // 5. Update Tháp hương 3 tầng
+      document.getElementById('pdp-pyramid-category').innerText = p.categoryText;
+      document.getElementById('pdp-top-notes').innerText = p.topNotes;
+      document.getElementById('pdp-top-desc').innerText = p.topDesc;
+      document.getElementById('pdp-heart-notes').innerText = p.heartNotes;
+      document.getElementById('pdp-heart-desc').innerText = p.heartDesc;
+      document.getElementById('pdp-base-notes').innerText = p.baseNotes;
+      document.getElementById('pdp-base-desc').innerText = p.baseDesc;
+
+      // 6. Update Thước đo trực quan
+      document.getElementById('pdp-longevity-text').innerText = p.longevity;
+      document.getElementById('pdp-longevity-bar').style.width = p.longevityPercent;
+      document.getElementById('pdp-sillage-text').innerText = p.sillage;
+      document.getElementById('pdp-sillage-bar').style.width = p.sillagePercent;
+
+      // Badges occasions
+      const occContainer = document.getElementById('pdp-occasions-container');
+      if (occContainer) {
+        occContainer.innerHTML = p.occasions.map(o => `
+          <span class="px-2.5 py-1 bg-brand-beige rounded-md text-brand-espresso font-medium text-[11px]">${o}</span>
+        `).join('');
+      }
+
+      // Badges seasons
+      const seaContainer = document.getElementById('pdp-seasons-container');
+      if (seaContainer) {
+        seaContainer.innerHTML = p.seasons.map(s => `
+          <span class="px-2.5 py-1 bg-brand-beige rounded-md text-brand-espresso font-medium text-[11px]">${s}</span>
+        `).join('');
+      }
+
+      // 7. Recalculate price
+      updatePDPPrice();
+    }
+
+    function switchPDPProductAndScroll(key) {
+      switchPDPProduct(key);
+      document.getElementById('featured-product').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function selectSize(size) {
+      currentProduct.size = size;
+      const p = PRODUCTS_DATA[currentProductKey];
+      currentProduct.basePrice = size === '50ml' ? p.price50ml : p.price10ml;
+      
+      const btn50 = document.getElementById('btn-size-50ml');
+      const btn10 = document.getElementById('btn-size-10ml');
+      
+      if (size === '50ml') {
+        btn50.className = "px-4 py-2 rounded-lg text-xs font-semibold border-2 border-brand-wine bg-brand-wine text-white shadow-sm transition-all";
+        btn10.className = "px-4 py-2 rounded-lg text-xs font-semibold border border-brand-sand bg-white text-brand-charcoal hover:border-brand-gold transition-all";
+      } else {
+        btn10.className = "px-4 py-2 rounded-lg text-xs font-semibold border-2 border-brand-wine bg-brand-wine text-white shadow-sm transition-all";
+        btn50.className = "px-4 py-2 rounded-lg text-xs font-semibold border border-brand-sand bg-white text-brand-charcoal hover:border-brand-gold transition-all";
+      }
+
+      // 1. Update main image on the left to match 10ml or 50ml bottle visual
+      const mainImg = document.getElementById('pdp-main-img');
+      const activeImg = size === '10ml' ? (p.image10ml || p.image) : (p.image50ml || p.image);
+      currentProduct.image = activeImg;
+      if (mainImg) {
+        delete mainImg.dataset.triedFallback;
+        mainImg.src = activeImg;
+        mainImg.alt = `${p.name} ${size === '10ml' ? 'Pocket 10ml' : 'Signature 50ml'}`;
+      }
+
+      // 2. Adjust live engraving cap position (cap is taller on 10ml pocket bottle)
+      const liveBadge = document.getElementById('live-engraving-badge');
+      if (liveBadge) {
+        liveBadge.style.top = size === '10ml' ? '24%' : '16%';
+      }
+
+      // 3. Update original price and savings badge
+      const origPriceElem = document.getElementById('pdp-original-price');
+      const savingsElem = document.getElementById('pdp-savings-badge');
+      if (origPriceElem) {
+        origPriceElem.innerText = size === '50ml' ? p.original50ml : (p.original10ml || "249.000đ");
+      }
+      if (savingsElem) {
+        savingsElem.innerText = size === '50ml' ? (p.savingsText50ml || p.savingsText) : (p.savingsText10ml || "Tiết kiệm 70k");
+      }
+
+      // 4. Update thumbnail images to match selected size
+      const keys = ['cherie', 'fleur', 'botanique', 'nuit', 'soleil'];
+      keys.forEach(k => {
+        const prod = PRODUCTS_DATA[k];
+        const btn = document.getElementById(`thumb-${k}`);
+        if (btn && prod) {
+          const thumbImg = btn.querySelector('img');
+          if (thumbImg) {
+            thumbImg.src = size === '10ml' ? (prod.image10ml || prod.image) : (prod.image50ml || prod.image);
+          }
+        }
+      });
+
+      updatePDPPrice();
+    }
+
+    function changePersonalization(option) {
+      currentProduct.personalization = option;
+      
+      const cardStandard = document.getElementById('card-opt-standard');
+      const cardEngraving = document.getElementById('card-opt-engraving');
+      const cardGiftwrap = document.getElementById('card-opt-giftwrap');
+      
+      const panelEngraving = document.getElementById('panel-engraving');
+      const panelGiftwrap = document.getElementById('panel-giftwrap');
+      const liveBadge = document.getElementById('live-engraving-badge');
+
+      // Reset styles
+      [cardStandard, cardEngraving, cardGiftwrap].forEach(card => {
+        card.classList.remove('border-brand-wine', 'bg-white');
+        card.classList.add('border-brand-sand', 'bg-white/70');
+      });
+
+      if (option === 'standard') {
+        cardStandard.classList.add('border-brand-wine', 'bg-white');
+        panelEngraving.classList.add('hidden');
+        panelGiftwrap.classList.add('hidden');
+        liveBadge.classList.add('hidden');
+        currentProduct.extraPrice = 0;
+      } else if (option === 'engraving') {
+        cardEngraving.classList.add('border-brand-wine', 'bg-white');
+        panelEngraving.classList.remove('hidden');
+        panelGiftwrap.classList.add('hidden');
+        liveBadge.classList.remove('hidden');
+        currentProduct.extraPrice = 80000;
+      } else if (option === 'giftwrap') {
+        cardGiftwrap.classList.add('border-brand-wine', 'bg-white');
+        panelEngraving.classList.add('hidden');
+        panelGiftwrap.classList.remove('hidden');
+        liveBadge.classList.add('hidden');
+        currentProduct.extraPrice = 30000;
+      }
+
+      updatePDPPrice();
+    }
+
+    function updateEngravingText(val) {
+      currentProduct.engravingText = val || "Chérie";
+      const textElem = document.getElementById('live-engraving-text');
+      if (textElem) {
+        textElem.innerText = currentProduct.engravingText;
+        if (val && val.length > 15) {
+          textElem.style.fontSize = '9px';
+        } else if (val && val.length > 11) {
+          textElem.style.fontSize = '10px';
+        } else {
+          textElem.style.fontSize = '';
+        }
+      }
+      const charCountElem = document.getElementById('char-count');
+      if (charCountElem) charCountElem.innerText = `${val.length}/20`;
+    }
+
+    function updateEngravingFont(font) {
+      currentProduct.engravingFont = font;
+      const textElem = document.getElementById('live-engraving-text');
+      textElem.className = 'text-xs tracking-wider font-bold ';
+      if (font === 'script') textElem.classList.add('font-engrave-script');
+      else if (font === 'serif') textElem.classList.add('font-engrave-serif');
+      else textElem.classList.add('font-engrave-sans');
+    }
+
+    let pdpQuantity = 1;
+
+    function changePDPQuantity(delta) {
+      pdpQuantity = Math.max(1, Math.min(99, pdpQuantity + delta));
+      const qtyElem = document.getElementById('pdp-qty-display');
+      if (qtyElem) qtyElem.innerText = pdpQuantity;
+      updatePDPPrice();
+    }
+
+    function updatePDPPrice() {
+      const singlePrice = currentProduct.basePrice + currentProduct.extraPrice;
+      const total = singlePrice * pdpQuantity;
+      const formattedSingle = new Intl.NumberFormat('vi-VN').format(singlePrice) + 'đ';
+      const formattedTotal = new Intl.NumberFormat('vi-VN').format(total) + 'đ';
+      document.getElementById('pdp-display-price').innerText = formattedSingle;
+      const btnCalc = document.getElementById('btn-price-calc');
+      if (btnCalc) {
+        btnCalc.innerText = pdpQuantity > 1 ? `${formattedTotal} (${pdpQuantity} chai)` : formattedTotal;
+      }
+    }
+
+    // ==========================================
+    // 2. CART ENGINE (WITH 399K FREESHIP & UPSELL)
+    // ==========================================
+    function saveCartToStorage() {
+      try {
+        localStorage.setItem('delamour_cart_v1', JSON.stringify(cartItems));
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    function loadCartFromStorage() {
+      try {
+        const saved = localStorage.getItem('delamour_cart_v1');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            return parsed;
+          }
+        }
+      } catch (e) {
+        console.error(e);
+      }
+      return [
+        {
+          id: 'item_1',
+          name: "Chérie L'amour",
+          size: "Signature 50ml",
+          price: 679000,
+          personalization: "standard",
+          personalizationText: "Hộp tiêu chuẩn De L'amour",
+          extraPrice: 0,
+          quantity: 1,
+          image: "assets/images/Chérie L'amour.jpg"
+        }
+      ];
+    }
+
+    let cartItems = loadCartFromStorage();
+
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById('cart-drawer');
+      const backdrop = document.getElementById('cart-drawer-backdrop');
+      if (open) {
+        drawer.classList.remove('translate-x-full');
+        backdrop.classList.remove('hidden');
+        renderCart();
+      } else {
+        drawer.classList.add('translate-x-full');
+        backdrop.classList.add('hidden');
+      }
+    }
+
+    function addCurrentProductToCart() {
+      let label = "Hộp tiêu chuẩn De L'amour";
+      if (currentProduct.personalization === 'engraving') {
+        label = `Khắc tên: "${currentProduct.engravingText}" (+80.000đ)`;
+      } else if (currentProduct.personalization === 'giftwrap') {
+        const giftMsg = document.getElementById('giftwrap-message') ? document.getElementById('giftwrap-message').value.trim() : '';
+        label = giftMsg 
+          ? `Gói quà & Thiệp (+30.000đ) • Lời nhắn: "${giftMsg}"` 
+          : `Gói quà đính nơ & Thiệp viết tay (+30.000đ)`;
+      }
+
+      cartItems.push({
+        id: 'item_' + Date.now(),
+        name: currentProduct.name,
+        size: currentProduct.size === '50ml' ? 'Signature 50ml' : 'Pocket 10ml',
+        price: currentProduct.basePrice,
+        personalization: currentProduct.personalization,
+        personalizationText: label,
+        extraPrice: currentProduct.extraPrice,
+        quantity: pdpQuantity,
+        image: currentProduct.image || "assets/images/Chérie L'amour.jpg"
+      });
+
+      showToast(`Đã thêm ${pdpQuantity}x ${currentProduct.name} vào giỏ hàng!`, 'success');
+      pdpQuantity = 1;
+      const qtyElem = document.getElementById('pdp-qty-display');
+      if (qtyElem) qtyElem.innerText = 1;
+      updatePDPPrice();
+      saveCartToStorage();
+      toggleCartDrawer(true);
+    }
+
+    function buyNowDirectly() {
+      addCurrentProductToCart();
+      openCheckoutModal();
+    }
+
+    // ==========================================
+    // 1b. POCKET DUO SELECTION ENGINE (2 CHAI 10ML TỰ CHỌN - 299.000Đ)
+    // ==========================================
+    const POCKET_DUO_SCENTS = [
+      {
+        id: "cherie",
+        name: "Chérie L'amour",
+        note: "Berry & Woody Vanilla",
+        tag: "Quyến rũ, ngọt ấm",
+        image: "assets/images/Cherie pocket.jpg"
+      },
+      {
+        id: "fleur",
+        name: "Fleur L'amour",
+        note: "Peony & White Tea",
+        tag: "Thanh thuần, nữ tính",
+        image: "assets/images/Fleur Pocket.jpg"
+      },
+      {
+        id: "botanique",
+        name: "L'amour Botanique",
+        note: "Green Tea & Bergamot",
+        tag: "Tươi mát, thảo mộc",
+        image: "assets/images/Botanique Pocket.jpg"
+      },
+      {
+        id: "nuit",
+        name: "Nuit L'amour",
+        note: "Warm Wood & Amber",
+        tag: "Huyền bí, sang trọng",
+        image: "assets/images/Nuit Pocket.jpg"
+      },
+      {
+        id: "soleil",
+        name: "Soleil L'amour",
+        note: "Laurel & Pink Grapefruit",
+        tag: "Rực rỡ, năng động",
+        image: "assets/images/Soleil Pocket.jpg"
+      }
+    ];
+
+    let pocketDuoSelection = []; // Danh sách ID mùi đã chọn: tối đa 2 chai
+
+    function openPocketDuoModal() {
+      if (!pocketDuoSelection) pocketDuoSelection = [];
+      renderPocketDuoModal();
+      const modal = document.getElementById('pocketduo-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closePocketDuoModal() {
+      const modal = document.getElementById('pocketduo-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function addPocketDuoScent(id) {
+      if (pocketDuoSelection.length < 2) {
+        pocketDuoSelection.push(id);
+        renderPocketDuoModal();
+      }
+    }
+
+    function removePocketDuoScentByIndex(index) {
+      if (index >= 0 && index < pocketDuoSelection.length) {
+        pocketDuoSelection.splice(index, 1);
+        renderPocketDuoModal();
+      }
+    }
+
+    function removePocketDuoScentById(id) {
+      const idx = pocketDuoSelection.indexOf(id);
+      if (idx !== -1) {
+        pocketDuoSelection.splice(idx, 1);
+        renderPocketDuoModal();
+      }
+    }
+
+    function renderPocketDuoModal() {
+      const count = pocketDuoSelection.length;
+      const counterBadge = document.getElementById('pocketduo-counter-badge');
+      const hintText = document.getElementById('pocketduo-status-hint');
+      const slotsGrid = document.getElementById('pocketduo-slots-grid');
+      const scentsGrid = document.getElementById('pocketduo-scents-grid');
+      const submitBtn = document.getElementById('btn-pocketduo-submit');
+
+      // 1. Cập nhật Badge đếm số lượng
+      if (counterBadge) {
+        counterBadge.innerText = `${count}/2 chai`;
+        if (count === 2) {
+          counterBadge.className = "px-2.5 py-0.5 bg-emerald-600 text-white rounded-full text-[11px] font-semibold";
+        } else {
+          counterBadge.className = "px-2.5 py-0.5 bg-brand-wine text-white rounded-full text-[11px] font-semibold";
+        }
+      }
+
+      // 2. Gợi ý trạng thái
+      if (hintText) {
+        if (count === 0) {
+          hintText.innerHTML = "Nhấp chọn chai thứ nhất bên dưới";
+        } else if (count === 1) {
+          hintText.innerHTML = "Tuyệt vời! Chọn tiếp 1 chai nữa để hoàn tất set";
+        } else {
+          hintText.innerHTML = "<span class='text-emerald-700 font-bold'>✓ Đã đủ 2 chai! Nhấn nút 'Xong' để thêm vào giỏ</span>";
+        }
+      }
+
+      // 3. Render 2 Slot hiển thị trực quan
+      if (slotsGrid) {
+        let htmlSlots = "";
+        for (let i = 0; i < 2; i++) {
+          const scentId = pocketDuoSelection[i];
+          if (scentId) {
+            const scent = POCKET_DUO_SCENTS.find(s => s.id === scentId);
+            htmlSlots += `
+              <div class="bg-white p-2.5 rounded-xl border-2 border-brand-wine flex items-center justify-between gap-3 shadow-sm relative group animate-in fade-in duration-200">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <img src="${scent.image}" onerror="handleImgFallback(this)" class="w-11 h-14 object-cover rounded-lg border border-brand-sand shrink-0" alt="${scent.name}">
+                  <div class="min-w-0">
+                    <span class="text-[10px] font-bold text-brand-wine uppercase tracking-wider block">Chai ${i + 1}</span>
+                    <h5 class="text-xs font-bold text-brand-espresso truncate font-serif">${scent.name}</h5>
+                    <p class="text-[10px] text-brand-muted truncate">${scent.note}</p>
+                  </div>
+                </div>
+                <button onclick="removePocketDuoScentByIndex(${i})" class="w-7 h-7 rounded-full bg-brand-cream hover:bg-rose-100 text-brand-muted hover:text-brand-wine flex items-center justify-center shrink-0 transition-colors" title="Bỏ chai này để chọn lại">
+                  <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            `;
+          } else {
+            htmlSlots += `
+              <div class="bg-white/60 p-2.5 rounded-xl border-2 border-dashed border-brand-sand/80 flex items-center gap-3">
+                <div class="w-11 h-14 rounded-lg bg-brand-cream border border-brand-sand/60 flex items-center justify-center shrink-0 text-brand-sand">
+                  <i data-lucide="plus" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-[10px] font-bold text-brand-muted uppercase tracking-wider block">Chai ${i + 1}</span>
+                  <p class="text-xs text-brand-muted italic">Chưa chọn (nhấn bên dưới)</p>
+                </div>
+              </div>
+            `;
+          }
+        }
+        slotsGrid.innerHTML = htmlSlots;
+      }
+
+      // 4. Render Menu 5 chai 10ml
+      if (scentsGrid) {
+        scentsGrid.innerHTML = POCKET_DUO_SCENTS.map(scent => {
+          const selectedCount = pocketDuoSelection.filter(id => id === scent.id).length;
+          const isFull = count >= 2;
+          const canAdd = !isFull;
+
+          return `
+            <div class="bg-white rounded-xl border ${selectedCount > 0 ? 'border-brand-wine ring-2 ring-brand-wine/20' : 'border-brand-sand'} p-2.5 flex flex-col justify-between hover:shadow-md transition-all relative">
+              ${selectedCount > 0 ? `
+                <div class="absolute top-1.5 right-1.5 z-10 bg-brand-wine text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow">
+                  x${selectedCount}
+                </div>
+              ` : ''}
+
+              <div>
+                <div class="relative aspect-[3/4] rounded-lg overflow-hidden bg-brand-cream mb-2 cursor-pointer" onclick="${canAdd ? `addPocketDuoScent('${scent.id}')` : ''}">
+                  <img src="${scent.image}" onerror="handleImgFallback(this)" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" alt="${scent.name}">
+                </div>
+                <h5 class="font-serif text-xs font-bold text-brand-espresso leading-tight">${scent.name}</h5>
+                <p class="text-[10px] text-brand-muted mt-0.5 line-clamp-1">${scent.note}</p>
+              </div>
+
+              <div class="mt-2.5 pt-2 border-t border-brand-sand/60 flex items-center gap-1">
+                ${selectedCount > 0 ? `
+                  <button onclick="removePocketDuoScentById('${scent.id}')" class="w-6 h-6 rounded-lg bg-brand-cream hover:bg-rose-100 text-brand-wine flex items-center justify-center text-xs font-bold transition-colors" title="Bớt 1 chai">
+                    -
+                  </button>
+                ` : ''}
+
+                <button 
+                  onclick="${canAdd ? `addPocketDuoScent('${scent.id}')` : ''}"
+                  ${!canAdd ? 'disabled' : ''}
+                  class="flex-1 py-1 rounded-lg text-[11px] font-semibold transition-all ${
+                    canAdd 
+                      ? 'bg-brand-cream hover:bg-brand-wine hover:text-white text-brand-wine' 
+                      : 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                  }"
+                >
+                  ${isFull && selectedCount === 0 ? 'Đã đủ 2 chai' : (selectedCount > 0 ? '+ Thêm' : '+ Chọn')}
+                </button>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // 5. Cập nhật Nút Xong (Submit)
+      if (submitBtn) {
+        if (count === 2) {
+          submitBtn.disabled = false;
+          submitBtn.className = "px-6 py-2.5 rounded-xl text-xs font-semibold bg-brand-wine hover:bg-brand-wineLight text-white shadow-lg cursor-pointer transform hover:scale-[1.02] transition-all flex items-center gap-2";
+          submitBtn.innerHTML = `
+            <span>Xong • Thêm vào giỏ (299.000đ)</span>
+            <i data-lucide="check" class="w-4 h-4"></i>
+          `;
+        } else {
+          submitBtn.disabled = true;
+          submitBtn.className = "px-6 py-2.5 rounded-xl text-xs font-semibold bg-brand-sand text-brand-muted cursor-not-allowed opacity-60 transition-all flex items-center gap-2";
+          submitBtn.innerHTML = `
+            <span>Vui lòng chọn 2 chai (${count}/2)</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          `;
+        }
+      }
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function submitPocketDuoToCart() {
+      if (pocketDuoSelection.length !== 2) return;
+      const scent1 = POCKET_DUO_SCENTS.find(s => s.id === pocketDuoSelection[0]);
+      const scent2 = POCKET_DUO_SCENTS.find(s => s.id === pocketDuoSelection[1]);
+
+      let detailText = "";
+      if (scent1.id === scent2.id) {
+        detailText = `2x ${scent1.name}`;
+      } else {
+        detailText = `1x ${scent1.name} + 1x ${scent2.name}`;
+      }
+
+      cartItems.push({
+        id: 'item_' + Date.now(),
+        name: "Pocket Duo (Set 2 chai 10ml)",
+        size: "Set 2 chai 10ml tự chọn",
+        price: 299000,
+        personalization: "standard",
+        personalizationText: detailText,
+        extraPrice: 0,
+        quantity: 1,
+        image: "assets/images/pocketduo.jpg"
+      });
+
+      showToast("Đã thêm Pocket Duo (299.000đ) vào giỏ hàng!", "success");
+      saveCartToStorage();
+      closePocketDuoModal();
+      toggleCartDrawer(true);
+    }
+
+    // ==========================================
+    // 1c. L'AMOUR GIFTING BOX ENGINE (CHỌN CHAI 50ML KÈM BOX QUÀ)
+    // ==========================================
+    const GIFTING_BOX_SCENTS = [
+      {
+        id: "fleur",
+        name: "Fleur L'amour",
+        note: "Peony & White Tea",
+        boxPrice: 899000,
+        originalPrice: "1.190.000đ",
+        savingsText: "Tiết kiệm 291.000đ",
+        isBestseller: true,
+        image: "assets/images/Fleur L'amour.jpg"
+      },
+      {
+        id: "cherie",
+        name: "Chérie L'amour",
+        note: "Berry & Woody Vanilla",
+        boxPrice: 1099000,
+        originalPrice: "1.390.000đ",
+        savingsText: "Tiết kiệm 291.000đ",
+        isBestseller: true,
+        image: "assets/images/Chérie L'amour.jpg"
+      },
+      {
+        id: "botanique",
+        name: "L'amour Botanique",
+        note: "Green Tea & Bergamot",
+        boxPrice: 999000,
+        originalPrice: "1.290.000đ",
+        savingsText: "Tiết kiệm 291.000đ",
+        isBestseller: false,
+        image: "assets/images/L'amour botanique.jpg"
+      },
+      {
+        id: "nuit",
+        name: "Nuit L'amour",
+        note: "Warm Wood & Amber",
+        boxPrice: 999000,
+        originalPrice: "1.290.000đ",
+        savingsText: "Tiết kiệm 291.000đ",
+        isBestseller: false,
+        image: "assets/images/Nuit L'amour.jpg"
+      },
+      {
+        id: "soleil",
+        name: "Soleil L'amour",
+        note: "Laurel & Pink Grapefruit",
+        boxPrice: 999000,
+        originalPrice: "1.290.000đ",
+        savingsText: "Tiết kiệm 291.000đ",
+        isBestseller: false,
+        image: "assets/images/Soleil L'amour.jpg"
+      }
+    ];
+
+    let selectedGiftingBoxScent = "fleur";
+
+    function openGiftingBoxModal() {
+      if (!selectedGiftingBoxScent) selectedGiftingBoxScent = "fleur";
+      renderGiftingBoxModal();
+      const modal = document.getElementById('giftingbox-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeGiftingBoxModal() {
+      const modal = document.getElementById('giftingbox-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function selectGiftingBoxScent(id) {
+      selectedGiftingBoxScent = id;
+      renderGiftingBoxModal();
+    }
+
+    function renderGiftingBoxModal() {
+      const scentsGrid = document.getElementById('giftingbox-scents-grid');
+      const displayPrice = document.getElementById('giftingbox-display-price');
+      const origPrice = document.getElementById('giftingbox-original-price');
+      const savingsText = document.getElementById('giftingbox-savings-text');
+      const selectedTitle = document.getElementById('giftingbox-selected-title');
+      const submitBtn = document.getElementById('btn-giftingbox-submit');
+
+      const current = GIFTING_BOX_SCENTS.find(s => s.id === selectedGiftingBoxScent) || GIFTING_BOX_SCENTS[0];
+
+      if (displayPrice) {
+        displayPrice.innerText = new Intl.NumberFormat('vi-VN').format(current.boxPrice) + 'đ';
+      }
+      if (origPrice) {
+        origPrice.innerText = current.originalPrice;
+      }
+      if (savingsText) {
+        savingsText.innerText = `${current.savingsText} cho trọn bộ quà tặng`;
+      }
+      if (selectedTitle) {
+        selectedTitle.innerText = `Chai 50ml: ${current.name}`;
+      }
+      if (submitBtn) {
+        const formatted = new Intl.NumberFormat('vi-VN').format(current.boxPrice) + 'đ';
+        submitBtn.innerHTML = `
+          <span>Thêm Box Vào Giỏ Hàng (${formatted})</span>
+          <i data-lucide="check" class="w-4 h-4"></i>
+        `;
+      }
+
+      if (scentsGrid) {
+        scentsGrid.innerHTML = GIFTING_BOX_SCENTS.map(scent => {
+          const isSelected = scent.id === selectedGiftingBoxScent;
+          const formattedBoxPrice = new Intl.NumberFormat('vi-VN').format(scent.boxPrice) + 'đ';
+
+          return `
+            <div 
+              onclick="selectGiftingBoxScent('${scent.id}')"
+              class="bg-white rounded-xl border-2 ${isSelected ? 'border-brand-wine ring-2 ring-brand-wine/25 shadow-md bg-brand-cream/30' : 'border-brand-sand hover:border-brand-gold/60'} p-2.5 flex flex-col justify-between hover:shadow-md transition-all relative cursor-pointer group"
+            >
+              ${scent.isBestseller ? `
+                <div class="absolute top-1.5 left-1.5 z-10 bg-brand-wine text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow tracking-wide">
+                  #bestseller
+                </div>
+              ` : ''}
+
+              ${isSelected ? `
+                <div class="absolute top-1.5 right-1.5 z-10 w-5 h-5 bg-brand-wine text-white rounded-full flex items-center justify-center text-[10px] font-bold shadow">
+                  ✓
+                </div>
+              ` : ''}
+
+              <div>
+                <div class="relative aspect-[3/4] rounded-lg overflow-hidden bg-brand-cream mb-2 mt-4">
+                  <img src="${scent.image}" onerror="handleImgFallback(this)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="${scent.name}">
+                </div>
+                <h5 class="font-serif text-xs font-bold text-brand-espresso leading-tight">${scent.name}</h5>
+                <p class="text-[10px] text-brand-muted mt-0.5 line-clamp-1">${scent.note}</p>
+              </div>
+
+              <div class="mt-2.5 pt-2 border-t border-brand-sand/60 flex flex-col gap-0.5">
+                <span class="text-[10px] text-brand-muted">Giá trọn box:</span>
+                <span class="text-xs font-bold text-brand-wine">${formattedBoxPrice}</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function submitGiftingBoxToCart() {
+      const scent = GIFTING_BOX_SCENTS.find(s => s.id === selectedGiftingBoxScent);
+      if (!scent) return;
+
+      cartItems.push({
+        id: 'item_' + Date.now(),
+        name: "L'amour Gifting Box",
+        size: "Combo hộp quà thượng hạng",
+        price: scent.boxPrice,
+        personalization: "standard",
+        personalizationText: `Chai 50ml: ${scent.name} + Kem dưỡng tay + Hủ sáp thơm phòng`,
+        extraPrice: 0,
+        quantity: 1,
+        image: "assets/images/giftingbox.jpg"
+      });
+
+      closeGiftingBoxModal();
+      toggleCartDrawer(true);
+    }
+
+    function quickAddProduct(name, price, img) {
+      cartItems.push({
+        id: 'item_' + Date.now(),
+        name: name,
+        size: "Pocket 10ml",
+        price: price,
+        personalization: "standard",
+        personalizationText: "Hộp tiêu chuẩn De L'amour",
+        extraPrice: 0,
+        quantity: 1,
+        image: img || "assets/images/Fleur L'amour.jpg"
+      });
+      showToast(`Đã thêm ${name} (10ml) vào giỏ hàng!`, 'success');
+      saveCartToStorage();
+      toggleCartDrawer(true);
+    }
+
+    function addDiscoverySetToCart() {
+      cartItems.push({
+        id: 'item_' + Date.now(),
+        name: "Discovery Set (3 ống x 2ml)",
+        size: "3 ống x 2ml",
+        price: 89000,
+        personalization: "standard",
+        personalizationText: "Tặng Voucher hoàn 50% trong 15 ngày",
+        extraPrice: 0,
+        quantity: 1,
+        image: "assets/images/Discoveryset.jpg"
+      });
+      showToast("Đã thêm Discovery Set 89k vào giỏ hàng!", "success");
+      saveCartToStorage();
+      closeQuizModal();
+      toggleCartDrawer(true);
+    }
+
+    function addUpsell10ml() {
+      cartItems.push({
+        id: 'item_' + Date.now(),
+        name: "Pocket 10ml (Ưu đãi mua kèm)",
+        size: "10ml",
+        price: 99000,
+        personalization: "standard",
+        personalizationText: "Đặc quyền mua kèm cùng chai 50ml",
+        extraPrice: 0,
+        quantity: 1,
+        image: "assets/images/Cherie pocket.jpg"
+      });
+      showToast("Đã thêm Pocket 10ml ưu đãi 99k!", "success");
+      saveCartToStorage();
+      renderCart();
+    }
+
+    function quickAdd69kItem() {
+      cartItems.push({
+        id: 'item_' + Date.now(),
+        name: "Sáp thơm phòng De L'amour",
+        size: "50g",
+        price: 69000,
+        personalization: "standard",
+        personalizationText: "Hương hoa cỏ Pháp",
+        extraPrice: 0,
+        quantity: 1,
+        image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=200&auto=format&fit=crop"
+      });
+      showToast("Đã thêm Sáp thơm phòng 69k!", "success");
+      saveCartToStorage();
+      renderCart();
+    }
+
+    function changeCartItemQty(id, delta) {
+      const item = cartItems.find(i => i.id === id);
+      if (!item) return;
+      item.quantity += delta;
+      if (item.quantity <= 0) {
+        cartItems = cartItems.filter(i => i.id !== id);
+        showToast(`Đã xóa ${item.name} khỏi giỏ hàng.`, 'info');
+      }
+      saveCartToStorage();
+      renderCart();
+    }
+
+    function removeCartItem(id) {
+      const item = cartItems.find(i => i.id === id);
+      cartItems = cartItems.filter(item => item.id !== id);
+      if (item) showToast(`Đã xóa ${item.name} khỏi giỏ hàng.`, 'info');
+      saveCartToStorage();
+      renderCart();
+    }
+
+    function renderCart() {
+      const container = document.getElementById('cart-items-list');
+      const badgeCount = document.getElementById('cart-badge-count');
+      const cartCountTitle = document.getElementById('cart-count-title');
+      const subtotalElem = document.getElementById('cart-subtotal');
+      const freeshipBar = document.getElementById('freeship-bar');
+      const freeshipStatus = document.getElementById('freeship-status-text');
+      const quickAdd69k = document.getElementById('quick-add-69k-banner');
+      const upsell10ml = document.getElementById('upsell-10ml-container');
+      const paymentNotice = document.getElementById('cart-payment-restriction-notice');
+
+      const totalItemsCount = cartItems.reduce((acc, curr) => acc + curr.quantity, 0);
+      badgeCount.innerText = totalItemsCount;
+      cartCountTitle.innerText = totalItemsCount;
+
+      if (cartItems.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 text-brand-muted space-y-3">
+            <i data-lucide="shopping-bag" class="w-12 h-12 mx-auto stroke-1 text-brand-sand"></i>
+            <p class="text-sm">Giỏ hàng của bạn đang trống.</p>
+            <button onclick="toggleCartDrawer(false)" class="text-xs text-brand-wine font-semibold underline hover:text-brand-wineLight">Khám phá bộ sưu tập ngay →</button>
+          </div>
+        `;
+        subtotalElem.innerText = "0đ";
+        freeshipBar.style.width = "0%";
+        freeshipStatus.innerText = "Mua thêm 399.000đ để nhận Freeship toàn quốc!";
+        quickAdd69k.classList.remove('hidden');
+        upsell10ml.classList.add('hidden');
+        paymentNotice.classList.add('hidden');
+        if (window.lucide) lucide.createIcons();
+        return;
+      }
+
+      let subtotal = 0;
+      let has50ml = false;
+      let hasCustomPersonalization = false;
+
+      container.innerHTML = cartItems.map(item => {
+        const itemTotal = (item.price + item.extraPrice) * item.quantity;
+        subtotal += itemTotal;
+        if (item.size && item.size.includes('50ml')) has50ml = true;
+        if (item.personalization === 'engraving' || item.personalization === 'giftwrap') {
+          hasCustomPersonalization = true;
+        }
+
+        return `
+          <div class="bg-white p-3 rounded-xl border border-brand-sand/80 flex gap-3 relative shadow-sm hover:border-brand-gold/60 transition-colors">
+            <img src="${item.image}" onerror="handleImgFallback(this)" class="w-16 h-20 object-cover rounded-lg border border-brand-sand shrink-0" alt="${item.name}">
+            <div class="flex-1 space-y-1 min-w-0">
+              <div class="flex items-start justify-between gap-1">
+                <h4 class="text-xs font-bold text-brand-espresso truncate">${item.name}</h4>
+                <button onclick="removeCartItem('${item.id}')" class="text-brand-muted hover:text-brand-wine p-0.5 rounded transition-colors" title="Xóa món này">
+                  <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+              <p class="text-[11px] text-brand-muted">${item.size}</p>
+              <p class="text-[10px] text-brand-goldDark font-medium truncate">${item.personalizationText}</p>
+              <div class="flex items-center justify-between pt-1.5 border-t border-brand-sand/40">
+                <span class="text-xs font-bold text-brand-wine">${new Intl.NumberFormat('vi-VN').format(itemTotal)}đ</span>
+                
+                <!-- Bộ điều khiển số lượng trong giỏ -->
+                <div class="flex items-center gap-1.5 bg-brand-cream border border-brand-sand/80 rounded-lg px-2 py-0.5">
+                  <button onclick="changeCartItemQty('${item.id}', -1)" class="w-4 h-4 text-xs font-bold text-brand-charcoal hover:text-brand-wine flex items-center justify-center transition-colors" title="Bớt 1">-</button>
+                  <span class="text-[11px] font-semibold text-brand-espresso min-w-[14px] text-center">${item.quantity}</span>
+                  <button onclick="changeCartItemQty('${item.id}', 1)" class="w-4 h-4 text-xs font-bold text-brand-charcoal hover:text-brand-wine flex items-center justify-center transition-colors" title="Thêm 1">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      subtotalElem.innerText = new Intl.NumberFormat('vi-VN').format(subtotal) + 'đ';
+
+      // Freeship Progress logic (Threshold: 399.000đ)
+      const threshold = 399000;
+      if (subtotal >= threshold) {
+        freeshipBar.style.width = "100%";
+        freeshipStatus.innerHTML = `<span class="text-emerald-700 font-bold">🎉 Đơn hàng đã đạt điều kiện Freeship toàn quốc!</span>`;
+        quickAdd69k.classList.add('hidden');
+      } else {
+        const diff = threshold - subtotal;
+        const percent = Math.min(100, Math.round((subtotal / threshold) * 100));
+        freeshipBar.style.width = percent + "%";
+        freeshipStatus.innerText = `Chỉ còn ${new Intl.NumberFormat('vi-VN').format(diff)}đ nữa để nhận Freeship toàn quốc!`;
+        quickAdd69k.classList.remove('hidden');
+      }
+
+      // Upsell 10ml visibility
+      if (has50ml) {
+        upsell10ml.classList.remove('hidden');
+      } else {
+        upsell10ml.classList.add('hidden');
+      }
+
+      // Payment restriction notice
+      if (hasCustomPersonalization) {
+        paymentNotice.classList.remove('hidden');
+      } else {
+        paymentNotice.classList.add('hidden');
+      }
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // ==========================================
+    // 3. CHECKOUT MODAL LOGIC (LOCK COD IF ENGRAVING)
+    // ==========================================
+    let currentOrderCode = "DL" + Math.floor(1000 + Math.random() * 9000);
+    let checkoutDiscount = 0;
+    let appliedVoucherCode = "";
+
+    function openCheckoutModal() {
+      toggleCartDrawer(false);
+      const modal = document.getElementById('checkout-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+
+      // Reset voucher state
+      checkoutDiscount = 0;
+      appliedVoucherCode = "";
+      const voucherInput = document.getElementById('checkout-voucher-input');
+      if (voucherInput) voucherInput.value = "";
+      const voucherBadge = document.getElementById('voucher-applied-badge');
+      if (voucherBadge) voucherBadge.classList.add('hidden');
+      const voucherMsg = document.getElementById('voucher-message');
+      if (voucherMsg) voucherMsg.classList.add('hidden');
+
+      // Sinh mã đơn hàng mới duy nhất
+      currentOrderCode = "DL" + Math.floor(1000 + Math.random() * 9000);
+      const remarkElem = document.getElementById('vietqr-order-remark');
+      if (remarkElem) remarkElem.innerText = `DELAMOUR ${currentOrderCode}`;
+
+      updateCheckoutTotals();
+
+      // Rule: Nếu có Khắc tên hoặc Gói quà -> Khóa tùy chọn COD!
+      let hasCustom = false;
+      cartItems.forEach(i => {
+        if (i.personalization === 'engraving' || i.personalization === 'giftwrap') {
+          hasCustom = true;
+        }
+      });
+
+      const codRadio = document.getElementById('radio-cod');
+      const codBadge = document.getElementById('badge-cod-lock');
+      const codLabel = document.getElementById('label-cod');
+
+      if (hasCustom) {
+        codRadio.disabled = true;
+        codRadio.checked = false;
+        codBadge.classList.remove('hidden');
+        codLabel.classList.add('line-through', 'text-brand-muted');
+        const vietqrRadio = document.querySelector('input[name="payment_method"][value="vietqr"]');
+        if (vietqrRadio) vietqrRadio.checked = true;
+        handlePaymentMethodChange('vietqr');
+      } else {
+        codRadio.disabled = false;
+        codBadge.classList.add('hidden');
+        codLabel.classList.remove('line-through', 'text-brand-muted');
+        const checked = document.querySelector('input[name="payment_method"]:checked');
+        handlePaymentMethodChange(checked ? checked.value : 'vietqr');
+      }
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function updateCheckoutTotals() {
+      let subtotal = 0;
+      cartItems.forEach(i => {
+        subtotal += (i.price + i.extraPrice) * i.quantity;
+      });
+
+      const finalAmount = Math.max(0, subtotal - checkoutDiscount);
+      const formatted = new Intl.NumberFormat('vi-VN').format(finalAmount) + 'đ';
+      document.getElementById('checkout-total-text').innerText = formatted;
+      document.getElementById('checkout-final-amount').innerText = formatted;
+
+      // Cập nhật mã VietQR động theo Napas 247
+      const qrImg = document.getElementById('vietqr-code-img');
+      if (qrImg) {
+        qrImg.src = `https://img.vietqr.io/image/MB-8888666999-compact2.png?amount=${finalAmount}&addInfo=DELAMOUR%20${currentOrderCode}&accountName=CTY%20DE%20LAMOUR%20VIETNAM`;
+        qrImg.onerror = function() {
+          this.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=DELAMOUR_${currentOrderCode}_${finalAmount}VND`;
+        };
+      }
+    }
+
+    function applyCheckoutVoucher() {
+      const input = document.getElementById('checkout-voucher-input');
+      const badge = document.getElementById('voucher-applied-badge');
+      const msg = document.getElementById('voucher-message');
+      const val = input ? input.value.trim().toUpperCase() : '';
+
+      if (!val) {
+        showToast('Vui lòng nhập mã Voucher!', 'info');
+        return;
+      }
+
+      if (val.startsWith('DELAMOUR50') || val === 'DELAMOUR' || val === 'PARIS50') {
+        checkoutDiscount = 50000;
+        appliedVoucherCode = val;
+        if (badge) badge.classList.remove('hidden');
+        if (msg) {
+          msg.classList.remove('hidden');
+          msg.className = "text-[11px] text-emerald-700 font-medium";
+          msg.innerText = `Áp dụng thành công ${val}: Giảm trực tiếp 50.000đ!`;
+        }
+        showToast(`Áp dụng Voucher ${val} thành công!`, 'success');
+        updateCheckoutTotals();
+      } else {
+        showToast('Mã voucher không hợp lệ!', 'info');
+        if (msg) {
+          msg.classList.remove('hidden');
+          msg.className = "text-[11px] text-rose-600 font-medium";
+          msg.innerText = "Mã không hợp lệ. Gợi ý: DELAMOUR50";
+        }
+      }
+    }
+
+    function handlePaymentMethodChange(method) {
+      const vietqrBox = document.getElementById('vietqr-preview-box');
+      const momoBox = document.getElementById('momo-preview-box');
+      const codBox = document.getElementById('cod-preview-box');
+
+      if (vietqrBox) vietqrBox.classList.add('hidden');
+      if (momoBox) momoBox.classList.add('hidden');
+      if (codBox) codBox.classList.add('hidden');
+
+      if (method === 'vietqr' && vietqrBox) {
+        vietqrBox.classList.remove('hidden');
+      } else if (method === 'momo' && momoBox) {
+        momoBox.classList.remove('hidden');
+      } else if (method === 'cod' && codBox) {
+        codBox.classList.remove('hidden');
+      }
+    }
+
+    function closeCheckoutModal() {
+      const modal = document.getElementById('checkout-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function confirmOrder() {
+      const nameInput = document.getElementById('order-name');
+      const phoneInput = document.getElementById('order-phone');
+      const addressInput = document.getElementById('order-address');
+
+      const name = nameInput && nameInput.value.trim() ? nameInput.value.trim() : "";
+      const phone = phoneInput && phoneInput.value.trim() ? phoneInput.value.trim() : "";
+      const address = addressInput && addressInput.value.trim() ? addressInput.value.trim() : "";
+
+      if (!name) {
+        showToast("Vui lòng nhập họ và tên người nhận!", "info");
+        nameInput?.focus();
+        return;
+      }
+
+      const cleanPhone = phone.replace(/\s/g, '');
+      const phoneRegex = /(84|0[3|5|7|8|9])+([0-9]{8})\b/;
+      if (!cleanPhone || !phoneRegex.test(cleanPhone)) {
+        showToast("Vui lòng nhập số điện thoại hợp lệ (10 chữ số)!", "info");
+        phoneInput?.focus();
+        return;
+      }
+
+      if (!address) {
+        showToast("Vui lòng nhập địa chỉ giao hàng!", "info");
+        addressInput?.focus();
+        return;
+      }
+
+      let subtotal = 0;
+      cartItems.forEach(i => {
+        subtotal += (i.price + i.extraPrice) * i.quantity;
+      });
+      const finalAmount = Math.max(0, subtotal - checkoutDiscount);
+      const formattedTotal = new Intl.NumberFormat('vi-VN').format(finalAmount) + 'đ';
+
+      const selectedMethod = document.querySelector('input[name="payment_method"]:checked');
+      let methodLabel = "Quét mã VietQR tự động";
+      if (selectedMethod) {
+        if (selectedMethod.value === 'momo') methodLabel = "Ví MoMo / VNPay";
+        else if (selectedMethod.value === 'cod') methodLabel = "Thanh toán khi nhận hàng (COD)";
+      }
+
+      // Cập nhật thông tin vào Modal Đặt hàng thành công
+      document.getElementById('success-order-id').innerText = '#' + currentOrderCode;
+      document.getElementById('success-customer-name').innerText = name;
+      document.getElementById('success-customer-phone').innerText = phone;
+      document.getElementById('success-customer-address').innerText = address;
+      document.getElementById('success-payment-method').innerText = methodLabel;
+      document.getElementById('success-total-amount').innerText = formattedTotal;
+
+      closeCheckoutModal();
+
+      const successModal = document.getElementById('order-success-modal');
+      if (successModal) {
+        successModal.classList.remove('hidden');
+        successModal.classList.add('flex');
+      }
+
+      cartItems = [];
+      saveCartToStorage();
+      renderCart();
+      showToast(`Đặt hàng #${currentOrderCode} thành công!`, 'success');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeOrderSuccessModal() {
+      const successModal = document.getElementById('order-success-modal');
+      if (successModal) {
+        successModal.classList.add('hidden');
+        successModal.classList.remove('flex');
+      }
+    }
+
+    // ==========================================
+    // 4. SCENT QUIZ ENGINE (70% REVEAL & 30% LEAD GATE)
+    // ==========================================
+    const quizQuestions = [
+      {
+        question: "1. Bạn muốn mùi hương mang lại cho mình cảm xúc nào nhất?",
+        options: [
+          { text: "Ngọt ngào, mơ mộng như một buổi chiều Paris", tag: "sweet" },
+          { text: "Thanh lịch, tự tin và kiêu hãnh", tag: "elegant" },
+          { text: "Tươi mát, sảng khoái và tràn đầy năng lượng", tag: "fresh" },
+          { text: "Bí ẩn, nồng ấm và đầy cuốn hút", tag: "warm" }
+        ]
+      },
+      {
+        question: "2. Hoàn cảnh bạn sử dụng nước hoa thường xuyên nhất?",
+        options: [
+          { text: "Hằng ngày: Đi làm văn phòng, học tập", tag: "daily" },
+          { text: "Hẹn hò lãng mạn, gặp gỡ người thương", tag: "date" },
+          { text: "Tiệc tối sang trọng, sự kiện đặc biệt", tag: "event" },
+          { text: "Cà phê cuối tuần, du lịch khám phá", tag: "casual" }
+        ]
+      },
+      {
+        question: "3. Thần thái và phong cách thời trang của bạn?",
+        options: [
+          { text: "Tiểu thư nữ tính, váy hoa nhẹ nhàng", tag: "chic" },
+          { text: "Minimalism: Áo sơ mi lụa, blazer thanh lịch", tag: "minimal" },
+          { text: "Năng động, hiện đại và trẻ trung", tag: "active" },
+          { text: "Quyến rũ, cổ điển và có chiều sâu", tag: "classic" }
+        ]
+      },
+      {
+        question: "4. Nhóm hương nào khiến bạn cảm thấy rung động nhất?",
+        options: [
+          { text: "Hoa hồng, Quả mọng và Phấn thơm mịn", tag: "floral" },
+          { text: "Trà xanh, Cam Bergamot và Thảo mộc tươi", tag: "tea" },
+          { text: "Gỗ tuyết tùng, Hổ phách và Xạ hương ấm", tag: "woody" },
+          { text: "Hạnh nhân nướng, Vani và Vỏ cam ngọt dịu", tag: "gourmand" }
+        ]
+      }
+    ];
+
+    let currentQuizStep = 0;
+    let quizAnswers = [];
+    let quizMatchedKey = "cherie";
+
+    function openQuizModal() {
+      const modal = document.getElementById('quiz-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      currentQuizStep = 0;
+      quizAnswers = [];
+      showQuizStep(0);
+    }
+
+    function closeQuizModal() {
+      const modal = document.getElementById('quiz-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function showQuizStep(step) {
+      document.getElementById('quiz-question-container').classList.remove('hidden');
+      document.getElementById('quiz-step-indicator').classList.remove('hidden');
+      document.getElementById('quiz-result-container').classList.add('hidden');
+      
+      document.getElementById('quiz-current-step').innerText = step + 1;
+      document.getElementById('quiz-progress-bar').style.width = ((step + 1) / 4) * 100 + "%";
+
+      const q = quizQuestions[step];
+      document.getElementById('quiz-question-title').innerText = q.question;
+
+      const grid = document.getElementById('quiz-options-grid');
+      grid.innerHTML = q.options.map((opt, idx) => `
+        <button onclick="pickQuizAnswer(${idx})" class="p-4 rounded-xl border border-brand-sand bg-white hover:border-brand-wine hover:bg-rose-50/40 text-left transition-all text-xs font-medium text-brand-charcoal hover:text-brand-wine shadow-sm group">
+          <div class="flex items-center justify-between">
+            <span>${opt.text}</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-brand-sand group-hover:text-brand-wine transition-colors"></i>
+          </div>
+        </button>
+      `).join('');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function pickQuizAnswer(idx) {
+      quizAnswers.push(idx);
+      if (currentQuizStep < 3) {
+        currentQuizStep++;
+        showQuizStep(currentQuizStep);
+      } else {
+        showQuizResult();
+      }
+    }
+
+    function showQuizResult() {
+      document.getElementById('quiz-question-container').classList.add('hidden');
+      document.getElementById('quiz-step-indicator').classList.add('hidden');
+      document.getElementById('quiz-result-container').classList.remove('hidden');
+
+      // Thuật toán chấm điểm matching động
+      const scores = { cherie: 0, fleur: 0, botanique: 0, nuit: 0, soleil: 0 };
+      
+      // Q1: Emotion
+      if (quizAnswers[0] === 0) { scores.fleur += 3; scores.cherie += 2; }
+      else if (quizAnswers[0] === 1) { scores.cherie += 3; scores.nuit += 2; }
+      else if (quizAnswers[0] === 2) { scores.botanique += 3; scores.soleil += 2; }
+      else if (quizAnswers[0] === 3) { scores.nuit += 3; scores.cherie += 1; }
+
+      // Q2: Occasion
+      if (quizAnswers[1] === 0) { scores.botanique += 2; scores.fleur += 2; }
+      else if (quizAnswers[1] === 1) { scores.cherie += 3; scores.fleur += 1; }
+      else if (quizAnswers[1] === 2) { scores.nuit += 3; }
+      else if (quizAnswers[1] === 3) { scores.soleil += 3; scores.botanique += 1; }
+
+      // Q3: Style
+      if (quizAnswers[2] === 0) { scores.fleur += 3; }
+      else if (quizAnswers[2] === 1) { scores.botanique += 3; scores.cherie += 1; }
+      else if (quizAnswers[2] === 2) { scores.soleil += 3; }
+      else if (quizAnswers[2] === 3) { scores.nuit += 3; scores.cherie += 2; }
+
+      // Q4: Notes
+      if (quizAnswers[3] === 0) { scores.fleur += 4; }
+      else if (quizAnswers[3] === 1) { scores.botanique += 4; }
+      else if (quizAnswers[3] === 2) { scores.nuit += 4; }
+      else if (quizAnswers[3] === 3) { scores.soleil += 3; scores.cherie += 3; }
+
+      let bestKey = "cherie";
+      let maxScore = -1;
+      for (const [key, score] of Object.entries(scores)) {
+        if (score > maxScore) {
+          maxScore = score;
+          bestKey = key;
+        }
+      }
+
+      quizMatchedKey = bestKey;
+      const matched = PRODUCTS_DATA[bestKey] || PRODUCTS_DATA.cherie;
+
+      // Độ tương thích 96% - 99%
+      const compatPercent = 95 + Math.min(4, Math.floor(maxScore / 3));
+      const badgeElem = document.getElementById('quiz-compat-badge');
+      if (badgeElem) badgeElem.innerText = `Độ tương thích ${compatPercent}%`;
+
+      // Cập nhật ảnh và thông tin
+      const imgElem = document.getElementById('quiz-result-img');
+      if (imgElem) {
+        imgElem.src = matched.image50ml || matched.image;
+        imgElem.alt = matched.name;
+      }
+      const titleElem = document.getElementById('quiz-result-title');
+      if (titleElem) titleElem.innerText = matched.name;
+      const catElem = document.getElementById('quiz-result-category');
+      if (catElem) catElem.innerText = matched.badge;
+      const descElem = document.getElementById('quiz-result-desc');
+      if (descElem) descElem.innerText = matched.quote.replace(/"/g, '');
+
+      // Cập nhật tháp hương 3 tầng
+      const topElem = document.getElementById('quiz-top-notes');
+      if (topElem) topElem.innerText = matched.topNotes.split(',').slice(0, 2).join(', ');
+      const heartElem = document.getElementById('quiz-heart-notes');
+      if (heartElem) heartElem.innerText = matched.heartNotes.split(',').slice(0, 2).join(', ');
+      const baseElem = document.getElementById('quiz-base-notes');
+      if (baseElem) baseElem.innerText = matched.baseNotes.split(',').slice(0, 2).join(', ');
+
+      // Cập nhật giá nút mua hàng
+      const buyBtn = document.getElementById('btn-quiz-buy-50ml');
+      if (buyBtn) {
+        const formattedPrice = new Intl.NumberFormat('vi-VN').format(matched.price50ml) + 'đ';
+        buyBtn.innerText = `Sở hữu ngay Signature 50ml (${formattedPrice})`;
+      }
+
+      // Reset lead gate state
+      document.getElementById('quiz-lead-gate').classList.remove('hidden');
+      document.getElementById('quiz-unlocked-section').classList.add('hidden');
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function copyQuizVoucher() {
+      const code = document.getElementById('quiz-voucher-code').innerText;
+      copyToClipboard(code, 'Đã sao chép mã Voucher 50%!');
+    }
+
+    function submitQuizLead() {
+      const phoneInput = document.getElementById('quiz-lead-phone');
+      const phone = phoneInput ? phoneInput.value.trim() : '';
+      if (!phone || phone.length < 9) {
+        alert("Vui lòng nhập số điện thoại hoặc Zalo hợp lệ (từ 9 số trở lên) để nhận Scent Profile!");
+        return;
+      }
+      const randomSuffix = Math.floor(1000 + Math.random() * 9000);
+      const voucherCode = `DELAMOUR50-${randomSuffix}`;
+      const codeElem = document.getElementById('quiz-voucher-code');
+      if (codeElem) codeElem.innerText = voucherCode;
+
+      // Bí quyết ủ hương riêng cho từng mùi
+      const tipsMap = {
+        cherie: "Xịt 2 shot vào cổ áo và sau gáy lúc 8h sáng, dặm lại bằng chai Pocket 10ml sau 14h chiều cho phong cách ngọt ngào kiêu kỳ.",
+        fleur: "Xịt nhẹ ở cổ tay và xương quai xanh trước khi ra ngoài để lan tỏa hương hoa mẫu đơn thanh thuần, tươi trẻ suốt ngày dài.",
+        botanique: "Xịt sương mỏng từ khoảng cách 20cm lên trang phục linen, cảm nhận trọn vẹn vị trà xanh và cam bergamot bừng tỉnh sinh khí.",
+        nuit: "Xịt điểm huyệt sau tai và gáy trước khi bước vào đêm tiệc, hương gỗ ấm và hổ phách sẽ bám tỏa kiêu sa suốt 8–10 tiếng.",
+        soleil: "Lý tưởng xịt vào những buổi hẹn cà phê hoặc dạo phố, tạo aura rạng rỡ, ngọt mọng và tràn đầy năng lượng tích cực."
+      };
+      const tipElem = document.getElementById('quiz-unlocked-tips');
+      if (tipElem) tipElem.innerText = tipsMap[quizMatchedKey] || tipsMap.cherie;
+
+      document.getElementById('quiz-lead-gate').classList.add('hidden');
+      document.getElementById('quiz-unlocked-section').classList.remove('hidden');
+      showToast('Đã kích hoạt Voucher hoàn tiền 50% qua Zalo!', 'success');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function addQuizResultToCart() {
+      const matched = PRODUCTS_DATA[quizMatchedKey] || PRODUCTS_DATA.cherie;
+      cartItems.push({
+        id: 'item_' + Date.now(),
+        name: `${matched.name} (Gợi ý Scent Quiz)`,
+        size: "Signature 50ml",
+        price: matched.price50ml,
+        personalization: "standard",
+        personalizationText: "Hộp tiêu chuẩn De L'amour",
+        extraPrice: 0,
+        quantity: 1,
+        image: matched.image50ml || matched.image
+      });
+      showToast(`Đã thêm ${matched.name} 50ml vào giỏ hàng!`, 'success');
+      saveCartToStorage();
+      closeQuizModal();
+      toggleCartDrawer(true);
+    }
+
+    function retakeQuiz() {
+      currentQuizStep = 0;
+      quizAnswers = [];
+      showQuizStep(0);
+    }
+
+    // Khởi tạo hiển thị giỏ hàng ban đầu
+    renderCart();
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "delamour-flagship-store",
+  "version": "1.0.0",
+  "description": "De L'amour - Parisian Haute Parfumerie Digital Flagship Store",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "keywords": [
+    "perfume",
+    "ecommerce",
+    "parisian",
+    "delamour"
+  ],
+  "author": "De L'amour Paris",
+  "license": "MIT"
+}
