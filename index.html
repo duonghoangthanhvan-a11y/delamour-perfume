@@ -65,7 +65,7 @@
     .animate-shimmer { animation: subtleShimmer 3s ease-in-out infinite; }
   </style>
 </head>
-<body class="bg-brand-cream text-brand-espresso font-sans antialiased selection:bg-brand-wine selection:text-white">
+<body class="bg-brand-cream text-brand-espresso font-sans antialiased selection:bg-brand-wine selection:text-white overflow-x-hidden">
 
   <!-- TOP NOTIFICATION BAR -->
   <div class="bg-brand-wine text-white text-xs py-2 px-4 text-center tracking-wider font-medium flex items-center justify-center gap-2">
@@ -313,10 +313,10 @@
 
     <!-- 3. INTERACTIVE PDP SECTION (PRODUCT DETAIL PAGE SHOWCASE) -->
     <!-- Đây là trái tim của trải nghiệm: Cột bên phải có đầy đủ Tháp hương, Thước đo, Khắc tên Live Preview, Gói quà và Safety Net -->
-    <section id="featured-product" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="featured-product" class="py-12 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-20">
       
       <!-- Section Breadcrumbs & Header -->
-      <div class="mb-8 flex items-center justify-between">
+      <div class="mb-6 sm:mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         <div class="flex items-center gap-2 text-xs text-brand-muted">
           <a href="#" class="hover:text-brand-wine">Trang chủ</a>
           <span>/</span>
@@ -324,63 +324,111 @@
           <span>/</span>
           <span id="pdp-breadcrumb-name" class="text-brand-espresso font-medium">Chérie L'amour</span>
         </div>
-        <span class="inline-flex items-center gap-1.5 text-xs text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full font-medium">
+        <span class="inline-flex items-center gap-1.5 text-xs text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full font-medium w-fit">
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
           Đang có sẵn • Giao nhanh 1-3 ngày
         </span>
       </div>
 
       <!-- Main PDP Grid: 2 Columns (Image Gallery Left, Buy & Olfactory Proof Right) -->
-      <div class="grid lg:grid-cols-12 gap-12 items-start">
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
         
         <!-- LEFT COLUMN: PRODUCT GALLERY (5 cols) -->
-        <div class="lg:col-span-5 sticky top-28">
-          <div class="relative bg-brand-beige rounded-2xl overflow-hidden aspect-[4/5] border border-brand-sand shadow-inner flex items-center justify-center group">
-            
-            <!-- Bottle Visual with Simulated Cap Overlay for Live Preview -->
+        <div class="lg:col-span-5 lg:sticky lg:top-28">
+          <div 
+            id="pdp-carousel-container" 
+            class="relative bg-brand-beige rounded-2xl overflow-hidden border border-brand-sand shadow-inner flex items-center justify-center group select-none w-full max-w-[430px] mx-auto"
+            style="aspect-ratio: 9/16; max-height: min(80vh, 760px);"
+          >
+            <!-- Bottle Visual / Carousel Slide with Simulated Cap Overlay for Live Preview -->
             <img 
               id="pdp-main-img"
               src="cherie-lamour.jpg" 
               alt="Chérie L'amour Eau de Parfum" 
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              class="w-full h-full object-cover object-center transition-all duration-300 group-hover:scale-[1.01]"
               onerror="handleImgFallback(this)"
             />
 
+            <!-- Carousel Left / Right Navigation Arrows -->
+            <button 
+              type="button"
+              onclick="prevPDPImage(event)" 
+              aria-label="Xem ảnh trước" 
+              class="absolute left-2.5 sm:left-3 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/85 hover:bg-white text-brand-espresso hover:text-brand-wine shadow-lg flex items-center justify-center transition-all duration-200 border border-brand-sand/60 backdrop-blur-sm opacity-90 hover:opacity-100 hover:scale-110 active:scale-95 cursor-pointer"
+            >
+              <i data-lucide="chevron-left" class="w-5 h-5 sm:w-6 sm:h-6 text-brand-espresso"></i>
+            </button>
+            <button 
+              type="button"
+              onclick="nextPDPImage(event)" 
+              aria-label="Xem ảnh kế tiếp" 
+              class="absolute right-2.5 sm:right-3 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/85 hover:bg-white text-brand-espresso hover:text-brand-wine shadow-lg flex items-center justify-center transition-all duration-200 border border-brand-sand/60 backdrop-blur-sm opacity-90 hover:opacity-100 hover:scale-110 active:scale-95 cursor-pointer"
+            >
+              <i data-lucide="chevron-right" class="w-5 h-5 sm:w-6 sm:h-6 text-brand-espresso"></i>
+            </button>
+
+            <!-- Carousel Counter Badge (Top-left) -->
+            <div class="absolute top-3 left-3 z-20 px-2.5 py-1 bg-brand-espresso/80 backdrop-blur-md rounded-full text-[11px] font-medium text-white shadow-sm flex items-center gap-1.5 border border-white/15">
+              <i data-lucide="layers" class="w-3.5 h-3.5 text-brand-gold"></i>
+              <span><span id="pdp-carousel-index">1</span>/<span id="pdp-carousel-total">6</span></span>
+              <span class="text-white/40">•</span>
+              <span id="pdp-carousel-label" class="text-brand-sand font-normal max-w-[130px] sm:max-w-none truncate">Ảnh đại diện</span>
+            </div>
+
             <!-- LIVE ENGRAVING PREVIEW ON BOTTLE CAP OVERLAY -->
-            <div id="live-engraving-badge" class="hidden absolute top-[16%] left-1/2 transform -translate-x-1/2 z-20 pointer-events-none transition-all duration-300">
+            <div id="live-engraving-badge" class="hidden absolute top-[35%] left-1/2 transform -translate-x-1/2 z-20 pointer-events-none transition-all duration-300">
               <div class="px-3 py-1 bg-brand-gold/90 backdrop-blur-sm text-brand-espresso rounded shadow-md border border-yellow-200/50">
                 <p id="live-engraving-text" class="text-xs font-engrave-script tracking-wider font-bold">Chérie</p>
               </div>
             </div>
 
+            <!-- Carousel Dots (6 hình) -->
+            <div id="pdp-carousel-dots" class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/45 backdrop-blur-md border border-white/15 shadow-sm">
+              <!-- Rendered via JS -->
+            </div>
+
             <!-- Floating Badge: Note category -->
-            <div id="pdp-badge-note" class="absolute bottom-4 left-4 z-10 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-semibold text-brand-wine border border-brand-sand shadow-sm">
+            <div id="pdp-badge-note" class="hidden sm:block absolute bottom-3 left-3 z-10 px-2.5 py-1 bg-white/90 backdrop-blur-md rounded-full text-[11px] font-semibold text-brand-wine border border-brand-sand shadow-sm">
               Berry &amp; Woody Vanilla
             </div>
 
-            <!-- Zoom Indicator -->
-            <div class="absolute top-4 right-4 z-10 p-2 bg-white/80 rounded-full text-brand-charcoal shadow-sm">
+            <!-- Zoom Indicator (Top-right) -->
+            <button 
+              type="button" 
+              onclick="openLightboxModal()" 
+              class="absolute top-3 right-3 z-20 w-8 h-8 flex items-center justify-center bg-white/85 hover:bg-white rounded-full text-brand-charcoal hover:text-brand-wine shadow-sm transition-all border border-brand-sand/50 cursor-pointer" 
+              title="Phóng to xem chi tiết"
+            >
               <i data-lucide="maximize-2" class="w-4 h-4"></i>
-            </div>
+            </button>
           </div>
 
           <!-- Thumbnail Strip (5 Chai nước hoa chủ đạo) -->
-          <div class="grid grid-cols-5 gap-2 mt-4" id="pdp-thumbnails">
-            <button onclick="switchPDPProduct('cherie')" id="thumb-cherie" class="rounded-xl overflow-hidden aspect-square border-2 border-brand-wine p-0.5 transition-all shadow-sm" title="Chérie L'amour">
-              <img src="cherie-lamour.jpg" class="w-full h-full object-cover rounded-lg" alt="Chérie L'amour" onerror="handleImgFallback(this)">
-            </button>
-            <button onclick="switchPDPProduct('fleur')" id="thumb-fleur" class="rounded-xl overflow-hidden aspect-square border border-brand-sand opacity-75 hover:opacity-100 transition-all" title="Fleur L'amour">
-              <img src="fleur-lamour.jpg" class="w-full h-full object-cover rounded-lg" alt="Fleur L'amour" onerror="handleImgFallback(this)">
-            </button>
-            <button onclick="switchPDPProduct('botanique')" id="thumb-botanique" class="rounded-xl overflow-hidden aspect-square border border-brand-sand opacity-75 hover:opacity-100 transition-all" title="L'amour Botanique">
-              <img src="botanique-lamour.jpg" class="w-full h-full object-cover rounded-lg" alt="L'amour Botanique" onerror="handleImgFallback(this)">
-            </button>
-            <button onclick="switchPDPProduct('nuit')" id="thumb-nuit" class="rounded-xl overflow-hidden aspect-square border border-brand-sand opacity-75 hover:opacity-100 transition-all" title="Nuit L'amour">
-              <img src="nuit-lamour.jpg" class="w-full h-full object-cover rounded-lg" alt="Nuit L'amour" onerror="handleImgFallback(this)">
-            </button>
-            <button onclick="switchPDPProduct('soleil')" id="thumb-soleil" class="rounded-xl overflow-hidden aspect-square border border-brand-sand opacity-75 hover:opacity-100 transition-all" title="Soleil L'amour">
-              <img src="soleil-lamour.jpg" class="w-full h-full object-cover rounded-lg" alt="Soleil L'amour" onerror="handleImgFallback(this)">
-            </button>
+          <div class="mt-4 max-w-[430px] mx-auto">
+            <div class="flex items-center justify-between mb-2 px-0.5 text-xs">
+              <span class="text-[11px] font-semibold uppercase tracking-wider text-brand-espresso flex items-center gap-1.5">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-gold"></i>
+                Bộ sưu tập 5 mùi hương
+              </span>
+              <span class="text-[10px] text-brand-muted italic">Click để đổi sản phẩm</span>
+            </div>
+            <div class="grid grid-cols-5 gap-2" id="pdp-thumbnails">
+              <button onclick="switchPDPProduct('cherie')" id="thumb-cherie" class="rounded-xl overflow-hidden aspect-square border-2 border-brand-wine p-0.5 transition-all shadow-sm group" title="Chérie L'amour">
+                <img src="cherie-lamour.jpg" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" alt="Chérie L'amour" onerror="handleImgFallback(this)">
+              </button>
+              <button onclick="switchPDPProduct('fleur')" id="thumb-fleur" class="rounded-xl overflow-hidden aspect-square border border-brand-sand opacity-75 hover:opacity-100 transition-all group" title="Fleur L'amour">
+                <img src="fleur-lamour.jpg" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" alt="Fleur L'amour" onerror="handleImgFallback(this)">
+              </button>
+              <button onclick="switchPDPProduct('botanique')" id="thumb-botanique" class="rounded-xl overflow-hidden aspect-square border border-brand-sand opacity-75 hover:opacity-100 transition-all group" title="L'amour Botanique">
+                <img src="botanique-lamour.jpg" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" alt="L'amour Botanique" onerror="handleImgFallback(this)">
+              </button>
+              <button onclick="switchPDPProduct('nuit')" id="thumb-nuit" class="rounded-xl overflow-hidden aspect-square border border-brand-sand opacity-75 hover:opacity-100 transition-all group" title="Nuit L'amour">
+                <img src="nuit-lamour.jpg" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" alt="Nuit L'amour" onerror="handleImgFallback(this)">
+              </button>
+              <button onclick="switchPDPProduct('soleil')" id="thumb-soleil" class="rounded-xl overflow-hidden aspect-square border border-brand-sand opacity-75 hover:opacity-100 transition-all group" title="Soleil L'amour">
+                <img src="soleil-lamour.jpg" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" alt="Soleil L'amour" onerror="handleImgFallback(this)">
+              </button>
+            </div>
           </div>
         </div>
 
@@ -719,7 +767,7 @@
     </section>
 
     <!-- 4. FULL COLLECTION SHOWCASE (5 SIGNATURE FRAGRANCES, DUO & DISCOVERY) -->
-    <section id="collection" class="py-20 bg-brand-beige/40 border-t border-brand-sand">
+    <section id="collection" class="py-16 sm:py-20 bg-brand-beige/40 border-t border-brand-sand scroll-mt-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12">
           <div>
@@ -904,7 +952,7 @@
     </section>
 
     <!-- 4b. DISCOVERY SET SECTION -->
-    <section id="discovery-set" class="py-20 bg-brand-espresso text-white overflow-hidden">
+    <section id="discovery-set" class="py-16 sm:py-20 bg-brand-espresso text-white overflow-hidden scroll-mt-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Header -->
@@ -1039,7 +1087,7 @@
     </section>
 
     <!-- 5. SCENT JOURNAL (BLOG / BRAND CONTENT) -->
-    <section id="journal" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="journal" class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-20">
       <div class="text-center max-w-2xl mx-auto mb-14">
         <span class="text-xs font-semibold text-brand-wine uppercase tracking-[0.25em]">The Scent Journal</span>
         <h3 class="font-serif text-3xl sm:text-4xl text-brand-espresso mt-2 font-semibold">Nghệ thuật thưởng hương &amp; Phong cách sống</h3>
@@ -1079,7 +1127,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer id="about" class="bg-brand-espresso text-brand-sand py-16 border-t border-brand-sand/20">
+  <footer id="about" class="bg-brand-espresso text-brand-sand py-12 sm:py-16 border-t border-brand-sand/20 scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
         
@@ -1460,6 +1508,37 @@
 
       </div>
 
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: PRODUCT CAROUSEL LIGHTBOX (PHÓNG TO XEM BỘ ẢNH CHI TIẾT)           -->
+  <!-- ========================================================================= -->
+  <div id="pdp-lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-3 sm:p-6" onclick="closeLightboxModal(event)">
+    <div class="relative max-w-4xl w-full max-h-[92vh] flex flex-col items-center justify-center" onclick="event.stopPropagation()">
+      <!-- Close Button -->
+      <button onclick="closeLightboxModal()" class="absolute -top-11 right-0 sm:top-2 sm:right-2 z-50 p-2 text-white/80 hover:text-white bg-white/10 hover:bg-white/25 rounded-full transition-colors cursor-pointer" title="Đóng (Esc)">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <!-- Lightbox Main Frame -->
+      <div class="relative w-full flex items-center justify-center">
+        <img id="lightbox-img" src="" alt="De L'amour" class="max-h-[78vh] w-auto max-w-full rounded-2xl object-contain shadow-2xl border border-white/10">
+        
+        <!-- Lightbox Prev / Next Buttons -->
+        <button onclick="prevPDPImage(event); updateLightboxImage();" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 hover:bg-white text-white hover:text-brand-espresso shadow-lg transition-all backdrop-blur-md cursor-pointer" title="Ảnh trước (Mũi tên trái)">
+          <i data-lucide="chevron-left" class="w-6 h-6"></i>
+        </button>
+        <button onclick="nextPDPImage(event); updateLightboxImage();" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 hover:bg-white text-white hover:text-brand-espresso shadow-lg transition-all backdrop-blur-md cursor-pointer" title="Ảnh tiếp theo (Mũi tên phải)">
+          <i data-lucide="chevron-right" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Lightbox Caption -->
+      <div class="mt-3 text-center text-white select-none">
+        <p id="lightbox-title" class="font-serif text-lg font-medium"></p>
+        <p id="lightbox-subtitle" class="text-xs text-brand-gold mt-0.5 font-medium"></p>
+      </div>
     </div>
   </div>
 
@@ -1847,6 +1926,13 @@
         image: "cherie-lamour.jpg",
         image50ml: "cherie-lamour.jpg",
         image10ml: "cherie-pocket.jpg",
+        carouselImages: [
+          { src: "cherie-1.jpg", label: "Ảnh 1: Ảnh bìa / Cover" },
+          { src: "cherie-2.jpg", label: "Ảnh 2: Infographic Tầng Hương" },
+          { src: "cherie-3.jpg", label: "Ảnh 3: So sánh / Proof" },
+          { src: "cherie-4.jpg", label: "Ảnh 4: Hướng dẫn dùng Voucher" },
+          { src: "cherie-5.jpg", label: "Ảnh 5: Cam kết / Policy" }
+        ],
         topNotes: "Quả mọng đỏ, Quả sung ngọt, Cam Bergamot",
         topDesc: "Mở đầu ngọt mọng, quyến rũ và ấn tượng khó phai.",
         heartNotes: "Hoa hồng Damask, Diên vĩ (Iris Powdery)",
@@ -1877,6 +1963,13 @@
         image: "fleur-lamour.jpg",
         image50ml: "fleur-lamour.jpg",
         image10ml: "fleur-pocket.png",
+        carouselImages: [
+          { src: "fleur-1.jpg", label: "Ảnh 1: Ảnh bìa / Cover" },
+          { src: "fleur-2.jpg", label: "Ảnh 2: Infographic Tầng Hương" },
+          { src: "fleur-3.jpg", label: "Ảnh 3: So sánh / Proof" },
+          { src: "fleur-4.jpg", label: "Ảnh 4: Hướng dẫn dùng Voucher" },
+          { src: "fleur-5.jpg", label: "Ảnh 5: Cam kết / Policy" }
+        ],
         topNotes: "Dâu tây dại, Cam Bergamot, Quả mọng",
         topDesc: "Tươi tắn, ngọt nhẹ và bừng sáng năng lượng tích cực.",
         heartNotes: "Hoa mẫu đơn Pháp (Peony), Trà trắng, Hoa nhài Grasse",
@@ -1907,6 +2000,13 @@
         image: "botanique-lamour.jpg",
         image50ml: "botanique-lamour.jpg",
         image10ml: "botanique-pocket.jpg",
+        carouselImages: [
+          { src: "Botan-1.jpg", label: "Ảnh 1: Ảnh bìa / Cover" },
+          { src: "Botan-2.jpg", label: "Ảnh 2: Infographic Tầng Hương" },
+          { src: "Botan-3.jpg", label: "Ảnh 3: So sánh / Proof" },
+          { src: "Botan-4.jpg", label: "Ảnh 4: Hướng dẫn dùng Voucher" },
+          { src: "Botan-5.jpg", label: "Ảnh 5: Cam kết / Policy" }
+        ],
         topNotes: "Cam Bergamot Ý, Quả chanh xanh, Cam Mandarin",
         topDesc: "Sảng khoái, bừng tỉnh các giác quan ngay tức khắc.",
         heartNotes: "Lá trà xanh tươi, Hoa cam Neroli, Cỏ xạ hương",
@@ -1937,6 +2037,13 @@
         image: "nuit-lamour.jpg",
         image50ml: "nuit-lamour.jpg",
         image10ml: "nuit-pocket.jpg",
+        carouselImages: [
+          { src: "nuit-1.jpg", label: "Ảnh 1: Ảnh bìa / Cover" },
+          { src: "nuit-2.jpg", label: "Ảnh 2: Infographic Tầng Hương" },
+          { src: "nuit-3.jpg", label: "Ảnh 3: So sánh / Proof" },
+          { src: "nuit-4.jpg", label: "Ảnh 4: Hướng dẫn dùng Voucher" },
+          { src: "nuit-5.jpg", label: "Ảnh 5: Cam kết / Policy" }
+        ],
         topNotes: "Tiêu hồng, Nhục đậu khấu, Quả lý chua đen",
         topDesc: "Cay nhẹ kích thích, cuốn hút và bí ẩn.",
         heartNotes: "Hoa hồng đen huyền bí, Trầm hương nhẹ (Oud), Hoa phong lữ",
@@ -1967,6 +2074,13 @@
         image: "soleil-lamour.jpg",
         image50ml: "soleil-lamour.jpg",
         image10ml: "soleil-pocket.jpg",
+        carouselImages: [
+          { src: "soleil-1.jpg", label: "Ảnh 1: Ảnh bìa / Cover" },
+          { src: "soleil-2.jpg", label: "Ảnh 2: Infographic Tầng Hương" },
+          { src: "soleil-3.jpg", label: "Ảnh 3: So sánh / Proof" },
+          { src: "soleil-4.jpg", label: "Ảnh 4: Hướng dẫn dùng Voucher" },
+          { src: "soleil-5.jpg", label: "Ảnh 5: Cam kết / Policy" }
+        ],
         topNotes: "Bưởi hồng mọng nước, Quýt ngọt, Lá nguyệt quế Địa Trung Hải",
         topDesc: "Tràn đầy sức sống, tươi sáng và rạng rỡ.",
         heartNotes: "Hoa cam Pháp, Gừng tươi, Hạnh nhân nướng",
@@ -1983,9 +2097,10 @@
     };
 
     // ==========================================
-    // 1. PDP STATE MANAGEMENT
+    // 1. PDP STATE MANAGEMENT & CAROUSEL
     // ==========================================
     let currentProductKey = "cherie";
+    let currentCarouselIndex = 0;
     let currentProduct = {
       name: PRODUCTS_DATA["cherie"].name,
       image: PRODUCTS_DATA["cherie"].image50ml,
@@ -2021,6 +2136,163 @@
       }
     }
 
+    // Lấy danh sách 6 ảnh cho sản phẩm đang chọn
+    // Lấy danh sách ảnh cho sản phẩm đang chọn:
+    // - Khi chọn Pocket 10ml: chỉ hiển thị 3 hình:
+    //   1. Ảnh đại diện (ảnh 0)
+    //   2. Ảnh 4 (Hướng dẫn dùng voucher)
+    //   3. Ảnh 5 (Cam kết / Policy)
+    // - Khi chọn Signature 50ml: hiển thị trọn bộ 6 hình:
+    //   Ảnh 0 (Chai chính) + Ảnh 1 (Bìa) + Ảnh 2 (Tầng hương) + Ảnh 3 (Proof) + Ảnh 4 (Voucher) + Ảnh 5 (Cam kết)
+    function getPDPCarouselList() {
+      const p = PRODUCTS_DATA[currentProductKey];
+      if (!p) return [];
+
+      if (currentProduct.size === '10ml') {
+        const mainSrc = p.image10ml || p.image;
+        const voucherImg = p.carouselImages && p.carouselImages[3] ? p.carouselImages[3] : { src: `${p.id}-4.jpg`, label: "Ảnh 4: Hướng dẫn dùng Voucher" };
+        const policyImg = p.carouselImages && p.carouselImages[4] ? p.carouselImages[4] : { src: `${p.id}-5.jpg`, label: "Ảnh 5: Cam kết / Policy" };
+
+        return [
+          { src: mainSrc, label: "Ảnh đại diện (Pocket 10ml)", isMain: true },
+          { src: voucherImg.src, label: "Ảnh 4: Hướng dẫn dùng Voucher" },
+          { src: policyImg.src, label: "Ảnh 5: Cam kết / Policy" }
+        ];
+      } else {
+        const mainSrc = p.image50ml || p.image;
+        return [
+          { src: mainSrc, label: "Ảnh đại diện (Signature 50ml)", isMain: true },
+          ...(p.carouselImages || [])
+        ];
+      }
+    }
+
+    function renderPDPCarousel(animate = false) {
+      const list = getPDPCarouselList();
+      if (!list || list.length === 0) return;
+      if (currentCarouselIndex >= list.length) currentCarouselIndex = 0;
+      if (currentCarouselIndex < 0) currentCarouselIndex = list.length - 1;
+
+      const cur = list[currentCarouselIndex];
+      const mainImg = document.getElementById('pdp-main-img');
+      if (mainImg) {
+        delete mainImg.dataset.triedFallback;
+        delete mainImg.dataset.fallbackStep;
+        if (animate) {
+          mainImg.style.opacity = '0.35';
+          mainImg.style.transform = 'scale(0.98)';
+          setTimeout(() => {
+            mainImg.src = cur.src;
+            mainImg.alt = `${PRODUCTS_DATA[currentProductKey].name} - ${cur.label}`;
+            mainImg.style.opacity = '1';
+            mainImg.style.transform = 'scale(1)';
+          }, 90);
+        } else {
+          mainImg.src = cur.src;
+          mainImg.alt = `${PRODUCTS_DATA[currentProductKey].name} - ${cur.label}`;
+          mainImg.style.opacity = '1';
+          mainImg.style.transform = 'scale(1)';
+        }
+      }
+
+      // Counter & Label
+      const idxEl = document.getElementById('pdp-carousel-index');
+      const totEl = document.getElementById('pdp-carousel-total');
+      const lblEl = document.getElementById('pdp-carousel-label');
+      if (idxEl) idxEl.innerText = currentCarouselIndex + 1;
+      if (totEl) totEl.innerText = list.length;
+      if (lblEl) lblEl.innerText = cur.label;
+
+      // Ẩn/hiện lớp phủ khắc tên trên nắp chai: Chỉ hiện khi ở ảnh đại diện (ảnh chai)
+      const liveBadge = document.getElementById('live-engraving-badge');
+      if (liveBadge) {
+        if (currentCarouselIndex === 0 && currentProduct.personalization === 'engraving') {
+          liveBadge.classList.remove('hidden');
+        } else {
+          liveBadge.classList.add('hidden');
+        }
+      }
+
+      // Render 6 dots
+      const dotsContainer = document.getElementById('pdp-carousel-dots');
+      if (dotsContainer) {
+        dotsContainer.innerHTML = list.map((item, idx) => {
+          const isActive = idx === currentCarouselIndex;
+          return `
+            <button 
+              type="button"
+              onclick="setPDPImageIndex(${idx})" 
+              title="${item.label}" 
+              class="${isActive ? 'w-5 h-2 bg-brand-gold rounded-full shadow-sm' : 'w-2 h-2 bg-white/60 hover:bg-white rounded-full'} transition-all duration-300 focus:outline-none cursor-pointer"
+              aria-label="Xem ${item.label}">
+            </button>
+          `;
+        }).join('');
+      }
+
+      // Cập nhật Lightbox nếu đang mở
+      const lbModal = document.getElementById('pdp-lightbox-modal');
+      if (lbModal && !lbModal.classList.contains('hidden')) {
+        updateLightboxImage();
+      }
+    }
+
+    function nextPDPImage(e) {
+      if (e && e.stopPropagation) e.stopPropagation();
+      const list = getPDPCarouselList();
+      if (!list.length) return;
+      currentCarouselIndex = (currentCarouselIndex + 1) % list.length;
+      renderPDPCarousel(true);
+    }
+
+    function prevPDPImage(e) {
+      if (e && e.stopPropagation) e.stopPropagation();
+      const list = getPDPCarouselList();
+      if (!list.length) return;
+      currentCarouselIndex = (currentCarouselIndex - 1 + list.length) % list.length;
+      renderPDPCarousel(true);
+    }
+
+    function setPDPImageIndex(idx) {
+      currentCarouselIndex = idx;
+      renderPDPCarousel(true);
+    }
+
+    function openLightboxModal() {
+      const modal = document.getElementById('pdp-lightbox-modal');
+      if (!modal) return;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      updateLightboxImage();
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeLightboxModal(e) {
+      const modal = document.getElementById('pdp-lightbox-modal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function updateLightboxImage() {
+      const list = getPDPCarouselList();
+      if (!list || list.length === 0) return;
+      const cur = list[currentCarouselIndex];
+      const lbImg = document.getElementById('lightbox-img');
+      const lbTitle = document.getElementById('lightbox-title');
+      const lbSub = document.getElementById('lightbox-subtitle');
+      if (lbImg) {
+        lbImg.src = cur.src;
+        lbImg.alt = `${PRODUCTS_DATA[currentProductKey].name} - ${cur.label}`;
+      }
+      if (lbTitle) {
+        lbTitle.innerText = `${PRODUCTS_DATA[currentProductKey].name} • (${currentCarouselIndex + 1}/${list.length})`;
+      }
+      if (lbSub) {
+        lbSub.innerText = cur.label;
+      }
+    }
+
     function switchPDPProduct(key) {
       const p = PRODUCTS_DATA[key];
       if (!p) return;
@@ -2031,14 +2303,15 @@
       currentProduct.image = activeImg;
       currentProduct.basePrice = currentProduct.size === '50ml' ? p.price50ml : p.price10ml;
 
-      // 1. Update image and badge
-      const mainImg = document.getElementById('pdp-main-img');
-      if (mainImg) {
-        delete mainImg.dataset.triedFallback;
-        mainImg.src = activeImg;
-        mainImg.alt = `${p.name} ${currentProduct.size === '10ml' ? 'Pocket 10ml' : 'Signature 50ml'}`;
-      }
+      // 1. Reset Carousel về ảnh chính (0) và render
+      currentCarouselIndex = 0;
+      renderPDPCarousel(false);
       document.getElementById('pdp-badge-note').innerText = p.badge;
+
+      const liveBadge = document.getElementById('live-engraving-badge');
+      if (liveBadge) {
+        liveBadge.style.top = currentProduct.size === '10ml' ? '27%' : '35%';
+      }
 
       // 2. Update thumbnails border styling
       const keys = ['cherie', 'fleur', 'botanique', 'nuit', 'soleil'];
@@ -2046,9 +2319,9 @@
         const btn = document.getElementById(`thumb-${k}`);
         if (btn) {
           if (k === key) {
-            btn.className = "rounded-xl overflow-hidden aspect-square border-2 border-brand-wine p-0.5 transition-all shadow-sm";
+            btn.className = "rounded-xl overflow-hidden aspect-square border-2 border-brand-wine p-0.5 transition-all shadow-sm group";
           } else {
-            btn.className = "rounded-xl overflow-hidden aspect-square border border-brand-sand opacity-75 hover:opacity-100 transition-all";
+            btn.className = "rounded-xl overflow-hidden aspect-square border border-brand-sand opacity-75 hover:opacity-100 transition-all group";
           }
         }
       });
@@ -2126,20 +2399,16 @@
         btn50.className = "px-4 py-2 rounded-lg text-xs font-semibold border border-brand-sand bg-white text-brand-charcoal hover:border-brand-gold transition-all";
       }
 
-      // 1. Update main image on the left to match 10ml or 50ml bottle visual
-      const mainImg = document.getElementById('pdp-main-img');
+      // 1. Reset về ảnh đại diện (ảnh 0) và render lại carousel theo dung tích
+      currentCarouselIndex = 0;
       const activeImg = size === '10ml' ? (p.image10ml || p.image) : (p.image50ml || p.image);
       currentProduct.image = activeImg;
-      if (mainImg) {
-        delete mainImg.dataset.triedFallback;
-        mainImg.src = activeImg;
-        mainImg.alt = `${p.name} ${size === '10ml' ? 'Pocket 10ml' : 'Signature 50ml'}`;
-      }
+      renderPDPCarousel(false);
 
-      // 2. Adjust live engraving cap position (cap is taller on 10ml pocket bottle)
+      // 2. Căn chỉnh vị trí khắc tên trên nắp chai tương ứng với khung 9:16
       const liveBadge = document.getElementById('live-engraving-badge');
       if (liveBadge) {
-        liveBadge.style.top = size === '10ml' ? '24%' : '16%';
+        liveBadge.style.top = size === '10ml' ? '27%' : '35%';
       }
 
       // 3. Update original price and savings badge
@@ -2195,7 +2464,11 @@
         cardEngraving.classList.add('border-brand-wine', 'bg-white');
         panelEngraving.classList.remove('hidden');
         panelGiftwrap.classList.add('hidden');
-        liveBadge.classList.remove('hidden');
+        if (currentCarouselIndex === 0) {
+          liveBadge.classList.remove('hidden');
+        } else {
+          liveBadge.classList.add('hidden');
+        }
         currentProduct.extraPrice = 80000;
       } else if (option === 'giftwrap') {
         cardGiftwrap.classList.add('border-brand-wine', 'bg-white');
@@ -3415,6 +3688,52 @@
 
     // Khởi tạo hiển thị giỏ hàng ban đầu
     renderCart();
+
+    // Khởi tạo Carousel bộ ảnh sản phẩm
+    renderPDPCarousel();
+
+    // Hỗ trợ vuốt chạm cảm ứng trên mobile (Touch Swipe)
+    (function initCarouselSwipe() {
+      const carouselEl = document.getElementById('pdp-carousel-container');
+      if (!carouselEl) return;
+      let startX = 0;
+      let startY = 0;
+      carouselEl.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+      }, { passive: true });
+
+      carouselEl.addEventListener('touchend', (e) => {
+        const diffX = startX - e.changedTouches[0].clientX;
+        const diffY = startY - e.changedTouches[0].clientY;
+        if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+          if (diffX > 0) {
+            nextPDPImage();
+          } else {
+            prevPDPImage();
+          }
+        }
+      }, { passive: true });
+    })();
+
+    // Phím tắt bàn phím (Mũi tên Trái/Phải và Phím Esc)
+    window.addEventListener('keydown', (e) => {
+      const lbModal = document.getElementById('pdp-lightbox-modal');
+      const isLbOpen = lbModal && !lbModal.classList.contains('hidden');
+      if (e.key === 'ArrowRight') {
+        nextPDPImage();
+        if (isLbOpen) updateLightboxImage();
+      } else if (e.key === 'ArrowLeft') {
+        prevPDPImage();
+        if (isLbOpen) updateLightboxImage();
+      } else if (e.key === 'Escape' && isLbOpen) {
+        closeLightboxModal();
+      }
+    });
+
+    if (window.lucide) {
+      lucide.createIcons();
+    }
   </script>
 </body>
 </html>
