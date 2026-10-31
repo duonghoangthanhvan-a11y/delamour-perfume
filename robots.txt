@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Cho phép các AI Search Bot thu thập dữ liệu phục vụ Generative Engine Optimization (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Bản đồ chỉ mục website (XML Sitemap)
+Sitemap: https://delamour.vn/sitemap.xml
