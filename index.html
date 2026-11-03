@@ -1731,7 +1731,7 @@
   </main>
 
   <!-- FOOTER & LIÊN HỆ -->
-  <footer id="contact" class="bg-brand-espresso text-brand-sand pt-10 pb-28 sm:py-14 lg:pb-14 border-t border-brand-sand/20 scroll-mt-20 w-full overflow-hidden">
+  <footer id="contact" class="bg-brand-espresso text-brand-sand pt-10 pb-10 sm:py-14 lg:pb-14 border-t border-brand-sand/20 scroll-mt-20 w-full overflow-hidden">
     <span id="about" class="sr-only">Về De L'amour</span>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -3245,49 +3245,10 @@
   </div>
 
   <!-- ========================================================================= -->
-  <!-- MOBILE STICKY BOTTOM ACTION BAR (TĂNG TỶ LỆ CHỐT ĐƠN TRÊN MOBILE)         -->
-  <!-- ========================================================================= -->
-  <div 
-    id="mobile-sticky-bar" 
-    class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-brand-sand/80 px-4 py-2.5 shadow-[0_-4px_25px_rgba(0,0,0,0.08)] flex items-center justify-between gap-3 transition-transform duration-300 pb-[max(0.625rem,env(safe-area-inset-bottom))]"
-  >
-    <div class="flex items-center gap-2.5 min-w-0 flex-1">
-      <img id="mobile-sticky-thumb" src="cherie-lamour.jpg" class="w-10 h-10 rounded-lg object-cover border border-brand-sand/80 shrink-0 shadow-2xs" alt="Sản phẩm đang chọn">
-      <div class="min-w-0">
-        <h4 id="mobile-sticky-title" class="font-serif text-xs font-bold text-brand-espresso truncate">Chérie L'amour (50ml)</h4>
-        <div class="flex items-center gap-1.5 mt-0.5">
-          <span id="mobile-sticky-price" class="text-xs font-bold text-brand-wine font-mono">679.000đ</span>
-          <span class="text-[9px] text-emerald-700 bg-emerald-50 px-1.5 py-0.2 rounded font-medium">Sẵn hàng</span>
-        </div>
-      </div>
-    </div>
-    <div class="flex items-center gap-2 shrink-0">
-      <button 
-        type="button" 
-        onclick="addCurrentProductToCart()" 
-        class="w-10 h-10 rounded-full bg-brand-cream hover:bg-brand-wine hover:text-white border border-brand-sand text-brand-espresso flex items-center justify-center transition-all active:scale-95 shadow-2xs" 
-        title="Thêm vào giỏ"
-        aria-label="Thêm vào giỏ hàng"
-      >
-        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-      </button>
-      <button 
-        type="button" 
-        id="btn-mobile-sticky-buy"
-        onclick="buyNowDirectly()" 
-        class="px-4 py-2.5 bg-brand-wine hover:bg-brand-wineLight text-white rounded-full text-xs font-bold tracking-wider uppercase shadow-md flex items-center gap-1 active:scale-95 transition-all"
-      >
-        <span>Mua ngay</span>
-        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-      </button>
-    </div>
-  </div>
-
-  <!-- ========================================================================= -->
   <!-- FLOATING ACTION BUTTONS (AI CHATBOT 24/7 & BACK TO TOP)                   -->
   <!-- ========================================================================= -->
   <!-- Nút Kích Hoạt Chatbot AI ở góc dưới bên phải -->
-  <div class="fixed bottom-20 right-3.5 sm:bottom-6 sm:right-6 z-40 flex items-center">
+  <div class="fixed bottom-5 right-3.5 sm:bottom-6 sm:right-6 z-40 flex items-center">
     <!-- Tooltip chào mừng tự động -->
     <div 
       id="ai-chat-tooltip" 
