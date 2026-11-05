@@ -2,68 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://delamour.vn/</loc>
-    <lastmod>2026-10-29T12:00:00+07:00</lastmod>
+    <loc>https://delamour-perfume.vercel.app/</loc>
+    <lastmod>2026-11-05T12:00:00+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://delamour.vn/cherie-lamour.jpg</image:loc>
+      <image:loc>https://delamour-perfume.vercel.app/cherie-lamour.jpg</image:loc>
       <image:title>Nước hoa Chérie L'amour Eau de Parfum 50ml - De L'amour Paris</image:title>
       <image:caption>Hương thơm ngọt ngào quyến rũ từ quả mọng dâu rừng, hoa hồng Pháp và gỗ tuyết tùng vani.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://delamour.vn/fleur-lamour.jpg</image:loc>
+      <image:loc>https://delamour-perfume.vercel.app/fleur-lamour.jpg</image:loc>
       <image:title>Nước hoa Fleur L'amour Eau de Parfum 50ml - De L'amour Paris</image:title>
       <image:caption>Hương thơm thanh khiết tao nhã từ hoa nhài Grasse, linh lan và xạ hương trắng tinh khôi.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://delamour.vn/botanique-lamour.jpg</image:loc>
+      <image:loc>https://delamour-perfume.vercel.app/botanique-lamour.jpg</image:loc>
       <image:title>Nước hoa L'amour Botanique Eau de Parfum 50ml - De L'amour Paris</image:title>
       <image:caption>Hương thơm tươi mát, tràn đầy sinh khí từ lá xô thơm, cỏ hương bài và cam bergamot Ý.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://delamour.vn/nuit-lamour.jpg</image:loc>
+      <image:loc>https://delamour-perfume.vercel.app/nuit-lamour.jpg</image:loc>
       <image:title>Nước hoa Nuit L'amour Eau de Parfum 50ml - De L'amour Paris</image:title>
       <image:caption>Hương thơm đêm huyền bí, trầm ấm cuốn hút từ hổ phách, gỗ đàn hương và khói da thuộc nhẹ.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://delamour.vn/soleil-lamour.jpg</image:loc>
+      <image:loc>https://delamour-perfume.vercel.app/soleil-lamour.jpg</image:loc>
       <image:title>Nước hoa Soleil L'amour Eau de Parfum 50ml - De L'amour Paris</image:title>
       <image:caption>Hương thơm rực rỡ ấm áp như ánh nắng Địa Trung Hải từ hoa cam Neroli, bưởi hồng và hổ phách vàng.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://delamour.vn/discovery-set.jpg</image:loc>
+      <image:loc>https://delamour-perfume.vercel.app/discovery-set.jpg</image:loc>
       <image:title>Discovery Kit Hộp Khám Phá Mùi Hương - De L'amour</image:title>
       <image:caption>Bộ thử hương 5 ống mini 2ml trải nghiệm trọn vẹn 5 nốt hương đặc sắc trước khi chọn chai full size.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://delamour.vn/giftingbox.jpg</image:loc>
+      <image:loc>https://delamour-perfume.vercel.app/giftingbox.jpg</image:loc>
       <image:title>L'amour Gifting Box Hộp Quà Sang Trọng Kèm Khắc Tên Laser</image:title>
       <image:caption>Hộp quà cao cấp lót nhung ép kim, thắt nơ ruy băng lụa và thiệp viết tay cá nhân hóa.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://delamour.vn/#collection</loc>
-    <lastmod>2026-10-29T12:00:00+07:00</lastmod>
+    <loc>https://delamour-perfume.vercel.app/track</loc>
+    <lastmod>2026-11-05T12:00:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://delamour.vn/#discovery-set</loc>
-    <lastmod>2026-10-29T12:00:00+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://delamour.vn/#journal</loc>
-    <lastmod>2026-10-29T12:00:00+07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://delamour.vn/#brand-story</loc>
-    <lastmod>2026-10-29T12:00:00+07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 </urlset>

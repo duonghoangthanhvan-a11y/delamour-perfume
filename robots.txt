@@ -20,4 +20,4 @@ User-agent: Applebot-Extended
 Allow: /
 
 # Bản đồ chỉ mục website (XML Sitemap)
-Sitemap: https://delamour.vn/sitemap.xml
+Sitemap: https://delamour-perfume.vercel.app/sitemap.xml
