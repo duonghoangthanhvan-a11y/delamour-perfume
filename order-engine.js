@@ -623,10 +623,33 @@ function saveTelegramConfig(token, chatId) {
 }
 
 /**
- * Gửi tin nhắn đến Telegram qua REST API
+ * Gửi tin nhắn đến Telegram (Hỗ trợ 2 lớp: Serverless Proxy ẩn Token + Client Fallback)
  */
 async function sendTelegramMessage(htmlContent) {
   const config = getTelegramConfig();
+
+  // LỚP 1: Thử gọi qua Vercel Serverless Proxy (/api/telegram) để giấu hoàn toàn Token
+  try {
+    const proxyRes = await fetch('/api/telegram', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        htmlContent: htmlContent,
+        chatId: config.chatId,
+        token: config.token
+      })
+    });
+    if (proxyRes.ok) {
+      const pData = await proxyRes.json();
+      if (pData.success) {
+        return { success: true, result: pData.result, proxy: true };
+      }
+    }
+  } catch (proxyErr) {
+    // Chạy môi trường local/file không có serverless -> tự động chuyển sang Lớp 2 bên dưới
+  }
+
+  // LỚP 2: Fallback gọi trực tiếp Telegram REST API (khi chạy offline / local preview)
   if (!config.token || !config.chatId) {
     console.warn("[De L'amour Bot] Chưa cấu hình Telegram Bot Token hoặc Chat ID. Vui lòng bấm vào 'Cài đặt Telegram' ở chân trang.");
     return { success: false, reason: 'missing_config' };
@@ -647,7 +670,7 @@ async function sendTelegramMessage(htmlContent) {
 
     const result = await response.json();
     if (result.ok) {
-      return { success: true, result };
+      return { success: true, result, proxy: false };
     } else {
       console.error("[De L'amour Bot] Lỗi từ Telegram API:", result);
       return { success: false, reason: result.description };
@@ -1343,20 +1366,30 @@ function generateOrderTrackingCard(o) {
   let step2Title = "Đang chuẩn bị hàng tại kho";
   let step2Sub = "Kiểm tra chất lượng & niêm phong nắp chai";
   if (hasEngrave) {
-    step2Title = "Đang gia công khắc laser nắp chai";
-    step2Sub = "Chuyên viên khắc laser & đóng gói hộp cao cấp";
+    const isEngDone = o.engravingStatus === 'done';
+    step2Title = isEngDone ? "Đã hoàn tất khắc laser nắp chai" : "Đang gia công khắc laser nắp chai";
+    step2Sub = isEngDone ? "✅ Đã kiểm tra QC chính tả & đóng hộp bảo vệ" : "Chuyên viên đang tỉ mỉ gia công khắc laser độc bản";
   } else if (hasGiftwrap) {
-    step2Title = "Đang đóng gói hộp quà & thiệp tay";
-    step2Sub = "Thắt nơ lụa thủ công & viết thiệp chúc mừng";
+    const isGiftDone = o.giftwrapStatus === 'done';
+    step2Title = isGiftDone ? "Đã hoàn tất gói quà & thiệp chúc mừng" : "Đang đóng gói hộp quà & thiệp tay";
+    step2Sub = isGiftDone ? "✅ Đã thắt nơ satin & chuẩn bị thiệp tay hoàn chỉnh" : "Thắt nơ lụa thủ công & nắn nót viết thiệp chúc mừng";
   }
 
   const itemsHtml = (o.items || []).map(i => {
     const itemTotal = fmt((i.price + (i.extraPrice || 0)) * (i.quantity || 1));
     let customBadge = '';
     if (i.personalization === 'engraving' || (i.personalizationText && i.personalizationText.includes('Khắc'))) {
-      customBadge = `<p class="mt-1 text-[11px] text-rose-700 bg-rose-50 px-2 py-0.5 rounded border border-rose-200 w-fit">✍️ ${escapeHTML(i.personalizationText)}</p>`;
+      const isEngDone = o.engravingStatus === 'done';
+      customBadge = `<div class="mt-1 flex items-center gap-1.5 flex-wrap">
+        <span class="text-[11px] text-rose-700 bg-rose-50 px-2 py-0.5 rounded border border-rose-200 font-medium">✍️ ${escapeHTML(i.personalizationText)}</span>
+        <span class="text-[10px] font-bold px-1.5 py-0.5 rounded ${isEngDone ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-amber-100 text-amber-800 border border-amber-300'}">${isEngDone ? '✓ Đã khắc xong' : '⏳ Đang chờ khắc'}</span>
+      </div>`;
     } else if (i.personalization === 'giftwrap' || (i.personalizationText && i.personalizationText.includes('Gói quà'))) {
-      customBadge = `<p class="mt-1 text-[11px] text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 w-fit">🎁 ${escapeHTML(i.personalizationText)}</p>`;
+      const isGiftDone = o.giftwrapStatus === 'done';
+      customBadge = `<div class="mt-1 flex items-center gap-1.5 flex-wrap">
+        <span class="text-[11px] text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-medium">🎁 ${escapeHTML(i.personalizationText)}</span>
+        <span class="text-[10px] font-bold px-1.5 py-0.5 rounded ${isGiftDone ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-amber-100 text-amber-800 border border-amber-300'}">${isGiftDone ? '✓ Đã gói quà' : '⏳ Chờ đóng gói'}</span>
+      </div>`;
     }
 
     return `
@@ -1738,11 +1771,37 @@ async function testGeminiConnection(apiKey, model = 'gemini-1.5-flash') {
 
 async function callGeminiChatAPI(chatHistory, userMessage) {
   const apiKey = getGeminiApiKey();
+  const model = getGeminiModel() || 'gemini-1.5-flash';
+  const systemPrompt = getGeminiSystemPrompt();
+
+  // LỚP 1: Thử gọi qua Vercel Serverless Proxy (/api/gemini) để giấu hoàn toàn API Key
+  try {
+    const proxyRes = await fetch('/api/gemini', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        userMessage: userMessage,
+        chatHistory: chatHistory,
+        model: model,
+        systemPrompt: systemPrompt,
+        apiKey: apiKey
+      })
+    });
+    if (proxyRes.ok) {
+      const pData = await proxyRes.json();
+      if (pData.success && pData.text) {
+        return pData.text;
+      }
+    }
+  } catch (proxyErr) {
+    // Không có serverless proxy, tự động fallback sang Lớp 2 bên dưới
+  }
+
+  // LỚP 2: Fallback gọi trực tiếp Google Gemini API (khi chạy offline / local preview)
   if (!apiKey) {
     throw new Error('NO_API_KEY');
   }
 
-  const model = getGeminiModel() || 'gemini-1.5-flash';
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
   const contents = [];
@@ -1759,8 +1818,6 @@ async function callGeminiChatAPI(chatHistory, userMessage) {
     role: 'user',
     parts: [{ text: userMessage }]
   });
-
-  const systemPrompt = getGeminiSystemPrompt();
 
   const payload = {
     contents: contents,

@@ -2,6 +2,10 @@
   "version": 2,
   "name": "delamour-perfumerie",
   "cleanUrls": true,
+  "rewrites": [
+    { "source": "/admin", "destination": "/index.html?admin" },
+    { "source": "/track", "destination": "/index.html?track" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
