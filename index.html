@@ -363,10 +363,10 @@
 
   <!-- NAVIGATION HEADER -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-sand/70 shadow-xs transition-all duration-300 w-full overflow-hidden">
-    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-10 h-16 sm:h-20 flex items-center justify-between gap-3 lg:gap-4 xl:gap-8">
+    <div class="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 lg:gap-4 xl:gap-6">
       
       <!-- LEFT AREA: Mobile controls (<lg) / 5 Menu Links (>=lg) -->
-      <div class="flex items-center min-w-0">
+      <div class="flex items-center shrink-0">
         <!-- Mobile: Hamburger & Kính lúp & Yêu thích (Ẩn hoàn toàn trên Desktop) -->
         <div class="flex items-center gap-0.5 sm:gap-1 lg:hidden">
           <button class="p-2 text-brand-espresso hover:text-brand-wine transition-colors rounded-lg hover:bg-brand-sand/20" onclick="toggleMobileNav()" title="Mở menu" aria-label="Mở menu điều hướng">
@@ -382,11 +382,11 @@
         </div>
 
         <!-- Desktop Menu: Bộ sưu tập - Discovery set - Câu chuyện thương hiệu - Nhật ký hương - Liên hệ -->
-        <nav class="hidden lg:flex items-center gap-2.5 lg:gap-3 xl:gap-5 2xl:gap-7 font-serif text-[13px] lg:text-[13.5px] xl:text-[15.5px] 2xl:text-[16.5px] font-semibold tracking-wide shrink-0">
+        <nav class="hidden lg:flex items-center gap-2.5 lg:gap-3 xl:gap-4 2xl:gap-5 font-serif text-[12.5px] lg:text-[13px] xl:text-[13.5px] 2xl:text-[14.5px] font-semibold tracking-wide shrink-0">
           <a href="#collection" class="whitespace-nowrap text-brand-espresso hover:text-brand-wine transition-colors py-1.5">Bộ sưu tập</a>
           
           <a href="#discovery-set" class="whitespace-nowrap text-brand-wine hover:text-brand-wineLight transition-colors flex items-center gap-1.5 py-1.5 font-semibold">
-            <i data-lucide="sparkles" class="w-4 xl:w-4.5 h-4 xl:h-4.5 text-brand-gold animate-pulse shrink-0"></i>
+            <i data-lucide="sparkles" class="w-3.5 xl:w-4 h-3.5 xl:h-4 text-brand-gold animate-pulse shrink-0"></i>
             <span>Discovery set</span>
           </a>
 
@@ -399,42 +399,42 @@
       </div>
 
       <!-- CENTER AREA: BRAND LOGO (Tâm điểm trang nhã, không đè chữ) -->
-      <div class="shrink-0 text-center px-1 sm:px-2 lg:px-3 xl:px-6">
+      <div class="shrink-0 text-center px-1 sm:px-2 lg:px-2 xl:px-4">
         <a href="#" class="inline-block py-1 hover:opacity-95 transition-opacity" aria-label="De L'amour Trang chủ">
-          <span class="font-serif text-2xl sm:text-3xl lg:text-[28px] xl:text-[34px] 2xl:text-[38px] tracking-[0.14em] xl:tracking-[0.18em] text-brand-wine font-semibold uppercase whitespace-nowrap">De L'amour</span>
+          <span class="font-serif text-2xl sm:text-[26px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px] tracking-[0.12em] xl:tracking-[0.15em] text-brand-wine font-semibold uppercase whitespace-nowrap">De L'amour</span>
         </a>
       </div>
 
       <!-- RIGHT AREA: Actions (Scent Quiz, Kính lúp, Yêu thích, Tài khoản, Giỏ hàng) -->
-      <div class="flex items-center gap-1.5 sm:gap-2.5 xl:gap-3.5 2xl:gap-4 justify-end shrink-0">
+      <div class="flex items-center gap-1.5 sm:gap-2 xl:gap-2.5 2xl:gap-3 justify-end shrink-0">
         <!-- Scent Quiz CTA -->
-        <button onclick="openQuizModal()" class="hidden lg:flex items-center gap-1.5 border border-brand-wine/25 bg-brand-cream/50 hover:bg-brand-wine hover:text-white px-3 xl:px-4 py-1.5 xl:py-2 rounded-full text-xs xl:text-sm font-semibold text-brand-wine transition-all shadow-2xs whitespace-nowrap shrink-0 group" title="Trắc nghiệm chọn mùi hương (Scent Quiz)">
-          <i data-lucide="compass" class="w-4 xl:w-4.5 h-4 xl:h-4.5 shrink-0 transition-transform group-hover:rotate-45"></i>
+        <button onclick="openQuizModal()" class="hidden lg:flex items-center gap-1.5 border border-brand-wine/25 bg-brand-cream/50 hover:bg-brand-wine hover:text-white px-2.5 xl:px-3.5 py-1.5 xl:py-2 rounded-full text-xs xl:text-[13px] font-semibold text-brand-wine transition-all shadow-2xs whitespace-nowrap shrink-0 group" title="Trắc nghiệm chọn mùi hương (Scent Quiz)">
+          <i data-lucide="compass" class="w-3.5 xl:w-4 h-3.5 xl:h-4 shrink-0 transition-transform group-hover:rotate-45"></i>
           <span>Scent Quiz</span>
         </button>
 
         <!-- Search Button Desktop -->
-        <button onclick="openSearchModal()" class="hidden lg:flex p-2 xl:p-2.5 text-brand-espresso hover:text-brand-wine transition-colors rounded-full hover:bg-brand-sand/30" title="Tìm kiếm nhanh" aria-label="Tìm kiếm">
-          <i data-lucide="search" class="w-5 xl:w-[22px] h-5 xl:h-[22px]"></i>
+        <button onclick="openSearchModal()" class="hidden lg:flex p-2 xl:p-2 text-brand-espresso hover:text-brand-wine transition-colors rounded-full hover:bg-brand-sand/30" title="Tìm kiếm nhanh" aria-label="Tìm kiếm">
+          <i data-lucide="search" class="w-4.5 xl:w-5 h-4.5 xl:h-5"></i>
         </button>
 
         <!-- Wishlist Button Desktop (>= lg) -->
-        <button onclick="openWishlistDrawer()" class="hidden lg:flex relative p-2 xl:p-2.5 text-brand-espresso hover:text-brand-wine transition-colors rounded-full hover:bg-brand-sand/30" title="Danh sách yêu thích" aria-label="Danh sách yêu thích">
-          <i data-lucide="heart" class="w-5 xl:w-[22px] h-5 xl:h-[22px]"></i>
-          <span id="wishlist-badge-count" class="hidden absolute top-0.5 right-0.5 w-4 xl:w-4.5 h-4 xl:h-4.5 bg-rose-600 text-white text-[10px] xl:text-[11px] font-bold rounded-full flex items-center justify-center">0</span>
+        <button onclick="openWishlistDrawer()" class="hidden lg:flex relative p-2 xl:p-2 text-brand-espresso hover:text-brand-wine transition-colors rounded-full hover:bg-brand-sand/30" title="Danh sách yêu thích" aria-label="Danh sách yêu thích">
+          <i data-lucide="heart" class="w-4.5 xl:w-5 h-4.5 xl:h-5"></i>
+          <span id="wishlist-badge-count" class="hidden absolute top-0.5 right-0.5 w-4 h-4 bg-rose-600 text-white text-[10px] font-bold rounded-full flex items-center justify-center">0</span>
         </button>
 
         <!-- Account / Login Button -->
-        <button onclick="openAccountModal()" class="hidden sm:flex relative p-2 xl:p-2.5 text-brand-espresso hover:text-brand-wine transition-colors rounded-full hover:bg-brand-sand/30" title="Tài khoản / Đăng nhập" aria-label="Tài khoản">
-          <i data-lucide="user" class="w-5 xl:w-[22px] h-5 xl:h-[22px]"></i>
+        <button onclick="openAccountModal()" class="hidden sm:flex relative p-2 xl:p-2 text-brand-espresso hover:text-brand-wine transition-colors rounded-full hover:bg-brand-sand/30" title="Tài khoản / Đăng nhập" aria-label="Tài khoản">
+          <i data-lucide="user" class="w-4.5 xl:w-5 h-4.5 xl:h-5"></i>
           <span id="header-user-status-dot" class="hidden absolute top-1 right-1 w-2.5 h-2.5 bg-emerald-500 rounded-full ring-2 ring-white"></span>
         </button>
 
         <!-- Cart Button -->
-        <button onclick="toggleCartDrawer(true)" class="relative flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 xl:px-4.5 py-1.5 sm:py-2 rounded-full bg-brand-wine text-white hover:bg-brand-wineLight transition-all shadow-xs group shrink-0" title="Xem giỏ hàng" aria-label="Giỏ hàng">
-          <i data-lucide="shopping-bag" class="w-[18px] xl:w-5 h-[18px] xl:h-5 group-hover:scale-110 transition-transform"></i>
-          <span class="text-xs sm:text-[13px] xl:text-sm font-semibold font-sans hidden sm:inline">Giỏ hàng</span>
-          <span id="cart-badge-count" class="hidden min-w-[21px] h-[21px] px-1 bg-white text-brand-wine text-[10px] xl:text-[11px] font-bold rounded-full flex items-center justify-center leading-none">0</span>
+        <button onclick="toggleCartDrawer(true)" class="relative flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 xl:px-4 py-1.5 sm:py-2 rounded-full bg-brand-wine text-white hover:bg-brand-wineLight transition-all shadow-xs group shrink-0" title="Xem giỏ hàng" aria-label="Giỏ hàng">
+          <i data-lucide="shopping-bag" class="w-4 xl:w-4.5 h-4 xl:h-4.5 group-hover:scale-110 transition-transform"></i>
+          <span class="text-xs sm:text-[13px] font-semibold font-sans hidden sm:inline">Giỏ hàng</span>
+          <span id="cart-badge-count" class="hidden min-w-[20px] h-[20px] px-1 bg-white text-brand-wine text-[10px] font-bold rounded-full flex items-center justify-center leading-none">0</span>
         </button>
       </div>
     </div>
@@ -690,17 +690,13 @@
 
             </div>
 
-            <!-- Cam kết chất lượng 3 gạch đầu dòng & Nút bấm CTA -->
-            <div class="pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-brand-sand/50">
-              <div class="flex flex-wrap items-center gap-4 text-xs text-brand-charcoal font-medium">
+            <!-- Cam kết chất lượng 3 gạch đầu dòng -->
+            <div class="pt-4 border-t border-brand-sand/50">
+              <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-brand-charcoal font-medium">
                 <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Chuẩn tinh dầu Grasse</span>
                 <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> An toàn dịu nhẹ</span>
                 <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Khắc tên độc bản</span>
               </div>
-              <a href="#collection" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-espresso hover:bg-brand-wine text-white text-xs font-semibold tracking-wider transition-all shadow-md group whitespace-nowrap">
-                <span>Khám phá 5 nốt hương</span>
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
-              </a>
             </div>
 
           </div>
@@ -1991,9 +1987,9 @@
           <button 
             id="btn-giftingbox-submit"
             onclick="submitGiftingBoxToCart()" 
-            class="px-6 py-2.5 rounded-xl text-xs font-semibold bg-brand-wine hover:bg-brand-wineLight text-white shadow-lg cursor-pointer transform hover:scale-[1.02] transition-all flex items-center gap-2"
+            class="px-6 py-2.5 rounded-xl text-xs font-semibold bg-brand-wine hover:bg-brand-wineLight text-white shadow-lg cursor-pointer transform hover:scale-[1.02] transition-all flex items-center justify-center gap-2 whitespace-nowrap"
           >
-            <span>Thêm Box Vào Giỏ Hàng (899.000đ)</span>
+            <span>Thêm Box Vào Giỏ Hàng</span>
             <i data-lucide="check" class="w-4 h-4"></i>
           </button>
         </div>
@@ -5593,16 +5589,15 @@
         selectedTitle.innerText = `Chai 50ml: ${current.name}${isCurrentOut ? ' (Tạm hết hàng)' : ''}`;
       }
       if (submitBtn) {
-        const formatted = new Intl.NumberFormat('vi-VN').format(current.boxPrice) + 'đ';
         if (isCurrentOut) {
           submitBtn.disabled = true;
-          submitBtn.className = "w-full py-3.5 bg-stone-200 text-stone-400 font-bold text-xs uppercase tracking-widest rounded-xl cursor-not-allowed shadow-none flex items-center justify-center gap-2 pointer-events-none";
+          submitBtn.className = "px-6 py-2.5 bg-stone-200 text-stone-400 font-semibold text-xs rounded-xl cursor-not-allowed shadow-none flex items-center justify-center gap-2 pointer-events-none whitespace-nowrap";
           submitBtn.innerHTML = `<span>Tạm Hết Chai 50ml (${current.name})</span>`;
         } else {
           submitBtn.disabled = false;
-          submitBtn.className = "w-full py-3.5 bg-brand-wine hover:bg-brand-wineLight text-white font-bold text-xs uppercase tracking-widest rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer";
+          submitBtn.className = "px-6 py-2.5 bg-brand-wine hover:bg-brand-wineLight text-white font-semibold text-xs rounded-xl shadow-lg hover:shadow-xl cursor-pointer transform hover:scale-[1.02] transition-all flex items-center justify-center gap-2 whitespace-nowrap";
           submitBtn.innerHTML = `
-            <span>Thêm Box Vào Giỏ Hàng (${formatted})</span>
+            <span>Thêm Box Vào Giỏ Hàng</span>
             <i data-lucide="check" class="w-4 h-4"></i>
           `;
         }
