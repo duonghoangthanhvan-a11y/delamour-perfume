@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /admin.html
 Disallow: /api/
 
 # Cho phép các AI Search Bot thu thập dữ liệu phục vụ Generative Engine Optimization (GEO)

@@ -3,7 +3,7 @@
   "name": "delamour-perfumerie",
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/admin", "destination": "/index.html?admin" },
+    { "source": "/admin", "destination": "/admin.html" },
     { "source": "/track", "destination": "/index.html?track" }
   ],
   "headers": [
@@ -26,6 +26,15 @@
     },
     {
       "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(webp|jpg|png|svg|ico)",
       "headers": [
         {
           "key": "Cache-Control",
