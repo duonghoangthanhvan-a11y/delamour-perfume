@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi" class="scroll-smooth overflow-x-hidden">
 <head>
   <!-- Google Tag Manager -->
@@ -25,6 +25,7 @@
   <meta name="author" content="De L'amour Paris">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://delamour-perfume.vercel.app/">
+  <link rel="help" type="text/plain" href="https://delamour-perfume.vercel.app/llms.txt" title="LLMs Context Summary">
 
   <!-- Open Graph / Facebook / Zalo Preview -->
   <meta property="og:type" content="website">
@@ -432,10 +433,10 @@
           <span class="flex items-center gap-2"><i data-lucide="user" class="w-4 h-4 text-brand-wine"></i> Đăng nhập / Tài khoản</span>
           <i data-lucide="chevron-right" class="w-4 h-4 text-brand-wine"></i>
         </button>
-        <button onclick="toggleMobileNav(false); openComparisonModal();" class="text-left text-brand-charcoal hover:text-brand-wine py-2 border-b border-brand-sand/40 flex items-center justify-between">
+        <a href="#fragrance-comparison" onclick="toggleMobileNav(false)" class="text-left text-brand-charcoal hover:text-brand-wine py-2 border-b border-brand-sand/40 flex items-center justify-between">
           <span>Bảng so sánh</span>
           <i data-lucide="chevron-right" class="w-4 h-4 text-brand-muted"></i>
-        </button>
+        </a>
         <a href="#collection" onclick="toggleMobileNav(false)" class="text-brand-charcoal hover:text-brand-wine py-2 border-b border-brand-sand/40 flex items-center justify-between">
           <span>Bộ sưu tập</span>
           <i data-lucide="chevron-right" class="w-4 h-4 text-brand-muted"></i>
@@ -698,10 +699,10 @@
           
           <!-- Actions: Bảng so sánh mùi & gợi ý -->
           <div class="flex items-center gap-3">
-            <button onclick="openComparisonModal()" class="px-3.5 sm:px-4 py-2 rounded-full border border-brand-wine/40 bg-white hover:bg-brand-wine hover:text-white text-brand-wine text-xs font-semibold transition-all shadow-sm flex items-center gap-1.5 cursor-pointer">
+            <a href="#fragrance-comparison" class="px-3.5 sm:px-4 py-2 rounded-full border border-brand-wine/40 bg-white hover:bg-brand-wine hover:text-white text-brand-wine text-xs font-semibold transition-all shadow-sm flex items-center gap-1.5 cursor-pointer">
               <i data-lucide="scale" class="w-3.5 h-3.5 text-brand-gold"></i>
               <span>Bảng so sánh mùi hương</span>
-            </button>
+            </a>
           </div>
         </div>
 
@@ -951,7 +952,7 @@
         <div class="lg:col-span-5 lg:sticky lg:top-28 w-full min-w-0">
           <div 
             id="pdp-carousel-container" 
-            class="relative bg-brand-beige rounded-2xl overflow-hidden border border-brand-sand shadow-inner flex items-center justify-center group select-none w-full max-w-[430px] mx-auto aspect-square sm:aspect-[9/16] max-h-[380px] sm:max-h-[min(80vh,760px)]"
+            class="relative bg-brand-beige rounded-2xl overflow-hidden border border-brand-sand shadow-inner flex items-center justify-center group select-none w-full max-w-[430px] mx-auto aspect-[9/16] max-h-[min(78vh,640px)] sm:max-h-[min(80vh,760px)]"
           >
             <!-- Bottle Visual / Carousel Slide with Simulated Cap Overlay for Live Preview -->
             <img 
@@ -1618,6 +1619,356 @@
         </div>
       </div>
     </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- 4c. SEMANTIC COMPARISON TABLE SECTION (AEO / GEO & AI SEARCH OPTIMIZED)   -->
+    <!-- Bảng so sánh HTML tĩnh chuẩn Semantic cho Googlebot, Perplexity & GPTBot  -->
+    <!-- ========================================================================= -->
+    <section id="fragrance-comparison" class="py-12 sm:py-20 bg-gradient-to-b from-white via-brand-beige/35 to-white border-b border-brand-sand/60 scroll-mt-20 w-full overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header & AEO Direct Answer Block -->
+        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-wine/10 text-brand-wine text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+            <i data-lucide="scale" class="w-3.5 h-3.5 text-brand-gold"></i>
+            ĐỐI CHIẾU MÙI HƯƠNG HAUTE PARFUMERIE
+          </div>
+          <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-espresso font-semibold tracking-tight">
+            Bảng So Sánh 6 Nốt Hương Signature De L'amour Paris
+          </h2>
+          
+          <!-- Khối trả lời trực tiếp (Direct Answer Block 40-60 từ) cho Google AI Overviews & Perplexity -->
+          <div class="mt-4 p-4 sm:p-5 bg-brand-cream/70 border border-brand-sand rounded-2xl text-left sm:text-center text-xs sm:text-sm text-brand-charcoal/90 leading-relaxed shadow-2xs">
+            <p>
+              <strong>Nước hoa De L'amour Paris</strong> bao gồm 6 nốt hương độc bản chế tác ở nồng độ <strong>Eau de Parfum (EDP 18% - 22%)</strong> từ 100% tinh dầu Grasse (Pháp), mang lại độ lưu hương thực tế từ <strong>8 đến 12 giờ</strong>. Bảng so sánh ngữ nghĩa dưới đây tổng hợp chi tiết kim tự tháp hương thơm, độ tỏa hương, phong cách cảm xúc và hoàn cảnh sử dụng tối ưu giúp bạn nhanh chóng chọn được chai nước hoa hoàn hảo nhất.
+            </p>
+          </div>
+
+          <!-- Nút kích hoạt Modal so sánh tương tác tùy chỉnh -->
+          <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
+            <button onclick="openComparisonModal()" type="button" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white hover:bg-brand-wine hover:text-white text-brand-wine text-xs font-semibold border border-brand-wine/30 transition-all shadow-2xs group cursor-pointer">
+              <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5 text-brand-gold group-hover:text-white transition-colors"></i>
+              <span>Mở bảng so sánh tương tác tùy chọn cột</span>
+            </button>
+            <button onclick="openQuizModal()" type="button" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-wine/5 hover:bg-brand-wine hover:text-white text-brand-espresso text-xs font-semibold border border-brand-sand transition-all shadow-2xs group cursor-pointer">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-gold"></i>
+              <span>Làm Scent Quiz 2 phút</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Semantic Table Responsive Container -->
+        <div class="bg-white rounded-2xl sm:rounded-3xl border border-brand-sand shadow-lg overflow-hidden">
+          
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse min-w-[900px] text-xs sm:text-sm">
+              <caption class="sr-only">
+                Bảng so sánh chi tiết thông số 6 dòng nước hoa Signature De L'amour Paris bao gồm Poire Givrée, Chérie L'amour, Fleur L'amour, L'amour Botanique, Nuit L'amour, Soleil L'amour
+              </caption>
+              
+              <!-- Table Header -->
+              <thead>
+                <tr class="bg-brand-espresso text-brand-sand border-b border-brand-sand/20 text-[11px] sm:text-xs uppercase tracking-wider font-semibold">
+                  <th scope="col" class="py-4 px-4 sm:px-6 w-[220px]">Dòng Nước Hoa</th>
+                  <th scope="col" class="py-4 px-4 w-[160px]">Nhóm Hương</th>
+                  <th scope="col" class="py-4 px-4 w-[280px]">Kim Tự Tháp Nốt Hương</th>
+                  <th scope="col" class="py-4 px-4 w-[140px] text-center">Nồng Độ &amp; Lưu Hương</th>
+                  <th scope="col" class="py-4 px-4 w-[150px]">Phong Cách</th>
+                  <th scope="col" class="py-4 px-4 w-[160px]">Dịp Khuyên Dùng</th>
+                  <th scope="col" class="py-4 px-4 w-[130px] text-right">Giá Niêm Yết</th>
+                  <th scope="col" class="py-4 px-4 sm:px-6 w-[120px] text-center">Trải Nghiệm</th>
+                </tr>
+              </thead>
+
+              <!-- Table Body -->
+              <tbody class="divide-y divide-brand-sand/50 text-brand-charcoal">
+                
+                <!-- Row 1: Poire Givrée -->
+                <tr class="hover:bg-brand-cream/40 transition-colors group">
+                  <td class="py-4 px-4 sm:px-6">
+                    <div class="flex items-center gap-3">
+                      <img src="Poire-1.webp" alt="Nước hoa Poire Givrée 50ml nồng độ EDP De L'amour" class="w-12 h-12 rounded-xl object-cover border border-brand-sand shadow-2xs shrink-0" loading="lazy" width="48" height="48">
+                      <div>
+                        <div class="font-serif font-bold text-brand-espresso text-sm sm:text-base group-hover:text-brand-wine transition-colors">Poire Givrée</div>
+                        <span class="inline-block mt-0.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-semibold">Mới ra mắt</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="font-medium text-brand-espresso">Floral Fruity Fresh</span>
+                    <p class="text-[11px] text-brand-muted mt-0.5">Trái cây hoa cỏ tươi mát</p>
+                  </td>
+                  <td class="py-4 px-4">
+                    <div class="space-y-1 text-xs">
+                      <div><strong class="text-brand-wine">Đầu:</strong> Lê tuyết Sapa, Dưa gang, Bergamot</div>
+                      <div><strong class="text-brand-wine">Giữa:</strong> Lan Nam Phi, Linh lan, Hoa hồng</div>
+                      <div><strong class="text-brand-wine">Cuối:</strong> Xạ hương trắng, Hổ phách, Tuyết tùng</div>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 text-center">
+                    <span class="inline-block px-2.5 py-1 rounded-full bg-brand-sand/40 text-brand-espresso font-semibold text-xs">EDP 20%</span>
+                    <div class="text-[11px] text-brand-muted mt-1 font-medium">8 - 10 tiếng</div>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="font-medium text-brand-espresso">Thanh mát, Quý phái</span>
+                    <p class="text-[11px] text-brand-muted mt-0.5">Thanh khiết, thư thái</p>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="text-xs">Công sở, Dạo phố, Hẹn hò ban ngày, Mùa xuân - hè</span>
+                  </td>
+                  <td class="py-4 px-4 text-right">
+                    <div class="font-bold text-brand-wine text-sm">445.000₫</div>
+                    <div class="text-[10px] text-brand-muted">10ml: 149.000₫</div>
+                  </td>
+                  <td class="py-4 px-4 sm:px-6 text-center">
+                    <button onclick="switchPDPProductAndScroll('poire')" class="w-full px-3 py-1.5 rounded-full bg-brand-wine text-white text-xs font-semibold hover:bg-brand-wineLight transition-all shadow-2xs whitespace-nowrap cursor-pointer">
+                      Thử mùi
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 2: Chérie L'amour -->
+                <tr class="hover:bg-brand-cream/40 transition-colors group">
+                  <td class="py-4 px-4 sm:px-6">
+                    <div class="flex items-center gap-3">
+                      <img src="cherie-1.webp" alt="Nước hoa Chérie L'amour 50ml nồng độ EDP De L'amour" class="w-12 h-12 rounded-xl object-cover border border-brand-sand shadow-2xs shrink-0" loading="lazy" width="48" height="48">
+                      <div>
+                        <div class="font-serif font-bold text-brand-espresso text-sm sm:text-base group-hover:text-brand-wine transition-colors">Chérie L'amour</div>
+                        <span class="inline-block mt-0.5 px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[10px] font-semibold">Bán chạy #1</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="font-medium text-brand-espresso">Fruity Gourmand</span>
+                    <p class="text-[11px] text-brand-muted mt-0.5">Quả mọng &amp; Vani ngọt ngào</p>
+                  </td>
+                  <td class="py-4 px-4">
+                    <div class="space-y-1 text-xs">
+                      <div><strong class="text-brand-wine">Đầu:</strong> Quả mọng đỏ, Dâu rừng, Lý chua đen</div>
+                      <div><strong class="text-brand-wine">Giữa:</strong> Hoa hồng Grasse, Hoa mẫu đơn</div>
+                      <div><strong class="text-brand-wine">Cuối:</strong> Vani Madagascar, Xạ hương ấm, Praline</div>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 text-center">
+                    <span class="inline-block px-2.5 py-1 rounded-full bg-brand-sand/40 text-brand-espresso font-semibold text-xs">EDP 22%</span>
+                    <div class="text-[11px] text-brand-muted mt-1 font-medium">10 - 12 tiếng</div>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="font-medium text-brand-espresso">Ngọt ngào, Gợi cảm</span>
+                    <p class="text-[11px] text-brand-muted mt-0.5">Nữ tính, cuốn hút</p>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="text-xs">Hẹn hò lãng mạn, Tiệc tối, Tiết trời se lạnh</span>
+                  </td>
+                  <td class="py-4 px-4 text-right">
+                    <div class="font-bold text-brand-wine text-sm">445.000₫</div>
+                    <div class="text-[10px] text-brand-muted">10ml: 149.000₫</div>
+                  </td>
+                  <td class="py-4 px-4 sm:px-6 text-center">
+                    <button onclick="switchPDPProductAndScroll('cherie')" class="w-full px-3 py-1.5 rounded-full bg-brand-wine text-white text-xs font-semibold hover:bg-brand-wineLight transition-all shadow-2xs whitespace-nowrap cursor-pointer">
+                      Thử mùi
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 3: Fleur L'amour -->
+                <tr class="hover:bg-brand-cream/40 transition-colors group">
+                  <td class="py-4 px-4 sm:px-6">
+                    <div class="flex items-center gap-3">
+                      <img src="fleur-1.webp" alt="Nước hoa Fleur L'amour 50ml nồng độ EDP De L'amour" class="w-12 h-12 rounded-xl object-cover border border-brand-sand shadow-2xs shrink-0" loading="lazy" width="48" height="48">
+                      <div>
+                        <div class="font-serif font-bold text-brand-espresso text-sm sm:text-base group-hover:text-brand-wine transition-colors">Fleur L'amour</div>
+                        <span class="inline-block mt-0.5 px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 text-[10px] font-semibold">Tiểu thư Paris</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="font-medium text-brand-espresso">White Floral Classic</span>
+                    <p class="text-[11px] text-brand-muted mt-0.5">Hoa trắng tinh khôi</p>
+                  </td>
+                  <td class="py-4 px-4">
+                    <div class="space-y-1 text-xs">
+                      <div><strong class="text-brand-wine">Đầu:</strong> Hoa mộc lan, Hoa cam Neroli</div>
+                      <div><strong class="text-brand-wine">Giữa:</strong> Hoa nhài Sambac, Hoa huệ trắng, Sơn trà</div>
+                      <div><strong class="text-brand-wine">Cuối:</strong> Gỗ đàn hương, Gỗ tuyết tùng Virginia</div>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 text-center">
+                    <span class="inline-block px-2.5 py-1 rounded-full bg-brand-sand/40 text-brand-espresso font-semibold text-xs">EDP 19%</span>
+                    <div class="text-[11px] text-brand-muted mt-1 font-medium">8 - 10 tiếng</div>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="font-medium text-brand-espresso">Trang nhã, Kiêu kỳ</span>
+                    <p class="text-[11px] text-brand-muted mt-0.5">Sang trọng nhẹ nhàng</p>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="text-xs">Công sở cao cấp, Gặp đối tác, Tiệc trà thanh lịch</span>
+                  </td>
+                  <td class="py-4 px-4 text-right">
+                    <div class="font-bold text-brand-wine text-sm">445.000₫</div>
+                    <div class="text-[10px] text-brand-muted">10ml: 149.000₫</div>
+                  </td>
+                  <td class="py-4 px-4 sm:px-6 text-center">
+                    <button onclick="switchPDPProductAndScroll('fleur')" class="w-full px-3 py-1.5 rounded-full bg-brand-wine text-white text-xs font-semibold hover:bg-brand-wineLight transition-all shadow-2xs whitespace-nowrap cursor-pointer">
+                      Thử mùi
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 4: L'amour Botanique -->
+                <tr class="hover:bg-brand-cream/40 transition-colors group">
+                  <td class="py-4 px-4 sm:px-6">
+                    <div class="flex items-center gap-3">
+                      <img src="botanique-1.webp" alt="Nước hoa L'amour Botanique 50ml nồng độ EDP De L'amour" class="w-12 h-12 rounded-xl object-cover border border-brand-sand shadow-2xs shrink-0" loading="lazy" width="48" height="48">
+                      <div>
+                        <div class="font-serif font-bold text-brand-espresso text-sm sm:text-base group-hover:text-brand-wine transition-colors">L'amour Botanique</div>
+                        <span class="inline-block mt-0.5 px-2 py-0.5 rounded-full bg-teal-50 text-teal-700 text-[10px] font-semibold">Unisex Nam &amp; Nữ</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="font-medium text-brand-espresso">Aromatic Woody Green</span>
+                    <p class="text-[11px] text-brand-muted mt-0.5">Thảo mộc xanh &amp; Gỗ thơm</p>
+                  </td>
+                  <td class="py-4 px-4">
+                    <div class="space-y-1 text-xs">
+                      <div><strong class="text-brand-wine">Đầu:</strong> Cam Bergamot Calabria, Bưởi hồng, Bạc hà</div>
+                      <div><strong class="text-brand-wine">Giữa:</strong> Lá xô thơm, Oải hương Provence, Trà xanh</div>
+                      <div><strong class="text-brand-wine">Cuối:</strong> Cỏ hương bài (Vetiver), Rêu sồi, Gỗ lũa</div>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 text-center">
+                    <span class="inline-block px-2.5 py-1 rounded-full bg-brand-sand/40 text-brand-espresso font-semibold text-xs">EDP 18%</span>
+                    <div class="text-[11px] text-brand-muted mt-1 font-medium">8 - 10 tiếng</div>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="font-medium text-brand-espresso">Phóng khoáng, Tự do</span>
+                    <p class="text-[11px] text-brand-muted mt-0.5">Xanh mát, chữa lành</p>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="text-xs">Thể thao, Du lịch, Mùa hè oi bức, Không gian sáng tạo</span>
+                  </td>
+                  <td class="py-4 px-4 text-right">
+                    <div class="font-bold text-brand-wine text-sm">445.000₫</div>
+                    <div class="text-[10px] text-brand-muted">10ml: 149.000₫</div>
+                  </td>
+                  <td class="py-4 px-4 sm:px-6 text-center">
+                    <button onclick="switchPDPProductAndScroll('botanique')" class="w-full px-3 py-1.5 rounded-full bg-brand-wine text-white text-xs font-semibold hover:bg-brand-wineLight transition-all shadow-2xs whitespace-nowrap cursor-pointer">
+                      Thử mùi
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 5: Nuit L'amour -->
+                <tr class="hover:bg-brand-cream/40 transition-colors group">
+                  <td class="py-4 px-4 sm:px-6">
+                    <div class="flex items-center gap-3">
+                      <img src="nuit-1.webp" alt="Nước hoa Nuit L'amour 50ml nồng độ EDP De L'amour" class="w-12 h-12 rounded-xl object-cover border border-brand-sand shadow-2xs shrink-0" loading="lazy" width="48" height="48">
+                      <div>
+                        <div class="font-serif font-bold text-brand-espresso text-sm sm:text-base group-hover:text-brand-wine transition-colors">Nuit L'amour</div>
+                        <span class="inline-block mt-0.5 px-2 py-0.5 rounded-full bg-purple-50 text-purple-700 text-[10px] font-semibold">Dạ tiệc đêm</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="font-medium text-brand-espresso">Oriental Woody Coffee</span>
+                    <p class="text-[11px] text-brand-muted mt-0.5">Phương Đông bí ẩn &amp; Trầm ấm</p>
+                  </td>
+                  <td class="py-4 px-4">
+                    <div class="space-y-1 text-xs">
+                      <div><strong class="text-brand-wine">Đầu:</strong> Cà phê đen, Hạnh nhân đắng, Tiêu hồng</div>
+                      <div><strong class="text-brand-wine">Giữa:</strong> Hoa cam Châu Phi, Hoa nhài ban đêm, Rượu Rum</div>
+                      <div><strong class="text-brand-wine">Cuối:</strong> Gỗ trầm hương (Oud), Hoắc hương, Đậu Tonka</div>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 text-center">
+                    <span class="inline-block px-2.5 py-1 rounded-full bg-brand-sand/40 text-brand-espresso font-semibold text-xs">EDP 22%</span>
+                    <div class="text-[11px] text-brand-muted mt-1 font-medium">10 - 12 tiếng</div>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="font-medium text-brand-espresso">Bí ẩn, Sang trọng</span>
+                    <p class="text-[11px] text-brand-muted mt-0.5">Quyền lực, nồng nàn</p>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="text-xs">Dạ tiệc, Sự kiện sang trọng, Mùa đông, Buổi tối hẹn hò</span>
+                  </td>
+                  <td class="py-4 px-4 text-right">
+                    <div class="font-bold text-brand-wine text-sm">445.000₫</div>
+                    <div class="text-[10px] text-brand-muted">10ml: 149.000₫</div>
+                  </td>
+                  <td class="py-4 px-4 sm:px-6 text-center">
+                    <button onclick="switchPDPProductAndScroll('nuit')" class="w-full px-3 py-1.5 rounded-full bg-brand-wine text-white text-xs font-semibold hover:bg-brand-wineLight transition-all shadow-2xs whitespace-nowrap cursor-pointer">
+                      Thử mùi
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 6: Soleil L'amour -->
+                <tr class="hover:bg-brand-cream/40 transition-colors group">
+                  <td class="py-4 px-4 sm:px-6">
+                    <div class="flex items-center gap-3">
+                      <img src="soleil-1.webp" alt="Nước hoa Soleil L'amour 50ml nồng độ EDP De L'amour" class="w-12 h-12 rounded-xl object-cover border border-brand-sand shadow-2xs shrink-0" loading="lazy" width="48" height="48">
+                      <div>
+                        <div class="font-serif font-bold text-brand-espresso text-sm sm:text-base group-hover:text-brand-wine transition-colors">Soleil L'amour</div>
+                        <span class="inline-block mt-0.5 px-2 py-0.5 rounded-full bg-orange-50 text-orange-700 text-[10px] font-semibold">Năng lượng ấm</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="font-medium text-brand-espresso">Citrus Amber Sunny</span>
+                    <p class="text-[11px] text-brand-muted mt-0.5">Quýt chín mọng &amp; Hổ phách</p>
+                  </td>
+                  <td class="py-4 px-4">
+                    <div class="space-y-1 text-xs">
+                      <div><strong class="text-brand-wine">Đầu:</strong> Quýt Mandarine chín mọng, Chanh Sicilia</div>
+                      <div><strong class="text-brand-wine">Giữa:</strong> Hoa phong lữ, Hoa cam mật ong, Cây bách xù</div>
+                      <div><strong class="text-brand-wine">Cuối:</strong> Hổ phách ấm lấp lánh, Nhựa thơm, Tuyết tùng vàng</div>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 text-center">
+                    <span class="inline-block px-2.5 py-1 rounded-full bg-brand-sand/40 text-brand-espresso font-semibold text-xs">EDP 19%</span>
+                    <div class="text-[11px] text-brand-muted mt-1 font-medium">8 - 10 tiếng</div>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="font-medium text-brand-espresso">Rạng rỡ, Tươi vui</span>
+                    <p class="text-[11px] text-brand-muted mt-0.5">Ấm áp, tràn đầy sinh khí</p>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="text-xs">Khởi đầu ngày mới, Dã ngoại cuối tuần, Gặp gỡ bạn bè</span>
+                  </td>
+                  <td class="py-4 px-4 text-right">
+                    <div class="font-bold text-brand-wine text-sm">445.000₫</div>
+                    <div class="text-[10px] text-brand-muted">10ml: 149.000₫</div>
+                  </td>
+                  <td class="py-4 px-4 sm:px-6 text-center">
+                    <button onclick="switchPDPProductAndScroll('soleil')" class="w-full px-3 py-1.5 rounded-full bg-brand-wine text-white text-xs font-semibold hover:bg-brand-wineLight transition-all shadow-2xs whitespace-nowrap cursor-pointer">
+                      Thử mùi
+                    </button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Footer của bảng: Cam kết & Voucher Discovery -->
+          <div class="p-4 sm:p-6 bg-brand-beige/50 border-t border-brand-sand flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-muted">
+            <div class="flex items-center gap-3">
+              <i data-lucide="shield-check" class="w-5 h-5 text-emerald-600 shrink-0"></i>
+              <span><strong>Cam kết độc quyền:</strong> Miễn phí khắc tên laser lên chai 50ml • Đổi trả an tâm 15 ngày • Bảo hành kích ứng 100%.</span>
+            </div>
+            <a href="#discovery-set" class="inline-flex items-center gap-1.5 text-brand-wine font-semibold hover:underline shrink-0">
+              <span>Chưa chắc chắn? Thử Discovery Kit 5 mùi chỉ 89k</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
 
     <!-- 5. SCENT JOURNAL (BLOG / BRAND CONTENT) -->
     <section id="journal" class="py-10 sm:py-18 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-20 w-full overflow-hidden">
