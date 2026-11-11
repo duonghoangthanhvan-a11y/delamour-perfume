@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #FAF8F5; }
+::-webkit-scrollbar-thumb { background: #D5C8B8; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #C5A880; }
+
+/* Engraving simulation font options */
+.font-engrave-script { font-family: 'Brush Script MT', cursive, serif; font-style: italic; }
+.font-engrave-serif { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; letter-spacing: 0.15em; font-weight: 600; text-transform: uppercase; }
+.font-engrave-sans { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; letter-spacing: 0.2em; font-weight: 500; text-transform: uppercase; }
+
+/* Metallic Laser Engraved Plate Effect */
+.engraving-plate {
+  background: linear-gradient(135deg, rgba(245, 230, 200, 0.95) 0%, rgba(200, 160, 105, 0.92) 50%, rgba(245, 230, 200, 0.95) 100%);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.8), inset 0 -1px 2px rgba(90, 60, 20, 0.4);
+  border: 1px solid rgba(160, 120, 60, 0.6);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), 0 -1px 0 rgba(80, 50, 10, 0.4);
+}
+
+/* Hide scrollbar for clean horizontal swipe containers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Scrollbar thin utility */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+/* Scroll Reveal Animation for Collection Products (Ultra-Smooth Silk Glide) */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px) scale(0.98);
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+}
+.reveal-on-scroll.is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Fix horizontal overflow on all mobile browsers (especially WebKit/iOS) */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  position: relative;
+}
+
+/* Modal and transition animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes zoomIn95 {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.animate-in {
+  animation-duration: 200ms;
+  animation-fill-mode: both;
+}
+.fade-in {
+  animation-name: fadeIn;
+}
+.zoom-in-95 {
+  animation-name: zoomIn95;
+}
+
+/* Subtle shimmer animation */
+@keyframes subtleShimmer {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+.animate-shimmer { animation: subtleShimmer 3s ease-in-out infinite; }
