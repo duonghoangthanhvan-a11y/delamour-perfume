@@ -952,14 +952,14 @@
         <div class="lg:col-span-5 lg:sticky lg:top-28 w-full min-w-0">
           <div 
             id="pdp-carousel-container" 
-            class="relative bg-brand-beige rounded-2xl overflow-hidden border border-brand-sand shadow-inner flex items-center justify-center group select-none w-full max-w-[460px] mx-auto aspect-[3/4] max-h-[min(80vh,680px)]"
+            class="relative bg-brand-beige rounded-2xl overflow-hidden border border-brand-sand shadow-inner flex items-center justify-center group select-none w-full max-w-[460px] mx-auto aspect-[3/4]"
           >
             <!-- Bottle Visual / Carousel Slide with Simulated Cap Overlay for Live Preview -->
             <img 
               id="pdp-main-img"
               src="cherie-lamour.webp" 
               alt="Chérie L'amour Eau de Parfum" 
-              class="w-full h-full object-cover object-center transition-all duration-300 group-hover:scale-[1.01]"
+              class="w-full h-full object-contain object-center transition-all duration-300 group-hover:scale-[1.01]"
               width="1200"
               height="1600"
               loading="eager"
@@ -5560,7 +5560,7 @@
             htmlSlots += `
               <div class="bg-white p-2.5 rounded-xl border-2 border-brand-wine flex items-center justify-between gap-3 shadow-sm relative group animate-in fade-in duration-200">
                 <div class="flex items-center gap-2.5 min-w-0">
-                  <img src="${scent.image}" onerror="handleImgFallback(this)" class="w-11 h-14 object-cover rounded-lg border border-brand-sand shrink-0" alt="${scent.name}" width="768" height="1376" loading="lazy" decoding="async">
+                  <img src="${scent.image}" onerror="handleImgFallback(this)" class="w-11 h-14 object-cover rounded-lg border border-brand-sand shrink-0" alt="${scent.name}" width="896" height="1200" loading="lazy" decoding="async">
                   <div class="min-w-0">
                     <span class="text-[10px] font-bold text-brand-wine uppercase tracking-wider block">Chai ${i + 1}</span>
                     <h5 class="text-xs font-bold text-brand-espresso truncate font-serif">${scent.name}</h5>
@@ -5614,7 +5614,7 @@
 
               <div>
                 <div class="relative aspect-[3/4] rounded-lg overflow-hidden bg-brand-cream mb-2 cursor-pointer" onclick="${canAdd ? `addPocketDuoScent('${scent.id}')` : ''}">
-                  <img src="${scent.image}" onerror="handleImgFallback(this)" class="w-full h-full object-cover ${canAdd ? 'hover:scale-105' : 'grayscale-[40%]'} transition-transform duration-300" alt="${scent.name}" width="768" height="1376" loading="lazy" decoding="async">
+                  <img src="${scent.image}" onerror="handleImgFallback(this)" class="w-full h-full object-cover ${canAdd ? 'hover:scale-105' : 'grayscale-[40%]'} transition-transform duration-300" alt="${scent.name}" width="896" height="1200" loading="lazy" decoding="async">
                   ${is10Out ? `
                     <div class="absolute inset-0 bg-black/40 backdrop-blur-[0.5px] flex items-center justify-center pointer-events-none">
                       <span class="text-[8px] font-bold text-amber-200 bg-stone-900/90 px-1.5 py-0.5 rounded-full uppercase tracking-wider border border-amber-300/40">Tạm hết</span>
@@ -5871,7 +5871,7 @@
 
               <div>
                 <div class="relative aspect-[3/4] rounded-lg overflow-hidden bg-brand-cream mb-2 mt-4">
-                  <img src="${scent.image}" onerror="handleImgFallback(this)" class="w-full h-full object-cover ${is50Out ? 'grayscale-[40%] blur-[0.4px]' : 'group-hover:scale-105'} transition-transform duration-300" alt="${scent.name}" width="768" height="1376" loading="lazy" decoding="async">
+                  <img src="${scent.image}" onerror="handleImgFallback(this)" class="w-full h-full object-cover ${is50Out ? 'grayscale-[40%] blur-[0.4px]' : 'group-hover:scale-105'} transition-transform duration-300" alt="${scent.name}" width="896" height="1200" loading="lazy" decoding="async">
                   ${is50Out ? `
                     <div class="absolute inset-0 bg-black/45 backdrop-blur-[0.5px] flex items-center justify-center pointer-events-none">
                       <span class="text-[8px] font-bold text-amber-200 bg-stone-900/90 px-1.5 py-0.5 rounded-full uppercase tracking-wider border border-amber-300/40">Tạm hết 50ml</span>
