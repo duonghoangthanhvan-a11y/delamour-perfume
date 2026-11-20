@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Sản Phẩm Chi Tiết | De L'amour Paris — Nước Hoa Pháp Tinh Tuyển</title>
+
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" id="meta-desc" content="Khám phá chi tiết sáng tạo hương thơm De L'amour Paris. Tinh dầu Grasse nhập khẩu, lưu hương 8-12h, thiết kế sang trọng đẳng cấp.">
+  <meta name="author" content="De L'amour Paris">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" id="canonical-url" href="https://delamour-perfume.vercel.app/product.html">
+
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="De L'amour Paris">
+  <meta property="og:title" id="og-title" content="De L'amour Paris — Nước Hoa Pháp">
+  <meta property="og:description" id="og-desc" content="Nước hoa Pháp cao cấp De L'amour.">
+  <meta property="og:image" id="og-image" content="https://delamour-perfume.vercel.app/cherie-lamour.webp">
+  <meta property="og:locale" content="vi_VN">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌹</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Alex+Brush&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS & Main Style -->
+  <link rel="stylesheet" href="style.min.css?v=10">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              wine: '#800020',
+              wineDark: '#5c0017',
+              wineLight: '#9e1b32',
+              gold: '#D4AF37',
+              goldDark: '#AA820A',
+              goldLight: '#EED971',
+              cream: '#FFFDD0',
+              beige: '#F7F4EF',
+              sand: '#E6DEC9',
+              charcoal: '#222222',
+              espresso: '#1A1110',
+              muted: '#71717A'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            display: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            script: ['"Alex Brush"', 'cursive'],
+            engraveClassic: ['"Cinzel"', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .accordion-content.open {
+      max-height: 1200px;
+    }
+    .font-engrave-script { font-family: 'Alex Brush', cursive; }
+    .font-engrave-classic { font-family: 'Cinzel', serif; letter-spacing: 0.2em; }
+  </style>
+</head>
+<body class="bg-[#FAF8F5] text-brand-charcoal font-sans antialiased selection:bg-brand-wine selection:text-white">
+
+  <!-- 1. TOP ANNOUNCEMENT BAR -->
+  <div class="bg-gradient-to-r from-brand-wineDark via-brand-wine to-brand-wineDark text-white text-[11px] sm:text-xs py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2 relative z-40 shadow-sm">
+    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-gold animate-pulse"></i>
+    <span>Ưu đãi ra mắt: Tặng kèm ống thử mùi cùng loại • <strong>Freeship toàn quốc</strong> cho đơn từ 399.000đ</span>
+  </div>
+
+  <!-- 2. STICKY HEADER / NAVIGATION: 2 TẦNG (LUXURY HAUTE PARFUMERIE) -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-sand/70 transition-all duration-300 shadow-xs w-full">
+    <!-- TẦNG 1 -->
+    <div class="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+      <!-- LEFT -->
+      <div class="flex-1 flex items-center justify-start gap-2 sm:gap-3">
+        <a href="index.html#collection" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-wine hover:text-brand-wineDark px-3 py-1.5 rounded-full border border-brand-wine/30 hover:bg-brand-cream/60 transition-all">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+          <span class="hidden sm:inline">Về bộ sưu tập</span>
+        </a>
+        <a href="index.html#quiz" class="hidden lg:flex items-center gap-2 border border-brand-wine/25 bg-brand-cream/60 hover:bg-brand-wine hover:text-white px-3.5 py-1.5 rounded-full text-xs xl:text-[13px] font-semibold text-brand-wine transition-all shadow-2xs whitespace-nowrap group">
+          <i data-lucide="compass" class="w-4 h-4 shrink-0 transition-transform group-hover:rotate-45"></i>
+          <span>Scent Quiz</span>
+        </a>
+      </div>
+
+      <!-- CENTER: LOGO (Chữ to nổi bật, bỏ chữ Haute Parfumerie) -->
+      <div class="shrink-0 text-center px-2 sm:px-4">
+        <a href="index.html" class="inline-block py-1 hover:opacity-90 transition-opacity">
+          <span class="font-serif text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] tracking-[0.14em] text-brand-wine font-bold uppercase whitespace-nowrap leading-none block">De L'amour</span>
+        </a>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="flex-1 flex items-center justify-end gap-1 sm:gap-2">
+        <a href="index.html#search" class="p-2 text-brand-espresso hover:text-brand-wine transition-colors rounded-full hover:bg-brand-sand/30" title="Tìm kiếm">
+          <i data-lucide="search" class="w-5 h-5"></i>
+        </a>
+        <a href="index.html#wishlist" class="relative p-2 text-brand-espresso hover:text-brand-wine transition-colors rounded-full hover:bg-brand-sand/30" title="Danh sách yêu thích">
+          <i data-lucide="heart" class="w-5 h-5"></i>
+        </a>
+        <button onclick="toggleCartDrawer(true)" class="relative p-2 text-brand-espresso hover:text-brand-wine transition-colors rounded-full hover:bg-brand-sand/30 group cursor-pointer" title="Xem giỏ hàng">
+          <i data-lucide="shopping-bag" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+          <span id="header-cart-badge" class="absolute top-0.5 right-0.5 w-4 h-4 rounded-full bg-brand-wine text-white text-[10px] font-bold flex items-center justify-center shadow-sm">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- TẦNG 2: CÁC MENU ĐIỀU HƯỚNG CĂN GIỮA (Giãn cách chuẩn, cỡ chữ đồng bộ 14px) -->
+    <nav class="hidden lg:flex items-center justify-center border-t border-brand-sand/40 py-2.5 sm:py-3 px-4 bg-white/40">
+      <div class="header-nav-tier2 flex items-center justify-center" style="gap: 2.75rem;">
+        <a href="index.html#collection" class="header-nav-link active" style="font-size: 14px;">
+          <span>Bộ sưu tập</span>
+        </a>
+        <a href="index.html#discovery-set" class="header-nav-link discovery-accent" style="font-size: 14px;">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-gold animate-pulse shrink-0"></i>
+          <span>Discovery set</span>
+        </a>
+        <a href="story.html" class="header-nav-link" style="font-size: 14px;">
+          <span>Câu chuyện thương hiệu</span>
+        </a>
+        <a href="index.html#journal" class="header-nav-link" style="font-size: 14px;">
+          <span>Nhật ký hương</span>
+        </a>
+        <a href="index.html#contact" class="header-nav-link" style="font-size: 14px;">
+          <span>Liên hệ</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 3. MAIN PRODUCT DETAIL PAGE CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
+    
+    <!-- Breadcrumbs -->
+    <nav class="flex items-center gap-2 text-xs text-brand-muted mb-6 sm:mb-8 overflow-x-auto whitespace-nowrap pb-1">
+      <a href="index.html" class="hover:text-brand-wine flex items-center gap-1">
+        <i data-lucide="home" class="w-3.5 h-3.5"></i>
+        <span>Trang chủ</span>
+      </a>
+      <span>/</span>
+      <a href="index.html#collection" class="hover:text-brand-wine">Bộ sưu tập nước hoa</a>
+      <span>/</span>
+      <span id="breadcrumb-current" class="text-brand-espresso font-semibold">Chérie L'amour</span>
+    </nav>
+
+    <!-- 2-COLUMN PDP GRID (Left: 5-Photo Carousel, Right: Buy Box + 3 Accordions) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+      
+      <!-- ================= LEFT COLUMN: CAROUSEL 5 ẢNH ================= -->
+      <div class="lg:col-span-6 lg:sticky lg:top-28">
+        <!-- Main Large Image Container -->
+        <div class="relative bg-white rounded-2xl overflow-hidden border border-brand-sand/80 shadow-md aspect-square sm:aspect-[4/5] flex items-center justify-center group select-none">
+          <img id="main-product-img" src="cherie-lamour.webp" alt="Ảnh chi tiết sản phẩm" class="w-full h-full object-cover transition-all duration-300 cursor-zoom-in" onclick="openLightbox()">
+
+          <!-- Tag Khuyến Mãi / Tình Trạng -->
+          <div class="absolute top-3 left-3 flex flex-col gap-1.5 z-10">
+            <span id="pdp-badge" class="px-3 py-1 bg-brand-wine text-white text-[11px] font-bold rounded-full shadow-sm tracking-wide">
+              Berry &amp; Woody Vanilla
+            </span>
+            <span class="px-2.5 py-0.5 bg-emerald-600/90 text-white text-[10px] font-semibold rounded-full backdrop-blur-xs flex items-center gap-1 shadow-xs">
+              <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+              Sẵn hàng • Grasse, Pháp
+            </span>
+          </div>
+
+          <!-- Wishlist Heart Button -->
+          <button id="pdp-wishlist-btn" onclick="toggleWishlistPDP()" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-brand-muted hover:text-rose-600 flex items-center justify-center shadow-md transition-all z-10" title="Thêm vào yêu thích">
+            <i data-lucide="heart" id="pdp-wishlist-icon" class="w-4 h-4"></i>
+          </button>
+
+          <!-- Prev / Next Navigation Arrows -->
+          <button onclick="prevProductImage()" class="absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/80 hover:bg-white text-brand-espresso shadow-md flex items-center justify-center transition-all opacity-80 group-hover:opacity-100 hover:scale-105 z-10" title="Ảnh trước">
+            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+          </button>
+          <button onclick="nextProductImage()" class="absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/80 hover:bg-white text-brand-espresso shadow-md flex items-center justify-center transition-all opacity-80 group-hover:opacity-100 hover:scale-105 z-10" title="Ảnh tiếp theo">
+            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+          </button>
+
+          <!-- Label chú thích ảnh -->
+          <div class="absolute bottom-3 inset-x-3 text-center pointer-events-none">
+            <span id="main-img-label" class="inline-block px-3 py-1 bg-black/65 backdrop-blur-sm text-white text-[11px] rounded-full shadow-sm">
+              Ảnh 1: Ảnh bìa / Cover
+            </span>
+          </div>
+        </div>
+
+        <!-- 5 Thumbnail Bar -->
+        <div class="grid grid-cols-5 gap-2 sm:gap-3 mt-3 sm:mt-4" id="carousel-thumbnails-bar">
+          <!-- Thumbnail buttons render dynamically -->
+        </div>
+
+        <p class="text-[11px] text-brand-muted text-center mt-2.5 flex items-center justify-center gap-1">
+          <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i>
+          <span>Click vào ảnh lớn để phóng to toàn màn hình</span>
+        </p>
+      </div>
+
+      <!-- ================= RIGHT COLUMN: BUY BOX & 3 ACCORDIONS ================= -->
+      <div class="lg:col-span-6 space-y-6">
+        
+        <!-- Header Info (Brand, Title, Rating, Price) -->
+        <div class="border-b border-brand-sand/70 pb-5">
+          <span class="text-[11px] font-bold tracking-[0.25em] text-brand-wine uppercase block mb-1">DE L'AMOUR PARIS • PARFUM DE LUXE</span>
+          <h1 id="product-name" class="font-serif text-2xl sm:text-4xl text-brand-espresso font-semibold tracking-tight">Chérie L'amour</h1>
+          <p id="product-subtitle" class="text-xs sm:text-sm text-brand-muted mt-1.5 font-medium">Chérie L'amour • Berry &amp; Woody Vanilla</p>
+
+          <!-- Rating & Sold Count -->
+          <div class="flex items-center gap-3 mt-2.5 text-xs">
+            <div class="flex items-center text-amber-500">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+            </div>
+            <span class="font-bold text-brand-espresso">4.9/5</span>
+            <span class="text-brand-muted">•</span>
+            <a href="#customer-reviews" class="text-brand-wine underline hover:text-brand-wineDark font-medium">128 đánh giá thực tế</a>
+          </div>
+
+          <!-- Price Display -->
+          <div class="flex items-baseline gap-3 mt-4">
+            <span id="product-price" class="font-serif text-2xl sm:text-3xl font-bold text-brand-wine">679.000đ</span>
+            <span id="product-original-price" class="text-sm sm:text-base text-brand-muted line-through">799.000đ</span>
+            <span id="product-savings-badge" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-wine/10 text-brand-wine border border-brand-wine/20">
+              Tiết kiệm 120k
+            </span>
+          </div>
+
+          <!-- Quote cảm xúc -->
+          <blockquote id="product-quote" class="italic text-xs sm:text-sm text-brand-charcoal/80 bg-brand-beige/80 p-3 sm:p-3.5 rounded-xl border-l-4 border-brand-wine mt-4 leading-relaxed font-serif">
+            "Một thoáng kiêu kỳ như đóa hoa nở muộn giữa lòng Paris – ngọt dịu quả mọng, ấm êm vani gỗ và vấn vương suốt ngày dài."
+          </blockquote>
+        </div>
+
+        <!-- Size Selector (Dung tích chuẩn phong cách Morra) -->
+        <div class="space-y-2.5">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold uppercase tracking-wider text-brand-espresso">Dung tích:</span>
+            <span id="selected-size-label" class="text-brand-muted font-medium">Signature 50ml (Bản biểu tượng)</span>
+          </div>
+          
+          <div class="grid grid-cols-2 gap-3" id="size-selector-container">
+            <!-- Option 10ml -->
+            <button type="button" onclick="selectPDPSize('10ml')" id="btn-size-10" class="p-3 sm:p-3.5 rounded-xl border border-brand-sand bg-white text-left transition-all hover:border-brand-wine flex flex-col justify-between group cursor-pointer">
+              <div class="flex items-center justify-between">
+                <span class="font-serif font-bold text-sm text-brand-espresso group-hover:text-brand-wine">Pocket 10ml</span>
+                <span class="text-[10px] text-brand-muted uppercase font-semibold">Tiện lợi</span>
+              </div>
+              <div class="mt-1 flex items-baseline gap-1.5">
+                <span id="btn-size-10-price" class="text-xs font-bold text-brand-wine">179.000đ</span>
+                <span id="btn-size-10-orig" class="text-[10px] text-brand-muted line-through">249.000đ</span>
+              </div>
+            </button>
+
+            <!-- Option 50ml -->
+            <button type="button" onclick="selectPDPSize('50ml')" id="btn-size-50" class="p-3 sm:p-3.5 rounded-xl border-2 border-brand-wine bg-brand-cream/60 text-left transition-all flex flex-col justify-between shadow-xs cursor-pointer">
+              <div class="flex items-center justify-between">
+                <span class="font-serif font-bold text-sm text-brand-wine">Signature 50ml</span>
+                <span class="text-[10px] bg-brand-wine text-white px-1.5 py-0.2 rounded font-semibold">Ưa chuộng</span>
+              </div>
+              <div class="mt-1 flex items-baseline gap-1.5">
+                <span id="btn-size-50-price" class="text-xs font-bold text-brand-wine">679.000đ</span>
+                <span id="btn-size-50-orig" class="text-[10px] text-brand-muted line-through">799.000đ</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quantity & Add to Cart Action Box -->
+        <div class="space-y-3 pt-2">
+          <div class="flex items-center gap-3">
+            <!-- Stepper Quantity -->
+            <div class="flex items-center border border-brand-sand rounded-xl bg-white shadow-xs p-1">
+              <button type="button" onclick="changeQuantity(-1)" class="w-8 h-8 rounded-lg hover:bg-brand-beige flex items-center justify-center text-brand-espresso font-bold transition-colors">
+                <i data-lucide="minus" class="w-3.5 h-3.5"></i>
+              </button>
+              <span id="pdp-quantity" class="w-10 text-center font-bold text-sm text-brand-espresso">1</span>
+              <button type="button" onclick="changeQuantity(1)" class="w-8 h-8 rounded-lg hover:bg-brand-beige flex items-center justify-center text-brand-espresso font-bold transition-colors">
+                <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+
+            <!-- Big CTA: Add to cart -->
+            <button type="button" onclick="handleAddToCartPDP(false)" class="flex-1 py-3.5 px-6 rounded-xl bg-brand-wine hover:bg-brand-wineDark text-white font-bold text-xs sm:text-sm tracking-wider uppercase shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 group cursor-pointer">
+              <i data-lucide="shopping-bag" class="w-4 h-4 transition-transform group-hover:scale-110"></i>
+              <span>Thêm Vào Giỏ Hàng</span>
+            </button>
+          </div>
+
+          <!-- Instant Buy Button -->
+          <button type="button" onclick="handleAddToCartPDP(true)" class="w-full py-3 px-6 rounded-xl border-2 border-brand-espresso hover:bg-brand-espresso hover:text-white text-brand-espresso font-bold text-xs tracking-wider uppercase transition-all shadow-xs flex items-center justify-center gap-2 cursor-pointer">
+            <i data-lucide="zap" class="w-4 h-4 text-brand-gold"></i>
+            <span>Mua Ngay • Thanh Toán Khi Nhận Hàng (COD)</span>
+          </button>
+        </div>
+
+        <!-- Quick Trust Signals (Chính sách cam kết nhanh) -->
+        <div class="grid grid-cols-3 gap-2 py-3 px-3.5 bg-brand-beige/60 rounded-xl border border-brand-sand/70 text-[11px] text-brand-charcoal">
+          <div class="flex items-center gap-2">
+            <i data-lucide="truck" class="w-4 h-4 text-brand-gold shrink-0"></i>
+            <span>Freeship đơn 399k</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="clock" class="w-4 h-4 text-brand-gold shrink-0"></i>
+            <span>Giao nhanh 24 - 48h</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+            <span>Đổi trả 7 ngày</span>
+          </div>
+        </div>
+
+        <!-- ================= 3 MỤC SỔ THÔNG TIN ACCORDION ================= -->
+        <div class="border-t border-brand-sand/80 pt-2 divide-y divide-brand-sand/60">
+          
+          <!-- ACCORDION 1: CHI TIẾT SẢN PHẨM -->
+          <div class="py-3">
+            <button type="button" onclick="toggleAccordion('acc-details')" class="w-full flex items-center justify-between text-left group cursor-pointer py-1">
+              <span class="font-serif font-bold text-sm sm:text-base text-brand-espresso group-hover:text-brand-wine flex items-center gap-2.5">
+                <i data-lucide="sparkles" class="w-4 h-4 text-brand-gold"></i>
+                <span>1. Chi tiết sản phẩm &amp; Tháp hương</span>
+              </span>
+              <i data-lucide="chevron-down" id="acc-details-icon" class="w-4 h-4 text-brand-muted transition-transform duration-300"></i>
+            </button>
+            <div id="acc-details" class="accordion-content open space-y-4 pt-3 text-xs leading-relaxed text-brand-charcoal">
+              <!-- Tháp 3 tầng hương -->
+              <div class="space-y-2 bg-white p-3.5 rounded-xl border border-brand-sand/70">
+                <div class="font-bold text-brand-espresso uppercase tracking-wider text-[11px] flex items-center gap-1.5 border-b border-brand-sand/50 pb-2">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-brand-wine"></i>
+                  <span>Cấu trúc 3 tầng hương Pháp (Olfactory Pyramid)</span>
+                </div>
+                <div class="space-y-2 pt-1 text-xs">
+                  <div>
+                    <span class="font-bold text-brand-wine">🍋 Hương đầu (Top Notes):</span>
+                    <span id="detail-top-notes" class="text-brand-charcoal ml-1">Quả mọng đỏ, Quả sung ngọt, Cam Bergamot</span>
+                    <p id="detail-top-desc" class="text-[11px] text-brand-muted italic mt-0.5">Mở đầu ngọt mọng, quyến rũ và ấn tượng khó phai.</p>
+                  </div>
+                  <div>
+                    <span class="font-bold text-brand-wine">🌸 Hương giữa (Heart Notes):</span>
+                    <span id="detail-heart-notes" class="text-brand-charcoal ml-1">Hoa hồng Damask, Diên vĩ (Iris Powdery)</span>
+                    <p id="detail-heart-desc" class="text-[11px] text-brand-muted italic mt-0.5">Trái tim kiêu kỳ, phấn thơm mịn như lụa là trên da.</p>
+                  </div>
+                  <div>
+                    <span class="font-bold text-brand-wine">🪵 Hương cuối (Base Notes):</span>
+                    <span id="detail-base-notes" class="text-brand-charcoal ml-1">Vani gỗ nguyên chất, Gỗ đàn hương, Xạ hương trắng</span>
+                    <p id="detail-base-desc" class="text-[11px] text-brand-muted italic mt-0.5">Lưu lại chiều sâu ấm áp, sang trọng và kiêu sa.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Thước đo độ lưu & tỏa hương -->
+              <div class="grid grid-cols-2 gap-3 bg-white p-3.5 rounded-xl border border-brand-sand/70">
+                <div>
+                  <span class="font-bold text-[11px] text-brand-espresso uppercase block mb-1">Độ lưu hương</span>
+                  <div class="flex items-baseline gap-1.5">
+                    <span id="detail-longevity" class="text-sm font-bold text-brand-wine">7 – 9 tiếng</span>
+                  </div>
+                  <div class="w-full bg-brand-sand/40 h-2 rounded-full overflow-hidden mt-1.5">
+                    <div id="detail-longevity-bar" class="bg-brand-wine h-full rounded-full" style="width: 85%;"></div>
+                  </div>
+                  <span id="detail-longevity-desc" class="text-[10px] text-brand-muted block mt-1">Lưu hương tốt trên da và vải áo</span>
+                </div>
+                <div>
+                  <span class="font-bold text-[11px] text-brand-espresso uppercase block mb-1">Độ tỏa hương</span>
+                  <div class="flex items-baseline gap-1.5">
+                    <span id="detail-sillage" class="text-sm font-bold text-brand-wine">1 cánh tay</span>
+                  </div>
+                  <div class="w-full bg-brand-sand/40 h-2 rounded-full overflow-hidden mt-1.5">
+                    <div id="detail-sillage-bar" class="bg-brand-goldDark h-full rounded-full" style="width: 70%;"></div>
+                  </div>
+                  <span id="detail-sillage-desc" class="text-[10px] text-brand-muted block mt-1">Dịu dàng, thanh lịch nơi công sở</span>
+                </div>
+              </div>
+
+              <!-- Hoàn cảnh sử dụng & Mùa -->
+              <div class="bg-white p-3.5 rounded-xl border border-brand-sand/70 space-y-1.5">
+                <span class="font-bold text-[11px] text-brand-espresso uppercase block">Hoàn cảnh sử dụng &amp; Phong cách</span>
+                <p id="detail-occasions" class="text-xs text-brand-charcoal">Tỏa sáng trong những buổi hẹn hò lãng mạn, gặp gỡ đối tác hoặc dự tiệc tối sang trọng.</p>
+                <div class="flex flex-wrap gap-1.5 pt-1" id="detail-occasion-tags">
+                  <span class="px-2 py-0.5 bg-brand-beige text-brand-charcoal rounded-md text-[10px]">Hẹn hò lãng mạn</span>
+                  <span class="px-2 py-0.5 bg-brand-beige text-brand-charcoal rounded-md text-[10px]">Công sở</span>
+                  <span class="px-2 py-0.5 bg-brand-beige text-brand-charcoal rounded-md text-[10px]">Tiệc tối</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACCORDION 2: CÁ NHÂN HÓA SẢN PHẨM (KHẮC TÊN 50ML & QUÀ TẶNG) -->
+          <div class="py-3">
+            <button type="button" onclick="toggleAccordion('acc-personalize')" class="w-full flex items-center justify-between text-left group cursor-pointer py-1">
+              <span class="font-serif font-bold text-sm sm:text-base text-brand-espresso group-hover:text-brand-wine flex items-center gap-2.5">
+                <i data-lucide="feather" class="w-4 h-4 text-brand-gold"></i>
+                <span>2. Cá nhân hóa sản phẩm (Khắc laser &amp; Quà tặng)</span>
+              </span>
+              <i data-lucide="chevron-down" id="acc-personalize-icon" class="w-4 h-4 text-brand-muted transition-transform duration-300"></i>
+            </button>
+            <div id="acc-personalize" class="accordion-content space-y-4 pt-3 text-xs leading-relaxed text-brand-charcoal">
+              
+              <!-- Dịch vụ Khắc Laser (CHỈ ÁP DỤNG CHO SIZE 50ML) -->
+              <div class="bg-white p-3.5 rounded-xl border border-brand-sand/70 space-y-3">
+                <div class="flex items-center justify-between">
+                  <label class="flex items-center gap-2 cursor-pointer font-bold text-brand-espresso">
+                    <input type="checkbox" id="check-engraving" onchange="toggleEngravingOption(this.checked)" class="w-4 h-4 rounded text-brand-wine focus:ring-brand-wine">
+                    <span>Khắc tên Laser trên nắp chai kim loại (+80.000đ)</span>
+                  </label>
+                  <span id="engraving-size-badge" class="text-[10px] font-semibold text-brand-wine bg-brand-wine/10 px-2 py-0.5 rounded-full">
+                    Áp dụng cho size 50ml
+                  </span>
+                </div>
+
+                <!-- Cảnh báo nếu chọn size 10ml -->
+                <div id="engraving-10ml-warning" class="hidden p-2.5 bg-amber-50 border border-amber-200 text-amber-800 rounded-lg text-[11px] flex items-center gap-2">
+                  <i data-lucide="alert-circle" class="w-4 h-4 shrink-0 text-amber-600"></i>
+                  <span>Dịch vụ khắc Laser hiện <strong>chỉ áp dụng cho chai 50ml</strong> do diện tích nắp chai tiêu chuẩn. Vui lòng chọn chai 50ml nếu muốn khắc tên.</span>
+                </div>
+
+                <!-- Form Nhập Tên & Live Preview (khi tick chọn và đang chọn size 50ml) -->
+                <div id="engraving-controls" class="space-y-3 pt-2 border-t border-brand-sand/50 hidden">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    <div>
+                      <label class="text-[11px] font-semibold text-brand-espresso block mb-1">Nội dung khắc (Tối đa 12 ký tự):</label>
+                      <input type="text" id="engraving-input-text" maxlength="12" value="Chérie" oninput="updateEngravingPreview()" placeholder="VD: Lan Anh, David..." class="w-full px-3 py-1.5 border border-brand-sand rounded-lg text-xs focus:outline-none focus:border-brand-wine">
+                    </div>
+                    <div>
+                      <label class="text-[11px] font-semibold text-brand-espresso block mb-1">Kiểu phông chữ:</label>
+                      <select id="engraving-font-select" onchange="updateEngravingPreview()" class="w-full px-3 py-1.5 border border-brand-sand rounded-lg text-xs focus:outline-none focus:border-brand-wine bg-white">
+                        <option value="script">Font Cursive Lãng mạn (Alex Brush)</option>
+                        <option value="classic">Font Classic Sang trọng (Cinzel)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- Live Preview Nắp Chai Vàng Gold -->
+                  <div class="relative bg-gradient-to-b from-[#2A231F] to-[#161210] p-4 rounded-xl border border-brand-gold/40 flex flex-col items-center justify-center text-center shadow-inner overflow-hidden">
+                    <span class="text-[10px] text-brand-sand/60 uppercase tracking-widest mb-1.5">Mô phỏng nắp chai De L'amour sau khi khắc</span>
+                    <div class="w-48 h-14 bg-gradient-to-r from-[#D4AF37] via-[#FFF3B0] to-[#AA820A] rounded-lg shadow-md flex items-center justify-center px-4 border border-[#FFF8D6]/60">
+                      <span id="engraving-preview-display" class="text-brand-espresso text-base font-bold font-engrave-script truncate tracking-wider drop-shadow-xs">Chérie</span>
+                    </div>
+                    <span class="text-[9px] text-brand-sand/50 italic mt-1.5">*Nét khắc laser sắc bén, vĩnh viễn không phai mờ</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Dịch vụ Gói Hộp Quà & Thiệp (+30.000đ) -->
+              <div class="bg-white p-3.5 rounded-xl border border-brand-sand/70 space-y-3">
+                <label class="flex items-center justify-between cursor-pointer font-bold text-brand-espresso">
+                  <div class="flex items-center gap-2">
+                    <input type="checkbox" id="check-giftwrap" onchange="toggleGiftwrapOption(this.checked)" class="w-4 h-4 rounded text-brand-wine focus:ring-brand-wine">
+                    <span>Gói hộp quà cao cấp + Thiệp viết tay (+30.000đ)</span>
+                  </div>
+                  <span class="text-[10px] text-brand-goldDark bg-brand-cream px-2 py-0.5 rounded-full font-semibold">Tặng người thương</span>
+                </label>
+
+                <!-- Ô nhập lời chúc trên thiệp -->
+                <div id="giftwrap-controls" class="space-y-2 pt-2 border-t border-brand-sand/50 hidden">
+                  <label class="text-[11px] font-semibold text-brand-espresso block">Nội dung viết lên thiệp chúc mừng:</label>
+                  <textarea id="gift-message-input" rows="2" maxlength="150" placeholder="VD: Chúc em sinh nhật vui vẻ, luôn rạng rỡ và ngát hương như đóa hoa sớm mai..." class="w-full p-2.5 border border-brand-sand rounded-lg text-xs focus:outline-none focus:border-brand-wine"></textarea>
+                  <span class="text-[10px] text-brand-muted block text-right">Tối đa 150 ký tự</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACCORDION 3: HƯỚNG DẪN BẢO QUẢN & CAM KẾT -->
+          <div class="py-3">
+            <button type="button" onclick="toggleAccordion('acc-care')" class="w-full flex items-center justify-between text-left group cursor-pointer py-1">
+              <span class="font-serif font-bold text-sm sm:text-base text-brand-espresso group-hover:text-brand-wine flex items-center gap-2.5">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                <span>3. Hướng dẫn bảo quản &amp; Cam kết đổi trả</span>
+              </span>
+              <i data-lucide="chevron-down" id="acc-care-icon" class="w-4 h-4 text-brand-muted transition-transform duration-300"></i>
+            </button>
+            <div id="acc-care" class="accordion-content space-y-3 pt-3 text-xs leading-relaxed text-brand-charcoal">
+              <div class="bg-white p-3.5 rounded-xl border border-brand-sand/70 space-y-2">
+                <span class="font-bold text-brand-espresso uppercase text-[11px] block">Mẹo xịt giữ hương suốt ngày dài (8-12 tiếng)</span>
+                <ul class="list-disc pl-4 space-y-1 text-brand-charcoal">
+                  <li><strong>Vị trí mạch ấm:</strong> Xịt cách cơ thể 15-20cm tại các điểm mạch đập như hai bên cổ, sau gáy, cổ tay và xương quai xanh.</li>
+                  <li><strong>Không chà xát:</strong> Sau khi xịt, để nước hoa khô tự nhiên trên da. Việc chà hai cổ tay sẽ bẻ gãy phân tử hương đầu (Top notes).</li>
+                  <li><strong>Dưỡng ẩm trước khi xịt:</strong> Xịt sau khi tắm hoặc thoa một lớp kem dưỡng ẩm không mùi sẽ giúp giữ hạt tinh dầu bám sâu gấp 1.5 lần.</li>
+                </ul>
+              </div>
+
+              <div class="bg-white p-3.5 rounded-xl border border-brand-sand/70 space-y-2">
+                <span class="font-bold text-brand-espresso uppercase text-[11px] block">Bảo quản chuẩn chuyên gia Pháp</span>
+                <p>Để chai nơi khô ráo, thoáng mát (nhiệt độ lý tưởng 18 - 25°C). Tuyệt đối tránh ánh nắng mặt trời trực tiếp và nơi ẩm ướt như phòng tắm.</p>
+              </div>
+
+              <div class="bg-emerald-50/80 p-3.5 rounded-xl border border-emerald-200 text-emerald-900 space-y-1">
+                <span class="font-bold text-[11px] uppercase flex items-center gap-1.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>
+                  <span>Chính Sách Safety Net 7 Ngày</span>
+                </span>
+                <p class="text-[11px] leading-relaxed">Mỗi đơn hàng đều được tặng kèm <strong>ống thử mùi (Vial 2ml)</strong> cùng loại. Bạn hãy thử mùi qua ống test trước. Nếu cảm thấy chưa phù hợp, bạn được <strong>đổi sang mùi hương khác hoàn toàn miễn phí</strong> trong vòng 7 ngày (khi chai chính còn nguyên seal nilon).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= CUSTOMER REVIEWS SECTION ================= -->
+    <section id="customer-reviews" class="mt-16 sm:mt-24 pt-12 border-t border-brand-sand">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-8">
+          <span class="text-xs font-semibold text-brand-wine tracking-widest uppercase">Trải nghiệm thực tế</span>
+          <h3 class="font-serif text-2xl sm:text-3xl text-brand-espresso font-semibold mt-1">Đánh giá từ khách hàng</h3>
+          <p class="text-xs text-brand-muted mt-1">Hơn 98% khách hàng đánh giá 5 sao về độ lưu hương và sự tinh tế của De L'amour.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="reviews-grid">
+          <!-- Review 1 -->
+          <div class="bg-white p-4 rounded-xl border border-brand-sand/80 shadow-xs space-y-2">
+            <div class="flex items-center text-amber-500 text-xs">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+            </div>
+            <p class="text-xs text-brand-charcoal italic">"Mùi thơm cực kỳ sang trọng, nốt vani gỗ bám trên áo khoác đến tận ngày hôm sau. Khắc tên laser trên nắp chai nhìn đẳng cấp thực sự!"</p>
+            <div class="pt-2 border-t border-brand-sand/40 flex items-center justify-between text-[11px]">
+              <span class="font-bold text-brand-espresso">Thu Thảo (Hà Nội)</span>
+              <span class="text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded text-[9px] font-semibold">Đã mua chai 50ml</span>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="bg-white p-4 rounded-xl border border-brand-sand/80 shadow-xs space-y-2">
+            <div class="flex items-center text-amber-500 text-xs">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+            </div>
+            <p class="text-xs text-brand-charcoal italic">"Mình đặt làm quà tặng bạn gái, dịch vụ gói quà và thiệp viết tay rất cẩn thận, chỉn chu. Bạn gái mình thích mê mùi này!"</p>
+            <div class="pt-2 border-t border-brand-sand/40 flex items-center justify-between text-[11px]">
+              <span class="font-bold text-brand-espresso">Minh Quân (TP.HCM)</span>
+              <span class="text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded text-[9px] font-semibold">Đã mua kèm gói quà</span>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="bg-white p-4 rounded-xl border border-brand-sand/80 shadow-xs space-y-2">
+            <div class="flex items-center text-amber-500 text-xs">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+            </div>
+            <p class="text-xs text-brand-charcoal italic">"Được tặng ống vial thử trước khi mở chai nên rất an tâm. Xịt đi làm ai trong văn phòng cũng khen mùi thanh lịch, không bị nồng gắt."</p>
+            <div class="pt-2 border-t border-brand-sand/40 flex items-center justify-between text-[11px]">
+              <span class="font-bold text-brand-espresso">Hồng Ánh (Đà Nẵng)</span>
+              <span class="text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded text-[9px] font-semibold">Đã mua chai 10ml</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RELATED PRODUCTS SLIDER ================= -->
+    <section class="mt-16 sm:mt-24 pt-12 border-t border-brand-sand">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-3">
+        <div>
+          <span class="text-xs font-semibold text-brand-wine tracking-widest uppercase">Khám phá tiếp</span>
+          <h3 class="font-serif text-2xl sm:text-3xl text-brand-espresso font-semibold mt-1">Các nốt hương khác trong bộ sưu tập</h3>
+        </div>
+        <a href="index.html#collection" class="text-xs font-bold text-brand-wine hover:underline flex items-center gap-1">
+          <span>Xem tất cả bộ sưu tập</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <!-- Băng chuyền hiển thị sản phẩm HÀNG NGANG (3 chai/màn hình) + Nút Mũi tên Trái / Phải -->
+      <div class="relative my-4 px-1 sm:px-3">
+        <!-- Nút Mũi tên Trái -->
+        <button type="button" onclick="scrollRelatedSlider(-1)" id="related-prev-btn" class="absolute -left-2 sm:-left-5 lg:-left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/95 text-brand-espresso shadow-xl border border-brand-sand/80 flex items-center justify-center hover:bg-brand-wine hover:text-white hover:border-brand-wine transition-all cursor-pointer hover:scale-110 active:scale-95 disabled:opacity-20 disabled:pointer-events-none" title="Xem chai trước" aria-label="Xem chai trước">
+          <i data-lucide="chevron-left" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+        </button>
+
+        <!-- Horizontal scroll of other fragrances -->
+        <div class="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth no-scrollbar py-4 px-1 items-stretch snap-x snap-mandatory" id="related-products-bar">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <!-- Nút Mũi tên Phải -->
+        <button type="button" onclick="scrollRelatedSlider(1)" id="related-next-btn" class="absolute -right-2 sm:-right-5 lg:-right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/95 text-brand-espresso shadow-xl border border-brand-sand/80 flex items-center justify-center hover:bg-brand-wine hover:text-white hover:border-brand-wine transition-all cursor-pointer hover:scale-110 active:scale-95 disabled:opacity-20 disabled:pointer-events-none" title="Xem thêm chai tiếp theo" aria-label="Xem thêm chai tiếp theo">
+          <i data-lucide="chevron-right" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+        </button>
+      </div>
+
+      <!-- Dots phân trang trực quan -->
+      <div id="related-dots" class="flex items-center justify-center gap-2 mt-2 mb-6"></div>
+    </section>
+
+  </main>
+
+  <!-- 4. LIGHTBOX MODAL (PHÓNG TO ẢNH FULLSCREEN) -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4" onclick="closeLightbox()">
+    <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white hover:text-brand-gold p-2">
+      <i data-lucide="x" class="w-8 h-8"></i>
+    </button>
+    <img id="lightbox-img" src="" alt="Phóng to ảnh" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl" onclick="event.stopPropagation()">
+  </div>
+
+  <!-- 5. CART DRAWER (GIỎ HÀNG TRƯỢT TỪ BÊN PHẢI) -->
+  <div id="cart-drawer-backdrop" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden transition-opacity" onclick="toggleCartDrawer(false)"></div>
+  
+  <aside id="cart-drawer" class="fixed top-0 right-0 bottom-0 z-50 w-full max-w-md bg-[#FAF8F5] border-l border-brand-sand shadow-2xl transform translate-x-full invisible pointer-events-none transition-all duration-300 ease-in-out flex flex-col">
+    <!-- Header -->
+    <div class="p-4 sm:p-5 border-b border-brand-sand/80 bg-white flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i data-lucide="shopping-bag" class="w-5 h-5 text-brand-wine"></i>
+        <h3 class="font-serif text-lg sm:text-xl font-bold text-brand-espresso">Giỏ Hàng Của Bạn</h3>
+        <span id="cart-drawer-count" class="text-xs bg-brand-wine/10 text-brand-wine px-2 py-0.5 rounded-full font-bold">0</span>
+      </div>
+      <button onclick="toggleCartDrawer(false)" class="p-1.5 text-brand-muted hover:text-brand-wine rounded-full">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Freeship Bar (399k) -->
+    <div class="p-3.5 bg-brand-beige border-b border-brand-sand/80 space-y-1.5">
+      <div class="flex items-center justify-between text-xs">
+        <span id="freeship-status-text" class="font-semibold text-brand-espresso">
+          Mua thêm để nhận Freeship toàn quốc!
+        </span>
+        <i data-lucide="truck" class="w-4 h-4 text-brand-gold"></i>
+      </div>
+      <div class="w-full bg-brand-sand/60 h-1.5 rounded-full overflow-hidden">
+        <div id="freeship-progress-bar" class="bg-brand-wine h-full transition-all duration-500 rounded-full" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Items List -->
+    <div id="cart-items-container" class="flex-1 overflow-y-auto p-4 space-y-3">
+      <!-- Items dynamically rendered -->
+    </div>
+
+    <!-- Footer Checkout -->
+    <div class="p-4 sm:p-5 border-t border-brand-sand/80 bg-white space-y-3">
+      <div class="flex items-center justify-between text-xs text-brand-muted">
+        <span>Tạm tính:</span>
+        <span id="cart-subtotal" class="font-bold text-base text-brand-espresso">0đ</span>
+      </div>
+      <div class="flex items-center justify-between text-xs text-brand-muted">
+        <span>Phí vận chuyển:</span>
+        <span id="cart-shipping-fee" class="font-semibold text-brand-espresso">Tính ở bước sau</span>
+      </div>
+      <div class="flex items-center justify-between text-sm font-bold text-brand-espresso pt-2 border-t border-brand-sand/40">
+        <span>Tổng thanh toán:</span>
+        <span id="cart-grand-total" class="font-serif text-xl text-brand-wine">0đ</span>
+      </div>
+
+      <button type="button" onclick="checkoutFromDrawer()" class="w-full py-3.5 px-4 bg-brand-wine hover:bg-brand-wineDark text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer">
+        <span>Tiến Hành Đặt Hàng</span>
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </button>
+
+      <a href="index.html#collection" onclick="toggleCartDrawer(false)" class="block text-center text-xs text-brand-muted hover:text-brand-wine pt-1">
+        ← Tiếp tục mua sắm
+      </a>
+    </div>
+  </aside>
+
+  <!-- 6. FOOTER -->
+  <footer class="bg-brand-espresso text-brand-sand border-t border-white/10 mt-20 pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-white/10 text-xs">
+        <div>
+          <span class="font-serif text-lg font-bold text-white uppercase tracking-widest block mb-2">De L'amour Paris</span>
+          <p class="text-brand-sand/70 leading-relaxed">Nghệ thuật điều hương nước hoa Pháp cao cấp. Tinh tuyển từ Grasse, kiến tạo những xúc cảm vượt thời gian.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider mb-3">Bộ Sưu Tập</h4>
+          <ul class="space-y-2 text-brand-sand/70">
+            <li><a href="product.html?id=cherie" class="hover:text-white transition-colors">Chérie L'amour (Berry &amp; Vanilla)</a></li>
+            <li><a href="product.html?id=fleur" class="hover:text-white transition-colors">Fleur L'amour (Fruity Floral)</a></li>
+            <li><a href="product.html?id=botanique" class="hover:text-white transition-colors">L'amour Botanique (Fresh Green)</a></li>
+            <li><a href="product.html?id=nuit" class="hover:text-white transition-colors">Nuit L'amour (Amber Woody)</a></li>
+            <li><a href="product.html?id=soleil" class="hover:text-white transition-colors">Soleil L'amour (Citrus Gourmand)</a></li>
+            <li><a href="product.html?id=poire" class="hover:text-white transition-colors">Poire Givrée (Iced Pear)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider mb-3">Chính Sách &amp; Cam Kết</h4>
+          <ul class="space-y-2 text-brand-sand/70">
+            <li>Miễn phí vận chuyển toàn quốc từ 399k</li>
+            <li>Tặng kèm vial thử mùi trước khi mở seal</li>
+            <li>Đổi mùi miễn phí trong 7 ngày</li>
+            <li>Cam kết 100% tinh dầu Grasse chính hãng</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider mb-3">Liên Hệ &amp; Tư Vấn</h4>
+          <p class="text-brand-sand/70 mb-2">Hotline / Zalo: 0988 888 888</p>
+          <p class="text-brand-sand/70 mb-3">Email: contact@delamourparis.vn</p>
+          <span class="text-[10px] text-brand-sand/50 block">Paris • Grasse • TP. Hồ Chí Minh • Hà Nội</span>
+        </div>
+      </div>
+      <div class="pt-6 text-center text-[11px] text-brand-sand/50">
+        © 2026 De L'amour Paris. All rights reserved. The Art of Self-Love.
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT DATABASE & LOGIC CHO PDP -->
+  <script src="products-data.js"></script>
+  <script>
+    // 1. LẤY SẢN PHẨM HIỆN TẠI TỪ URL QUERY PARAM (?id=...)
+    const urlParams = new URLSearchParams(window.location.search);
+    let currentKey = urlParams.get('id') || 'cherie';
+    if (!window.PRODUCTS_DATA[currentKey]) {
+      currentKey = 'cherie';
+    }
+
+    let pData = window.PRODUCTS_DATA[currentKey];
+    let selectedSize = '50ml'; // Mặc định 50ml
+    let quantity = 1;
+    let currentImgIndex = 0;
+    let isEngravingChecked = false;
+    let isGiftwrapChecked = false;
+
+    // 2. KHỞI TẠO DỮ LIỆU LÊN GIAO DIỆN
+    function initPDP() {
+      pData = window.PRODUCTS_DATA[currentKey];
+      if (!pData) return;
+
+      // Title & Meta
+      document.title = `${pData.name} | De L'amour Paris — Nước Hoa Pháp Cao Cấp`;
+      const metaDesc = document.getElementById('meta-desc');
+      if (metaDesc) metaDesc.content = `${pData.name} — ${pData.subtitle}. ${pData.quote}`;
+      
+      const bc = document.getElementById('breadcrumb-current');
+      if (bc) bc.innerText = pData.name;
+
+      // Header info
+      document.getElementById('product-name').innerText = pData.name;
+      document.getElementById('product-subtitle').innerText = pData.subtitle;
+      document.getElementById('pdp-badge').innerText = pData.badge || pData.categoryText;
+      document.getElementById('product-quote').innerText = pData.quote;
+
+      // Giá theo size ban đầu
+      updatePricesAndSizeUI();
+
+      // Tháp hương
+      document.getElementById('detail-top-notes').innerText = pData.topNotes;
+      document.getElementById('detail-top-desc').innerText = pData.topDesc;
+      document.getElementById('detail-heart-notes').innerText = pData.heartNotes;
+      document.getElementById('detail-heart-desc').innerText = pData.heartDesc;
+      document.getElementById('detail-base-notes').innerText = pData.baseNotes;
+      document.getElementById('detail-base-desc').innerText = pData.baseDesc;
+
+      // Độ lưu & tỏa hương
+      document.getElementById('detail-longevity').innerText = pData.longevity || '7 – 9 tiếng';
+      document.getElementById('detail-longevity-bar').style.width = pData.longevityPercent || '85%';
+      document.getElementById('detail-longevity-desc').innerText = pData.longevityDesc || 'Lưu hương tốt trên da';
+
+      document.getElementById('detail-sillage').innerText = pData.sillage || '1 cánh tay';
+      document.getElementById('detail-sillage-bar').style.width = pData.sillagePercent || '70%';
+      document.getElementById('detail-sillage-desc').innerText = pData.sillageDesc || 'Dịu nhẹ, thanh lịch';
+
+      document.getElementById('detail-occasions').innerText = pData.occasionsDesc || '';
+      
+      // Occasion tags
+      const tagsContainer = document.getElementById('detail-occasion-tags');
+      if (tagsContainer && pData.occasions) {
+        tagsContainer.innerHTML = pData.occasions.map(o => `<span class="px-2 py-0.5 bg-brand-beige text-brand-charcoal rounded-md text-[10px] font-medium border border-brand-sand/60">${o}</span>`).join('');
+      }
+
+      // Render Gallery Thumbnails
+      renderThumbnails();
+      switchMainImage(0);
+
+      // Render Related Products
+      renderRelatedProducts();
+
+      // Check wishlist
+      updateWishlistIconState();
+
+      // Refresh icons
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // 3. THAY ĐỔI DUNG TÍCH (SIZE SELECTOR)
+    function selectPDPSize(size) {
+      selectedSize = size;
+      updatePricesAndSizeUI();
+
+      // Tự đổi ảnh chính tương ứng size nếu có
+      if (size === '10ml' && pData.image10ml) {
+        document.getElementById('main-product-img').src = pData.image10ml;
+      } else if (size === '50ml' && pData.image50ml) {
+        document.getElementById('main-product-img').src = pData.image50ml;
+      }
+
+      // XỬ LÝ KHẮC TÊN THEO YÊU CẦU: CHỈ ÁP DỤNG CHO 50ML
+      const chkEngraving = document.getElementById('check-engraving');
+      const engravingControls = document.getElementById('engraving-controls');
+      const warning10ml = document.getElementById('engraving-10ml-warning');
+
+      if (size === '10ml') {
+        if (chkEngraving.checked) {
+          chkEngraving.checked = false;
+          isEngravingChecked = false;
+        }
+        chkEngraving.disabled = true;
+        engravingControls.classList.add('hidden');
+        warning10ml.classList.remove('hidden');
+      } else {
+        chkEngraving.disabled = false;
+        warning10ml.classList.add('hidden');
+        if (isEngravingChecked) {
+          engravingControls.classList.remove('hidden');
+        }
+      }
+    }
+
+    function updatePricesAndSizeUI() {
+      const is50 = selectedSize === '50ml';
+      const curPrice = is50 ? pData.price50ml : pData.price10ml;
+      const origPrice = is50 ? pData.original50ml : pData.original10ml;
+      const savings = is50 ? (pData.savingsText50ml || 'Tiết kiệm 120k') : (pData.savingsText10ml || 'Tiết kiệm 70k');
+
+      document.getElementById('product-price').innerText = formatCurrency(curPrice);
+      document.getElementById('product-original-price').innerText = origPrice;
+      document.getElementById('product-savings-badge').innerText = savings;
+      document.getElementById('selected-size-label').innerText = is50 ? 'Signature 50ml (Bản biểu tượng sang trọng)' : 'Pocket 10ml (Bản tiện lợi bỏ túi)';
+
+      // UI 2 button size
+      const btn10 = document.getElementById('btn-size-10');
+      const btn50 = document.getElementById('btn-size-50');
+
+      if (is50) {
+        btn50.className = "p-3 sm:p-3.5 rounded-xl border-2 border-brand-wine bg-brand-cream/60 text-left transition-all flex flex-col justify-between shadow-xs cursor-pointer";
+        btn10.className = "p-3 sm:p-3.5 rounded-xl border border-brand-sand bg-white text-left transition-all hover:border-brand-wine flex flex-col justify-between group cursor-pointer";
+      } else {
+        btn10.className = "p-3 sm:p-3.5 rounded-xl border-2 border-brand-wine bg-brand-cream/60 text-left transition-all flex flex-col justify-between shadow-xs cursor-pointer";
+        btn50.className = "p-3 sm:p-3.5 rounded-xl border border-brand-sand bg-white text-left transition-all hover:border-brand-wine flex flex-col justify-between group cursor-pointer";
+      }
+
+      // Giá trên nút
+      document.getElementById('btn-size-10-price').innerText = formatCurrency(pData.price10ml);
+      document.getElementById('btn-size-10-orig').innerText = pData.original10ml;
+      document.getElementById('btn-size-50-price').innerText = formatCurrency(pData.price50ml);
+      document.getElementById('btn-size-50-orig').innerText = pData.original50ml;
+    }
+
+    // 4. QUẢN LÝ GALLERY ẢNH (CAROUSEL 5 ẢNH)
+    function renderThumbnails() {
+      const container = document.getElementById('carousel-thumbnails-bar');
+      const images = pData.carouselImages || [
+        { src: pData.image, label: "Ảnh bìa" }
+      ];
+
+      container.innerHTML = images.map((img, idx) => `
+        <button type="button" onclick="switchMainImage(${idx})" id="pdp-thumb-${idx}" class="relative aspect-square rounded-xl overflow-hidden border-2 ${idx === 0 ? 'border-brand-wine ring-2 ring-brand-wine/20' : 'border-brand-sand/70 opacity-70'} hover:opacity-100 transition-all cursor-pointer">
+          <img src="${img.src}" alt="${img.label}" class="w-full h-full object-cover">
+        </button>
+      `).join('');
+    }
+
+    function switchMainImage(idx) {
+      const images = pData.carouselImages || [];
+      if (!images.length) return;
+      currentImgIndex = idx;
+      const target = images[idx];
+      const mainImg = document.getElementById('main-product-img');
+      const label = document.getElementById('main-img-label');
+
+      mainImg.style.opacity = '0.4';
+      setTimeout(() => {
+        mainImg.src = target.src;
+        mainImg.alt = target.label;
+        mainImg.style.opacity = '1';
+        if (label) label.innerText = target.label;
+      }, 150);
+
+      // Highlight active thumbnail
+      images.forEach((_, i) => {
+        const thumb = document.getElementById(`pdp-thumb-${i}`);
+        if (thumb) {
+          if (i === idx) {
+            thumb.className = "relative aspect-square rounded-xl overflow-hidden border-2 border-brand-wine ring-2 ring-brand-wine/20 transition-all cursor-pointer opacity-100";
+          } else {
+            thumb.className = "relative aspect-square rounded-xl overflow-hidden border-2 border-brand-sand/70 opacity-60 hover:opacity-100 transition-all cursor-pointer";
+          }
+        }
+      });
+    }
+
+    function prevProductImage() {
+      const images = pData.carouselImages || [];
+      let newIdx = currentImgIndex - 1;
+      if (newIdx < 0) newIdx = images.length - 1;
+      switchMainImage(newIdx);
+    }
+
+    function nextProductImage() {
+      const images = pData.carouselImages || [];
+      let newIdx = currentImgIndex + 1;
+      if (newIdx >= images.length) newIdx = 0;
+      switchMainImage(newIdx);
+    }
+
+    // Lightbox modal
+    function openLightbox() {
+      const mainImg = document.getElementById('main-product-img');
+      const modal = document.getElementById('lightbox-modal');
+      const lightImg = document.getElementById('lightbox-img');
+      lightImg.src = mainImg.src;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // 5. ACCORDION TOGGLE
+    function toggleAccordion(id) {
+      const content = document.getElementById(id);
+      const icon = document.getElementById(`${id}-icon`);
+      if (!content) return;
+
+      const isOpen = content.classList.contains('open');
+      if (isOpen) {
+        content.classList.remove('open');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      } else {
+        content.classList.add('open');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    // 6. CÁ NHÂN HÓA (KHẮC TÊN & GÓI QUÀ)
+    function toggleEngravingOption(checked) {
+      isEngravingChecked = checked;
+      const controls = document.getElementById('engraving-controls');
+      if (checked) {
+        controls.classList.remove('hidden');
+        updateEngravingPreview();
+      } else {
+        controls.classList.add('hidden');
+      }
+    }
+
+    function updateEngravingPreview() {
+      const text = document.getElementById('engraving-input-text').value.trim() || 'Chérie';
+      const font = document.getElementById('engraving-font-select').value;
+      const display = document.getElementById('engraving-preview-display');
+
+      display.innerText = text;
+      if (font === 'script') {
+        display.className = "text-brand-espresso text-base font-bold font-engrave-script truncate tracking-wider drop-shadow-xs";
+      } else {
+        display.className = "text-brand-espresso text-xs font-bold font-engrave-classic truncate tracking-widest drop-shadow-xs uppercase";
+      }
+    }
+
+    function toggleGiftwrapOption(checked) {
+      isGiftwrapChecked = checked;
+      const controls = document.getElementById('giftwrap-controls');
+      if (checked) {
+        controls.classList.remove('hidden');
+      } else {
+        controls.classList.add('hidden');
+      }
+    }
+
+    // 7. SỐ LƯỢNG
+    function changeQuantity(delta) {
+      quantity = Math.max(1, quantity + delta);
+      document.getElementById('pdp-quantity').innerText = quantity;
+    }
+
+    // 8. RELATED PRODUCTS
+    function scrollRelatedSlider(dir) {
+      const slider = document.getElementById('related-products-bar');
+      if (!slider) return;
+      const visibleCards = Array.from(slider.children);
+      if (visibleCards.length === 0) return;
+      
+      const cardRect = visibleCards[0].getBoundingClientRect();
+      const gap = window.innerWidth >= 640 ? 24 : 16;
+      // Desktop: trượt đúng 3 sản phẩm, Tablet: 2, Mobile: 1
+      const cardsPerView = window.innerWidth >= 1024 ? 3 : (window.innerWidth >= 640 ? 2 : 1);
+      const scrollDistance = (cardRect.width + gap) * cardsPerView;
+      
+      slider.scrollBy({ left: dir * scrollDistance, behavior: 'smooth' });
+      setTimeout(updateRelatedSliderState, 350);
+    }
+    window.scrollRelatedSlider = scrollRelatedSlider;
+
+    function goToRelatedSlide(pageIndex) {
+      const slider = document.getElementById('related-products-bar');
+      if (!slider) return;
+      const visibleCards = Array.from(slider.children);
+      if (visibleCards.length === 0) return;
+      
+      const cardRect = visibleCards[0].getBoundingClientRect();
+      const gap = window.innerWidth >= 640 ? 24 : 16;
+      const cardsPerView = window.innerWidth >= 1024 ? 3 : (window.innerWidth >= 640 ? 2 : 1);
+      const targetScroll = pageIndex * (cardRect.width + gap) * cardsPerView;
+      
+      slider.scrollTo({ left: targetScroll, behavior: 'smooth' });
+      setTimeout(updateRelatedSliderState, 350);
+    }
+    window.goToRelatedSlide = goToRelatedSlide;
+
+    function updateRelatedSliderState() {
+      const slider = document.getElementById('related-products-bar');
+      const prevBtn = document.getElementById('related-prev-btn');
+      const nextBtn = document.getElementById('related-next-btn');
+      const dotsContainer = document.getElementById('related-dots');
+      if (!slider) return;
+
+      const maxScroll = Math.max(0, slider.scrollWidth - slider.clientWidth);
+      const currentScroll = slider.scrollLeft;
+      const visibleCards = Array.from(slider.children);
+      const cardsPerView = window.innerWidth >= 1024 ? 3 : (window.innerWidth >= 640 ? 2 : 1);
+      const totalPages = Math.ceil(visibleCards.length / cardsPerView);
+
+      if (totalPages <= 1 || maxScroll <= 10) {
+        if (prevBtn) prevBtn.classList.add('opacity-0', 'pointer-events-none');
+        if (nextBtn) nextBtn.classList.add('opacity-0', 'pointer-events-none');
+        if (dotsContainer) dotsContainer.innerHTML = '';
+        return;
+      }
+
+      if (prevBtn) {
+        prevBtn.classList.remove('opacity-0', 'pointer-events-none');
+        if (currentScroll <= 15) {
+          prevBtn.classList.add('opacity-20', 'pointer-events-none');
+        } else {
+          prevBtn.classList.remove('opacity-20', 'pointer-events-none');
+        }
+      }
+
+      if (nextBtn) {
+        nextBtn.classList.remove('opacity-0', 'pointer-events-none');
+        if (currentScroll >= maxScroll - 15) {
+          nextBtn.classList.add('opacity-20', 'pointer-events-none');
+        } else {
+          nextBtn.classList.remove('opacity-20', 'pointer-events-none');
+        }
+      }
+
+      if (dotsContainer) {
+        const currentPage = Math.min(
+          totalPages - 1,
+          Math.max(0, Math.round(currentScroll / (slider.clientWidth || 1)))
+        );
+
+        let dotsHtml = '';
+        for (let i = 0; i < totalPages; i++) {
+          const isActive = i === currentPage;
+          dotsHtml += `
+            <button type="button" onclick="goToRelatedSlide(${i})" class="transition-all duration-300 rounded-full cursor-pointer ${isActive ? 'w-8 h-2 bg-brand-wine shadow-xs' : 'w-2 h-2 bg-brand-sand hover:bg-brand-muted'}" title="Trang ${i + 1}" aria-label="Xem nhóm sản phẩm ${i + 1}"></button>
+          `;
+        }
+        dotsContainer.innerHTML = dotsHtml;
+      }
+    }
+    window.updateRelatedSliderState = updateRelatedSliderState;
+
+    function renderRelatedProducts() {
+      const container = document.getElementById('related-products-bar');
+      if (!container) return;
+      const allKeys = Object.keys(window.PRODUCTS_DATA).filter(k => k !== currentKey);
+      
+      container.innerHTML = allKeys.map(k => {
+        const item = window.PRODUCTS_DATA[k];
+        return `
+          <a href="product.html?id=${k}" class="w-[88%] min-w-[88%] max-w-[88%] sm:w-[calc((100%-1.5rem)/2)] sm:min-w-[calc((100%-1.5rem)/2)] sm:max-w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)] lg:min-w-[calc((100%-3rem)/3)] lg:max-w-[calc((100%-3rem)/3)] shrink-0 snap-start bg-white rounded-2xl overflow-hidden border border-brand-sand/80 p-4 sm:p-5 flex flex-col justify-between group hover:shadow-xl hover:border-brand-sand transition-all duration-300">
+            <div>
+              <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-brand-cream/60 mb-3 sm:mb-4">
+                <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                <span class="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur text-brand-wine text-[9px] sm:text-[10px] font-bold px-2.5 py-1 rounded-full shadow-xs border border-brand-sand/60 tracking-wider uppercase inline-flex items-center">${item.badge || item.categoryText || 'Haute Parfumerie'}</span>
+                <span class="absolute bottom-2.5 right-2.5 bg-black/60 text-white text-[9px] sm:text-[10px] px-2 py-0.5 rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">Khám phá →</span>
+              </div>
+              <div class="h-12 sm:h-14 flex items-center justify-between gap-2">
+                <h4 class="font-serif text-base sm:text-lg lg:text-xl font-bold text-brand-espresso group-hover:text-brand-wine transition-colors line-clamp-1 leading-snug">${item.name}</h4>
+              </div>
+              <p class="h-9 sm:h-10 text-[11px] sm:text-xs text-brand-muted mt-1 leading-relaxed line-clamp-2">${item.subtitle || (item.topNotes ? item.topNotes : item.badge)}</p>
+            </div>
+            <div class="mt-auto pt-3 sm:pt-4 border-t border-brand-sand/60 flex items-center justify-between">
+              <span class="text-sm sm:text-base font-bold text-brand-wine">${formatCurrency(item.price50ml)}</span>
+              <span class="inline-flex items-center gap-1 text-[11px] sm:text-xs text-brand-muted group-hover:text-brand-wine font-semibold transition-colors">Chi tiết <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i></span>
+            </div>
+          </a>
+        `;
+      }).join('');
+
+      if (window.lucide) lucide.createIcons();
+      setTimeout(updateRelatedSliderState, 50);
+    }
+
+    // 9. THÊM VÀO GIỎ HÀNG & SYNC CART DRAWER
+    function handleAddToCartPDP(instantCheckout = false) {
+      const is50 = selectedSize === '50ml';
+      const basePrice = is50 ? pData.price50ml : pData.price10ml;
+      let extraPrice = 0;
+      let engraveNote = "";
+      let giftNote = "";
+
+      if (is50 && isEngravingChecked) {
+        extraPrice += 80000;
+        const txt = document.getElementById('engraving-input-text').value.trim() || 'Chérie';
+        const font = document.getElementById('engraving-font-select').value;
+        engraveNote = `Khắc tên: "${txt}" (${font === 'script' ? 'Script' : 'Classic'})`;
+      }
+
+      if (isGiftwrapChecked) {
+        extraPrice += 30000;
+        const msg = document.getElementById('gift-message-input').value.trim();
+        giftNote = `Gói quà + Thiệp${msg ? ': "' + msg + '"' : ''}`;
+      }
+
+      const cartItem = {
+        key: currentKey,
+        name: pData.name,
+        size: selectedSize,
+        image: is50 ? pData.image50ml : pData.image10ml,
+        price: basePrice + extraPrice,
+        basePrice: basePrice,
+        extraPrice: extraPrice,
+        quantity: quantity,
+        engraveNote: engraveNote,
+        giftNote: giftNote
+      };
+
+      addToCartStorage(cartItem);
+      renderCartDrawerUI();
+      toggleCartDrawer(true);
+
+      if (instantCheckout) {
+        // Cuộn xuống nút checkout
+        setTimeout(() => {
+          checkoutFromDrawer();
+        }, 400);
+      }
+    }
+
+    // Storage Cart Helper
+    function getCart() {
+      try {
+        return JSON.parse(localStorage.getItem('delamour_cart_v1') || '[]');
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function saveCart(cart) {
+      localStorage.setItem('delamour_cart_v1', JSON.stringify(cart));
+      updateCartBadge();
+    }
+
+    function addToCartStorage(item) {
+      let cart = getCart();
+      // Tìm xem đã có sản phẩm cùng key, size và note chưa
+      const existingIdx = cart.findIndex(c => 
+        c.key === item.key && 
+        c.size === item.size && 
+        c.engraveNote === item.engraveNote && 
+        c.giftNote === item.giftNote
+      );
+
+      if (existingIdx > -1) {
+        cart[existingIdx].quantity += item.quantity;
+      } else {
+        cart.push(item);
+      }
+      saveCart(cart);
+    }
+
+    function updateCartBadge() {
+      const cart = getCart();
+      const totalCount = cart.reduce((acc, c) => acc + (c.quantity || 1), 0);
+      const badge = document.getElementById('header-cart-badge');
+      const drawerBadge = document.getElementById('cart-drawer-count');
+      if (badge) badge.innerText = totalCount;
+      if (drawerBadge) drawerBadge.innerText = totalCount;
+    }
+
+    function renderCartDrawerUI() {
+      const cart = getCart();
+      const container = document.getElementById('cart-items-container');
+      const subtotalElem = document.getElementById('cart-subtotal');
+      const grandTotalElem = document.getElementById('cart-grand-total');
+      const freeshipText = document.getElementById('freeship-status-text');
+      const freeshipBar = document.getElementById('freeship-progress-bar');
+
+      if (!cart.length) {
+        container.innerHTML = `
+          <div class="py-12 text-center text-brand-muted space-y-2">
+            <i data-lucide="shopping-bag" class="w-12 h-12 mx-auto stroke-1 text-brand-sand"></i>
+            <p class="text-sm font-semibold">Giỏ hàng của bạn đang trống.</p>
+            <p class="text-xs">Hãy chọn một mùi hương ưng ý từ De L'amour nhé!</p>
+          </div>
+        `;
+        subtotalElem.innerText = "0đ";
+        grandTotalElem.innerText = "0đ";
+        freeshipText.innerText = "Mua thêm 399.000đ để nhận Freeship toàn quốc!";
+        freeshipBar.style.width = "0%";
+        if (window.lucide) lucide.createIcons();
+        return;
+      }
+
+      let subtotal = 0;
+      container.innerHTML = cart.map((item, idx) => {
+        const itemTotal = (item.price || item.basePrice) * item.quantity;
+        subtotal += itemTotal;
+
+        return `
+          <div class="p-3 bg-white rounded-xl border border-brand-sand/70 flex gap-3 shadow-xs">
+            <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded-lg bg-brand-beige shrink-0 border border-brand-sand/50">
+            <div class="flex-1 min-w-0">
+              <div class="flex items-start justify-between gap-1">
+                <h4 class="font-serif font-bold text-xs text-brand-espresso truncate">${item.name}</h4>
+                <button type="button" onclick="removeFromCart(${idx})" class="text-brand-muted hover:text-rose-600 p-0.5">
+                  <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+              <span class="text-[10px] text-brand-muted block">${item.size || '50ml'}</span>
+              ${item.engraveNote ? `<span class="text-[9px] text-brand-wine font-medium block truncate">🖋️ ${item.engraveNote}</span>` : ''}
+              ${item.giftNote ? `<span class="text-[9px] text-brand-goldDark font-medium block truncate">🎁 ${item.giftNote}</span>` : ''}
+              
+              <div class="flex items-center justify-between mt-2">
+                <div class="flex items-center border border-brand-sand rounded-lg overflow-hidden bg-brand-cream/40">
+                  <button type="button" onclick="updateCartQty(${idx}, -1)" class="px-2 py-0.5 text-xs hover:bg-brand-sand/50">-</button>
+                  <span class="px-2 text-xs font-bold">${item.quantity}</span>
+                  <button type="button" onclick="updateCartQty(${idx}, 1)" class="px-2 py-0.5 text-xs hover:bg-brand-sand/50">+</button>
+                </div>
+                <span class="font-bold text-xs text-brand-wine">${formatCurrency(itemTotal)}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      subtotalElem.innerText = formatCurrency(subtotal);
+      grandTotalElem.innerText = formatCurrency(subtotal);
+
+      // Freeship 399k calculation
+      const freeshipThreshold = 399000;
+      if (subtotal >= freeshipThreshold) {
+        freeshipText.innerHTML = `🎉 <strong>Chúc mừng!</strong> Bạn đã được <strong>Miễn phí vận chuyển toàn quốc</strong>!`;
+        freeshipBar.style.width = "100%";
+      } else {
+        const remaining = freeshipThreshold - subtotal;
+        freeshipText.innerText = `Mua thêm ${formatCurrency(remaining)} để nhận Freeship toàn quốc!`;
+        freeshipBar.style.width = `${Math.min(100, (subtotal / freeshipThreshold) * 100)}%`;
+      }
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function updateCartQty(idx, delta) {
+      let cart = getCart();
+      if (!cart[idx]) return;
+      cart[idx].quantity += delta;
+      if (cart[idx].quantity <= 0) {
+        cart.splice(idx, 1);
+      }
+      saveCart(cart);
+      renderCartDrawerUI();
+    }
+
+    function removeFromCart(idx) {
+      let cart = getCart();
+      cart.splice(idx, 1);
+      saveCart(cart);
+      renderCartDrawerUI();
+    }
+
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById('cart-drawer');
+      const backdrop = document.getElementById('cart-drawer-backdrop');
+      if (!drawer || !backdrop) return;
+
+      if (open) {
+        drawer.classList.remove('invisible', 'pointer-events-none');
+        void drawer.offsetWidth;
+        drawer.classList.remove('translate-x-full');
+        backdrop.classList.remove('hidden');
+        renderCartDrawerUI();
+      } else {
+        drawer.classList.add('translate-x-full');
+        backdrop.classList.add('hidden');
+        setTimeout(() => {
+          if (drawer.classList.contains('translate-x-full')) {
+            drawer.classList.add('invisible', 'pointer-events-none');
+          }
+        }, 300);
+      }
+    }
+
+    function checkoutFromDrawer() {
+      // Chuyển về index.html và tự mở checkout drawer
+      window.location.href = 'index.html?openCheckout=true';
+    }
+
+    // 10. WISHLIST PDP
+    function toggleWishlistPDP() {
+      let wishlist = [];
+      try {
+        wishlist = JSON.parse(localStorage.getItem('delamour_wishlist_v1') || '[]');
+      } catch (e) {}
+
+      const idx = wishlist.indexOf(currentKey);
+      if (idx > -1) {
+        wishlist.splice(idx, 1);
+      } else {
+        wishlist.push(currentKey);
+      }
+      localStorage.setItem('delamour_wishlist_v1', JSON.stringify(wishlist));
+      updateWishlistIconState();
+    }
+
+    function updateWishlistIconState() {
+      let wishlist = [];
+      try {
+        wishlist = JSON.parse(localStorage.getItem('delamour_wishlist_v1') || '[]');
+      } catch (e) {}
+
+      const icon = document.getElementById('pdp-wishlist-icon');
+      const btn = document.getElementById('pdp-wishlist-btn');
+      if (!icon || !btn) return;
+
+      if (wishlist.includes(currentKey)) {
+        icon.classList.add('fill-rose-500', 'text-rose-500');
+        icon.classList.remove('text-brand-muted');
+        btn.classList.add('bg-rose-50');
+      } else {
+        icon.classList.remove('fill-rose-500', 'text-rose-500');
+        icon.classList.add('text-brand-muted');
+        btn.classList.remove('bg-rose-50');
+      }
+    }
+
+    function formatCurrency(num) {
+      return new Intl.NumberFormat('vi-VN').format(num) + 'đ';
+    }
+
+    // KHỞI ĐỘNG KHI TẢI TRANG
+    window.addEventListener('DOMContentLoaded', () => {
+      initPDP();
+      updateCartBadge();
+
+      // Lắng nghe sự kiện cuộn & resize để cập nhật mũi tên và dots của các nốt hương khác
+      const relatedSlider = document.getElementById('related-products-bar');
+      if (relatedSlider) {
+        let relScrollTimer;
+        relatedSlider.addEventListener('scroll', () => {
+          clearTimeout(relScrollTimer);
+          relScrollTimer = setTimeout(() => {
+            if (typeof updateRelatedSliderState === 'function') updateRelatedSliderState();
+          }, 50);
+        }, { passive: true });
+      }
+      window.addEventListener('resize', () => {
+        if (typeof updateRelatedSliderState === 'function') updateRelatedSliderState();
+      });
+      setTimeout(() => {
+        if (typeof updateRelatedSliderState === 'function') updateRelatedSliderState();
+      }, 150);
+    });
+  </script>
+</body>
+</html>

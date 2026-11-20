@@ -4,6 +4,8 @@
   "cleanUrls": true,
   "rewrites": [
     { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/product", "destination": "/product.html" },
+    { "source": "/story", "destination": "/story.html" },
     { "source": "/track", "destination": "/index.html?track" }
   ],
   "headers": [

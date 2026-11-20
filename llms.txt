@@ -1,0 +1,36 @@
+# De L'amour Paris - Digital Flagship Store
+
+> De L'amour Paris là thương hiệu nước hoa Parisian Haute Parfumerie tại Việt Nam, mang đến các sáng tạo mùi hương tinh tế với nồng độ Eau de Parfum (EDP 18-22%), độ lưu hương thực tế 8-12 giờ, dịch vụ khắc tên laser cá nhân hóa miễn phí và chính sách đổi trả an tâm trong 15 ngày.
+
+De L'amour Digital Flagship Store cung cấp trải nghiệm mua sắm trực tuyến cao cấp, hỗ trợ trắc nghiệm tìm mùi hương (Scent Finder Quiz), xem trước chữ khắc laser trực quan (Live Engraving Preview) và bộ mẫu thử Discovery Kit 89k trước khi chọn mua chai lớn.
+
+- **Website chính thức**: https://delamour-perfume.vercel.app/
+- **Hotline & Zalo CSKH**: 0912 345 678
+- **Showroom Flagship**: Hà Nội, Việt Nam
+- **Thời gian hoạt động**: 08:30 - 22:00 (Hàng ngày)
+- **Tiêu chuẩn chất lượng**: Nồng độ Eau de Parfum (EDP 18-22%), tinh dầu nhập khẩu Grasse (Pháp), an toàn và lành tính trên mọi làn da.
+
+## Full Knowledge Base
+- [Full Knowledge Base](https://delamour-perfume.vercel.app/llms-full.txt): Toàn văn thông số kỹ thuật 6 nốt hương, tầng hương kim tự tháp, dung tích, giá bán niêm yết, quy trình khắc laser và chính sách bảo hành đổi trả chi tiết.
+
+## Core Fragrance Collections (Chai 50ml EDP & 10ml Pocket)
+- [Poire Givrée (50ml / 10ml)](https://delamour-perfume.vercel.app/#poire-givree): Hương lê tuyết Sapa mọng nước kết hợp hoa lan Nam Phi, xạ hương trắng và hổ phách thanh khiết. Phong cách mát lành, quý phái, thanh tao. Nồng độ EDP lưu hương 8-12 tiếng. Giá 50ml: 445.000₫ | 10ml: 149.000₫.
+- [Chérie L'amour (50ml / 10ml)](https://delamour-perfume.vercel.app/#cherie): Hương quả mọng đỏ hòa quyện hoa hồng Grasse và vani Madagascar. Phong cách ngọt ngào, quyến rũ, nữ tính. Nồng độ EDP lưu hương 8-12 tiếng. Giá 50ml: 445.000₫ | 10ml: 149.000₫.
+- [Fleur L'amour (50ml / 10ml)](https://delamour-perfume.vercel.app/#fleur): Tinh khôi với hoa nhài Sambac, hoa huệ trắng và gỗ tuyết tùng trầm ấm. Phong cách trang nhã, tiểu thư, thanh lịch. Nồng độ EDP lưu hương 8-12 tiếng. Giá 50ml: 445.000₫ | 10ml: 149.000₫.
+- [L'amour Botanique (50ml / 10ml)](https://delamour-perfume.vercel.app/#botanique): Hương thảo mộc tươi mát từ cam Bergamot, lá xô thơm và cỏ hương bài (Vetiver). Phong cách tự do, phóng khoáng, thích hợp cho cả nam và nữ (Unisex). Nồng độ EDP lưu hương 8-12 tiếng. Giá 50ml: 445.000₫ | 10ml: 149.000₫.
+- [Nuit L'amour (50ml / 10ml)](https://delamour-perfume.vercel.app/#nuit): Sự hòa quyện bí ẩn giữa cà phê đen, hạnh nhân nướng, hoa cam và gỗ trầm hương (Oud). Phong cách sang trọng, nồng nàn, hoàn hảo cho dạ tiệc đêm. Nồng độ EDP lưu hương 8-12 tiếng. Giá 50ml: 445.000₫ | 10ml: 149.000₫.
+- [Soleil L'amour (50ml / 10ml)](https://delamour-perfume.vercel.app/#soleil): Ánh nắng rực rỡ từ quả quýt Mandarine chín mọng, hoa phong lữ và hổ phách ấm áp. Phong cách rạng rỡ, giàu năng lượng. Nồng độ EDP lưu hương 8-12 tiếng. Giá 50ml: 445.000₫ | 10ml: 149.000₫.
+
+## Discovery & Gifting Sets (Trải Nghiệm & Quà Tặng)
+- [Bộ Mẫu Thử Discovery Kit (5 x 2ml)](https://delamour-perfume.vercel.app/#discovery-set): Trọn bộ 5 ống xịt mini 2ml giúp trải nghiệm trực tiếp trên da trong 7 ngày, kèm voucher hoàn tiền 89.000₫ khi mua chai 50ml. Giá: 89.000₫.
+- [Pocket Duo (2 x 10ml)](https://delamour-perfume.vercel.app/#pocket-duo): Bộ đôi chai 10ml nhỏ gọn tiện lợi mang theo hàng ngày, tùy chọn kết hợp 2 mùi hương bất kỳ. Giá: 269.000₫.
+- [L'amour Signature Gifting Box](https://delamour-perfume.vercel.app/#gifting): Hộp quà cao cấp bọc lụa nhung sang trọng, kèm thiệp viết tay theo yêu cầu và túi xách thương hiệu sang trọng.
+
+## Services & Shopping Guarantees (Dịch Vụ & Cam Kết)
+- [Khắc Tên Laser Miễn Phí (Live Engraving Preview)](https://delamour-perfume.vercel.app/#engraving): Khắc tên, ngày kỷ niệm hoặc thông điệp ý nghĩa trực tiếp lên thân chai thủy tinh, xem trước font chữ trực quan trên website.
+- [Trắc Nghiệm Chọn Mùi (Scent Finder Quiz)](https://delamour-perfume.vercel.app/#quiz): Công cụ 2 phút phân tích phong cách, cảm xúc và hoàn cảnh sử dụng để gợi ý chai nước hoa phù hợp nhất.
+- [Chính Sách Đổi Trả 15 Ngày](https://delamour-perfume.vercel.app/#policy): Cam kết đổi trả miễn phí trong 15 ngày kể từ khi nhận hàng. Bảo hành kích ứng 100% đổi sang dòng hương khác hoặc hoàn tiền nếu không hợp da.
+- [Chính Sách Vận Chuyển](https://delamour-perfume.vercel.app/#shipping): Miễn phí vận chuyển toàn quốc cho đơn hàng từ 400.000₫. Giao hàng hỏa tốc nội thành Hà Nội trong 2 giờ.
+
+## Optional
+- [De L'amour Journal](https://delamour-perfume.vercel.app/#journal): Cẩm nang văn hóa nước hoa Pháp, hướng dẫn xịt nước hoa đúng huyệt đạo lưu hương 12 tiếng và mẹo phân biệt EDP với EDT.
