@@ -1,0 +1,16 @@
+# Binaries & Tooling
+tailwindcss.exe
+*.exe
+
+# Backup files
+*.backup*
+*.bak
+backup_webp_images/
+new_images/
+
+# External Tools
+claude-seo/
+
+# OS & Temp
+.DS_Store
+Thumbs.db

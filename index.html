@@ -316,7 +316,7 @@
   <link rel="preload" as="image" href="cherie-lamour.webp" fetchpriority="high">
 
   <!-- De L'amour Minified Stylesheet (Zero Main-Thread Blocking) -->
-  <link rel="stylesheet" href="assets/css/style.min.css?v=10">
+  <link rel="stylesheet" href="assets/css/style.min.css?v=11">
 
   <!-- Lucide Icons (Deferred for Fast FCP) -->
   <script src="https://unpkg.com/lucide@latest" defer></script>
@@ -4309,7 +4309,8 @@
       // 1. Reset Carousel về ảnh chính (0) và render
       currentCarouselIndex = 0;
       renderPDPCarousel(false);
-      document.getElementById('pdp-badge-note').innerText = p.badge;
+      const badgeNote = document.getElementById('pdp-badge-note');
+      if (badgeNote) badgeNote.innerText = p.badge;
 
       // Luôn reset về tiêu chuẩn và ẩn badge khắc tên khi đổi sản phẩm
       if (typeof changePersonalization === 'function') {
@@ -4729,7 +4730,8 @@
       const total = singlePrice * pdpQuantity;
       const formattedSingle = new Intl.NumberFormat('vi-VN').format(singlePrice) + 'đ';
       const formattedTotal = new Intl.NumberFormat('vi-VN').format(total) + 'đ';
-      document.getElementById('pdp-display-price').innerText = formattedSingle;
+      const pdpPriceEl = document.getElementById('pdp-display-price');
+      if (pdpPriceEl) pdpPriceEl.innerText = formattedSingle;
       const btnCalc = document.getElementById('btn-price-calc');
       if (btnCalc) {
         btnCalc.innerText = pdpQuantity > 1 ? `${formattedTotal} (${pdpQuantity} chai)` : formattedTotal;
